@@ -1,11 +1,12 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { CoreModule } from './core'
+import { CoreModule } from './core';
 import { FeaturesModule } from './features';
 import { LoginComponent } from './core/login/login.component';
+import { SharedModule } from './shared';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
@@ -19,10 +20,11 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
+    CoreModule,
     FeaturesModule,
-    CoreModule
+    SharedModule
   ],
-  providers: [],
+  providers: [Title],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

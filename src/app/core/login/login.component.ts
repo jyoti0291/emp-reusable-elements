@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'emp-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private titleService: Title) {
+    this.titleService.setTitle('EMP | Login');
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'emp-event-registration',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventRegistrationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private titleService: Title) {
+    this.titleService.setTitle('EMP | Event Registration');
+  }
 
   ngOnInit() {
   }
