@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { FacadeService } from 'services';
+
 
 @Component({
   selector: 'emp-login',
@@ -8,8 +10,8 @@ import { Title } from '@angular/platform-browser';
 })
 export class LoginComponent {
 
-  constructor(private titleService: Title) {
-    this.titleService.setTitle('EMP | Login');
+  constructor( private facadeService: FacadeService) {
+    this.facadeService.setTitle('login');
   }
 
 }
