@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core';
 import { FeaturesModule } from './features';
-import { LoginComponent } from './core/login/login.component';
+import { LoginComponent } from './core/components/login/login.component';
 import { SharedModule } from './shared';
 
 const appRoutes: Routes = [
@@ -14,8 +14,7 @@ const appRoutes: Routes = [
 ];
 @NgModule({
   declarations: [
-    AppComponent,
-    LoginComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
