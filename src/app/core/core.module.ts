@@ -5,6 +5,7 @@ import { FacadeService } from './services';
 
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { InterceptorProvider } from './interceptors';
 
 @NgModule({
   declarations: [FooterComponent, HeaderComponent],
@@ -13,7 +14,8 @@ import { HeaderComponent } from './components/header/header.component';
     RouterModule
   ],
   providers: [
-    FacadeService
+    FacadeService,
+    InterceptorProvider
   ]
 })
 export class CoreModule { }
