@@ -7,7 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint && npm run lint:styles",
-    "lint:styles": "stylelint \"src/**/*.scss\"; exit 0",
+    "lint:styles": "stylelint \"src/**/*.scss\"",
     "prepush": "npm run lint",
     "precommit": "npm run lint",
     "e2e": "ng e2e"
