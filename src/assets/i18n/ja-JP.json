@@ -1,0 +1,8 @@
+{
+    "key":"English",
+    "depth": {
+        "key":"Japanese"
+    },
+    "login": "ログインする",
+    "event":"イベント登録"
+}

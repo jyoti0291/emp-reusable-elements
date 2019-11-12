@@ -1,18 +1,21 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
-import { LoginComponent } from './components/login/login.component';
-
-
+import { FacadeService } from './services';
+import { InterceptorProvider } from './interceptors';
 
 @NgModule({
-  declarations: [FooterComponent, HeaderComponent, LoginComponent],
+  declarations: [FooterComponent, HeaderComponent],
   imports: [
     CommonModule,
     RouterModule
+  ],
+  providers: [
+    FacadeService,
+    InterceptorProvider
   ]
 })
 export class CoreModule { }

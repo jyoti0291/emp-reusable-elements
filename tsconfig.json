@@ -1,8 +1,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "outDir": "./dist/out-tsc",
+    "paths": {
+      "services": ["app/core/services"]
+    },
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
@@ -22,5 +25,12 @@
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
-  }
+  },
+  "include": [
+    "src/**/*"
+],
+"exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+]
 }

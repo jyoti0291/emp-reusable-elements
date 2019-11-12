@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { FacadeService } from 'services';
 
 @Component({
   selector: 'emp-event-registration',
@@ -8,8 +8,8 @@ import { Title } from '@angular/platform-browser';
 })
 export class EventRegistrationComponent implements OnInit {
 
-  constructor(private titleService: Title) {
-    this.titleService.setTitle('EMP | Event Registration');
+  constructor(private facadeService: FacadeService) {
+    this.facadeService.setTitle('event');
   }
 
   ngOnInit() {
