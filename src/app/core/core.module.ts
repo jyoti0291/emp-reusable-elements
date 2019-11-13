@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FacadeService } from './services';
+import { LoginService } from './services';
 import { InterceptorProvider } from './interceptors';
 
 @NgModule({
@@ -15,7 +16,8 @@ import { InterceptorProvider } from './interceptors';
   ],
   providers: [
     FacadeService,
-    InterceptorProvider
+    InterceptorProvider,
+    LoginService
   ]
 })
 export class CoreModule { }

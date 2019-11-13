@@ -2,6 +2,7 @@ import { BrowserModule, Title } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CoreModule } from './core';
@@ -11,6 +12,7 @@ import { SharedModule } from './shared';
 
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { LoginService } from './core/services/login';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
@@ -35,9 +37,10 @@ const appRoutes: Routes = [
     }),
     CoreModule,
     FeaturesModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
-  providers: [Title],
+  providers: [Title, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

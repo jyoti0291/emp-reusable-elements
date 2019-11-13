@@ -1,3 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 @import '_base.scss';
 @import '_mixin.scss';
+
+body {
+    background: url(../images/landing-bg.jpg) no-repeat center center fixed #000;
+    background-size: cover;
+    font-size: 12px;
+    font-family: "Conv_MYRIADPRO-REGULAR", Sans-Serif;
+    min-width: 800px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    color: #fff;
+}

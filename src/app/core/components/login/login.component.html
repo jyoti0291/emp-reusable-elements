@@ -1,12 +1,22 @@
-<a [routerLink]="['/event']" routerLinkActive="router-link-active" >event</a>
-Default language is : 
-<span [translate]="'depth.key'"></span>
-<p>Font-Awesome</p>
-<i class="fa fa-american-sign-language-interpreting fa-5x" aria-hidden="true"> </i>
-<p>Bootstrap</p>
-
-<div class="alert alert-danger" role="alert">
-    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-    <span class="sr-only">Error:</span>
-    Enter a valid email address
+<div class="container-fluid">
+    <div ng:init="$root.pageTitle = 'Login'"></div>
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3 custom-login">
+            <h1 class="login-title mt-3">LOGIN</h1>
+            <form class="form-signin custom-form" autocomplete="off">
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-user"></i>
+                            </span>
+                        </div>
+                        <input type="text" name="user" class="form-control" placeholder="Enter UserID" [(ngModel)]="userId" required autofocus>
+                    </div>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="doLogin()">
+                    Sign in</button>
+            </form>
+        </div>
+    </div>
 </div>
