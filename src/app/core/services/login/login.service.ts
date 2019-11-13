@@ -12,7 +12,6 @@ export class LoginService {
   private apiURL = 'http://emp.collabo.rakuten.co.jp:9090/emp/services/Login?rakutenUserId=';
 
   doLogin(userId): Observable<any[]> {
-    this.apiURL += userId;
-    return this.http.post<any[]>(this.apiURL, {});
+    return this.http.post<any[]>(this.apiURL + userId, {});
   }
 }
