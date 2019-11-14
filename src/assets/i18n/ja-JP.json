@@ -1,8 +1,10 @@
 {
-    "key":"English",
     "depth": {
         "key":"Japanese"
     },
     "login": "ログインする",
-    "event":"イベント登録"
+    "event":"イベント登録",
+    "footer": {
+        "description":"&copy; Copyright (c) Rakuten, Inc. All Rights Reserved.  {{value}}"
+    }
 }

@@ -13,7 +13,6 @@ export class SessionInterceptor implements HttpInterceptor {
     Observable<HttpEvent<any>> {
     if (localStorage.getItem('CSRF-TOKEN') != null) {
       const token = localStorage.getItem('CSRF-TOKEN');
-
       const AuthRequest = req.clone({
         headers: new HttpHeaders({
           'X-CSRF-TOKEN': token,

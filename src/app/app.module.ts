@@ -9,6 +9,7 @@ import { CoreModule } from './core';
 import { FeaturesModule } from './features';
 import { LoginComponent } from './core/components/login/login.component';
 import { SharedModule } from './shared';
+import { FooterComponent } from './core/components/footer/footer.component';
 
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader} from '@ngx-translate/http-loader';
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

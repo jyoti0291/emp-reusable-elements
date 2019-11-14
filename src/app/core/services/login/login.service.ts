@@ -9,9 +9,10 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   private userId = '';
-  private apiURL = 'http://emp.collabo.rakuten.co.jp:9090/emp/services/Login?rakutenUserId=';
+  // private apiURL = 'http://emp.collabo.rakuten.co.jp:8086/emp/services/Login?rakutenUserId=';
+  private apiURL = '/api/' + 'Login?rakutenUserId=';
 
   doLogin(userId): Observable<any[]> {
-    return this.http.post<any[]>(this.apiURL + userId, {});
+    return this.http.post<any[]>( this.apiURL + userId, {});
   }
 }

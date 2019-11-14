@@ -3,5 +3,9 @@
         "key":"English"
     },
     "login": "Login",
-    "event":"Event-registration"
+    "event":"Event-registration",
+    "footer": {
+        "description":"&copy; Copyright (c) Rakuten, Inc. All Rights Reserved.  {{value}}"
+
+    }
 }
