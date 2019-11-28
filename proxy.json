@@ -1,8 +1,9 @@
 {
-    "/api/*": {
-      "target": "http://emp.collabo.rakuten.co.jp:8086/emp/services/",
-      "pathRewrite": {"^/api" : ""},
+    "/emp/*": {
+      "target": "http://127.0.0.1:8011/",
+      "pathRewrite": {"^/emp" : ""},
       "secure": false,
+      "loglevel": "info",
       "changeOrigin": true
     }
   }

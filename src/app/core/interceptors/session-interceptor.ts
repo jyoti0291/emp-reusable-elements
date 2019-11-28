@@ -1,30 +1,26 @@
 import { Injectable } from '@angular/core';
-import {
-  HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HttpHeaders
-} from '@angular/common/http';
+import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HttpHeaders, HttpResponse } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
+import { map, filter, tap } from 'rxjs/operators';
 
 /** Pass untouched request through to the next request handler. */
 @Injectable()
 export class SessionInterceptor implements HttpInterceptor {
 
-  intercept(req: HttpRequest<any>, next: HttpHandler):
-    Observable<HttpEvent<any>> {
-    if (localStorage.getItem('CSRF-TOKEN') != null) {
-      const token = localStorage.getItem('CSRF-TOKEN');
-      const AuthRequest = req.clone({
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    if (localStorage.getItem('CSRF-TOKEN')) {
+      request = request.clone({
         headers: new HttpHeaders({
-          'X-CSRF-TOKEN': token,
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE',
-          'Access-Control-Allow-Headers': 'X-Requested-With,content-type',
-          'Access-Control-Allow-Credentials': 'true'
+          'X-CSRF-TOKEN': localStorage.getItem('CSRF-TOKEN')
         })
       });
-      return next.handle(AuthRequest);
-    } else {
-      return next.handle(req);
     }
+
+    return next.handle(request).pipe(
+      tap((ev: HttpEvent<any>) => {
+      }, error => {
+        console.error('Error is', error);
+    }));
   }
 }

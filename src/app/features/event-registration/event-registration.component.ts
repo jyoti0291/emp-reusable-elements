@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FacadeService } from 'services';
+import { CommonService, FacadeService } from 'services';
 
 @Component({
   selector: 'emp-event-registration',
@@ -7,12 +7,16 @@ import { FacadeService } from 'services';
   styleUrls: ['./event-registration.component.scss']
 })
 export class EventRegistrationComponent implements OnInit {
-
-  constructor(private facadeService: FacadeService) {
+  private apiURL = '/emp/emp/services/manage/app';
+  constructor(private facadeService: FacadeService, private commonService: CommonService) {
     this.facadeService.setTitle('event');
   }
 
   ngOnInit() {
+    this.commonService.getVersion(this.apiURL).subscribe(response => {
+      if (response) {
+        console.log(response);
+      }
+    });
   }
-
 }
