@@ -1,0 +1,67 @@
+.custom-navbar {
+    background: none;
+    border-top: 4px solid #00a490;
+    border-bottom: 2px solid #5e6c89;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border-right: none;
+    margin-bottom: 0;
+}
+
+.custom-brand {
+    width: 28px;
+    height: 38px;
+    position: absolute;
+    text-align: center;
+    left: 16px;
+    z-index: 2;
+    top: 4px;
+    background: url(../../../../assets/images/brand-2.png) no-repeat center center;
+}
+
+.custom-brand a {
+    display: block;
+    text-indent: -9999px;
+    width: 28px;
+    height: 38px;
+    outline: none;
+}
+
+.custom-brand-dev {
+    width: 40px;
+    height: 38px;
+    position: absolute;
+    text-align: center;
+    left: 13px;
+    z-index: 2;
+    top: 4px;
+    background: url(../../../../assets/images/brand-2-dev.png) no-repeat center center;
+}
+
+.custom-brand-dev a {
+    display: block;
+    text-indent: -9999px;
+    width: 40px;
+    height: 38px;
+    outline: none;
+}
+
+.custom-brand-stg {
+    width: 40px;
+    height: 38px;
+    position: absolute;
+    text-align: center;
+    left: 13px;
+    z-index: 2;
+    top: 4px;
+    background: url(../../../../assets/images/brand-2-stg.png) no-repeat center center;
+}
+
+.custom-brand-stg a {
+    display: block;
+    text-indent: -9999px;
+    width: 40px;
+    height: 38px;
+    outline: none;
+}

@@ -9,14 +9,20 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   private userId = '';
-  // private apiURL = 'http://emp.collabo.rakuten.co.jp:8086/emp/services/Login?rakutenUserId=';
-  private apiURL = '/emp/emp/services/Login?rakutenUserId=';
+  private apiEndPoint = '/emp/emp/services/';
   public httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     withCredentials: true,
     observe: 'response' as 'response'
   };
-  doLogin(userId): any {
-    return this.http.post( this.apiURL + userId, {}, this.httpOptions);
+
+  doLogin(userId): Observable<any> {
+    const apiURL = this.apiEndPoint + 'Login?rakutenUserId=';
+    return this.http.post<any>(apiURL + userId, {}, this.httpOptions);
+  }
+
+  getUser(): Observable<any> {
+    const apiURL = this.apiEndPoint + 'Users/Self';
+    return this.http.get<any>(apiURL);
   }
 }

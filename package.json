@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.json --open",
+    "start": "ng serve --proxy-config proxy.json --open --host '0.0.0.0' --port 4200 --public-host 'emp.collabo.rakuten.co.jp:4200'",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint && npm run lint:styles",
@@ -24,7 +24,7 @@
     "@angular/router": "~8.2.8",
     "@ngx-translate/core": "^11.0.1",
     "@ngx-translate/http-loader": "^4.0.0",
-    "bootstrap": "^3.4.1",
+    "bootstrap": "^4.0.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
     "rxjs": "~6.4.0",

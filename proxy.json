@@ -1,9 +1,9 @@
 {
     "/emp/*": {
-      "target": "http://127.0.0.1:8011/",
+      "target": "http://127.0.0.1:9090/",
       "pathRewrite": {"^/emp" : ""},
       "secure": false,
       "loglevel": "info",
       "changeOrigin": true
     }
-  }
+}

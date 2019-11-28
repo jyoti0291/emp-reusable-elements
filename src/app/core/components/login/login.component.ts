@@ -13,14 +13,22 @@ import { HttpClient, HttpResponse, HttpHeaders } from '@angular/common/http';
 export class LoginComponent {
   userId = '';
   private loginData;
-  constructor(private facadeService: FacadeService, public loginService: LoginService, private router: Router) {
+  private userData;
+  constructor(private facadeService: FacadeService, public loginService: LoginService) {
     this.facadeService.setTitle('login');
   }
 
   doLogin() {
-    this.loginService.doLogin(this.userId).subscribe((res: HttpResponse<any>) => {
-      localStorage.setItem('CSRF-TOKEN', res.headers.get('CSRF-TOKEN'));
-      this.router.navigate(['/event']);
+    this.loginService.doLogin(this.userId).subscribe(resp => {
+      localStorage.setItem('CSRF-TOKEN', resp.headers.get('CSRF-TOKEN'));
+      this.loginData = resp.body;
+      this.getUser();
+    });
+  }
+
+  getUser() {
+    this.loginService.getUser().subscribe(resp => {
+      this.userData = resp;
     });
   }
 
