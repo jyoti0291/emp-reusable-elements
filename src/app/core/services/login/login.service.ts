@@ -9,12 +9,19 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   private userId = '';
-  private apiURL = 'emp/emp/services/Login?rakutenUserId=';
+  private apiEndPoint = '/emp/emp/services/';
   public httpOptions = {
     withCredentials: true,
     observe: 'response' as 'response'
   };
+
   doLogin(userId): Observable<any> {
-    return this.http.post( this.apiURL + userId, {}, this.httpOptions);
+    const apiURL = this.apiEndPoint + 'Login?rakutenUserId=';
+    return this.http.post<any>(apiURL + userId, {}, this.httpOptions);
+  }
+
+  getUser(): Observable<any> {
+    const apiURL = this.apiEndPoint + 'Users/Self';
+    return this.http.get<any>(apiURL);
   }
 }

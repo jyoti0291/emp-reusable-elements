@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
   public version: object;
+  public description = '& copy; 2016 Rakuten, Inc.All rights reserved.';
   constructor() { }
 
   ngOnInit() {
-    this.version = { value: 1.0 };
+    this.version = { value: '13.0.5-RELEASE' };
   }
 }

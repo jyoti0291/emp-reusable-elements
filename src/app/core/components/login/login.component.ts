@@ -13,17 +13,26 @@ import { LoginService } from 'services';
 export class LoginComponent implements OnInit {
   public userId = '';
   private loginData;
-  constructor(private facadeService: FacadeService, public loginService: LoginService, private router: Router) {
+  private userData;
+  constructor(private facadeService: FacadeService, public loginService: LoginService) {
     this.facadeService.setTitle('login');
   }
   ngOnInit() {
     localStorage.clear();
   }
   doLogin() {
-    this.loginService.doLogin(this.userId).subscribe((res: HttpResponse<any>) => {
-      localStorage.setItem('CSRF-TOKEN', res.headers.get('CSRF-TOKEN'));
-      localStorage.setItem('userData', JSON.stringify(res.body.responseObject));
-      this.router.navigate(['/event']);
+    this.loginService.doLogin(this.userId).subscribe(resp => {
+      localStorage.setItem('CSRF-TOKEN', resp.headers.get('CSRF-TOKEN'));
+      localStorage.setItem('userData', JSON.stringify(resp.body.responseObject));
+      this.loginData = resp.body;
+      this.getUser();
+      // /*this.router.navigate(['/event']);
+    });
+  }
+
+  getUser() {
+    this.loginService.getUser().subscribe(resp => {
+      this.userData = resp;
     });
   }
 
