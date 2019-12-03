@@ -4,6 +4,7 @@ import { TrustedPipe } from './trusted/trusted.pipe';
 
 @NgModule({
   declarations: [TrustedPipe],
-  imports: []
+  imports: [],
+  exports: [TrustedPipe]
 })
 export class PipesModule { }

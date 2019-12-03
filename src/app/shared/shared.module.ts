@@ -9,7 +9,6 @@ import { PipesModule } from './pipes/index';
     CommonModule,
     PipesModule
   ],
-  exports: [
-  ]
+  exports: [PipesModule]
 })
 export class SharedModule { }
