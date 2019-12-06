@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { PipesModule } from './pipes/index';
-import { TranslateModule } from '@ngx-translate/core';
+import { CommonLayoutService } from './services';
 
 @NgModule({
   declarations: [],
@@ -10,9 +11,9 @@ import { TranslateModule } from '@ngx-translate/core';
     CommonModule,
     PipesModule
   ],
-  exports: [
-    PipesModule,
-    TranslateModule
+  exports: [TranslateModule, PipesModule],
+  providers: [
+    CommonLayoutService
   ]
 })
 export class SharedModule { }

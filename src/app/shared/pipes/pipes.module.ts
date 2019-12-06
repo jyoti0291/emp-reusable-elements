@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 
 import { TrustedPipe } from './trusted/trusted.pipe';
+import { OrderbyPipe } from './orderby/orderby.pipe';
 
 @NgModule({
-  declarations: [TrustedPipe],
+  declarations: [TrustedPipe, OrderbyPipe],
   imports: [],
-  exports: [TrustedPipe]
+  exports: [TrustedPipe, OrderbyPipe]
 })
 export class PipesModule { }

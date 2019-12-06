@@ -4,7 +4,8 @@
     "baseUrl": "./src",
     "outDir": "./dist/out-tsc",
     "paths": {
-      "services": ["app/core/services"]
+      "services": ["app/core/services"],
+      "shared": ["app/shared"]
     },
     "sourceMap": true,
     "declaration": false,

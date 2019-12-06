@@ -1,54 +1,57 @@
 <div class="container mainIcon-container" id="landingPage">
 
     <div class="row mainIcon">
-        <div class="col-xs-12  noBorder">
+        <div class="col-12  noBorder">
             <div class="welcomeText noBorder">
-                <h1>{{'LANDING.WELCOME' | translate}} <span><span ng-if="environmentVar!='PRD' && locale=='ja-JP'"
-                            ng-class="environmentVar=='DEV'? 'env-dev':environmentVar=='STG'? 'env-stg' :''"
-                            ng-bind="'('+environmentVar+')'"></span> {{'LANDING.TXT_EMP' | translate}}</span> <span
-                        ng-if="environmentVar!='PRD' && locale!='ja-JP'"
-                        ng-class="environmentVar=='DEV'? 'env-dev':environmentVar=='STG'? 'env-stg' :''"
-                        ng-bind="'('+environmentVar+')'"></span></h1>
+                <h1>{{'LANDING.WELCOME' | translate}} <span><span *ngIf="environmentVar!='PRD' && locale=='ja-JP'"
+                            [ngClass]="environmentVar=='DEV'? 'env-dev':environmentVar=='STG'? 'env-stg' :''">{{'('+environmentVar+')'}}</span>
+                        {{'LANDING.TXT_EMP' | translate}}</span> <span *ngIf="environmentVar!='PRD' && locale!='ja-JP'"
+                        [ngClass]="environmentVar=='DEV'? 'env-dev':environmentVar=='STG'? 'env-stg'
+                        :''">{{'('+environmentVar+')'}}</span></h1>
                 <p>{{'LANDING.TXT_EMP_DETAILS_FIRST' | translate}} </p>
                 <p class="welcome">
                     {{'LANDING.TXT_EMP_DETAILS_SECOND' | translate}}<br>
                     <a href="{{landingPageInfo.inquiry_link}}" target="_blank">{{landingPageInfo.inquiry_link}}</a>
                 </p>
-                <div class="browserInfo">Supported Browser : Chrome {{$root.chromeVersion}}, FireFox
-                    {{$root.firefoxVersion}}</div>
+                <div class="browserInfo">Supported Browser : Chrome {{chromeVersion}}, FireFox
+                    {{firefoxVersion}}</div>
             </div>
         </div>
     </div>
     <div class="row mainIcon">
-        <div
-            ng-class="!$root.getMenuPermisson('eventList') ? 'col-md-6 col-xs-6' : (isAdmin ? 'col-md-3 col-xs-3' : 'col-md-4 col-xs-4')">
+        <div [ngClass]="!getMenuPermisson('eventList') ? 'col col-md-6 col-6' : (isAdmin ? 'col col-md-3 col-3' :
+            'col col-md-4 col-4')">
             <a href="#" class="lightCol menusLink active" data-menu="menus"> <span
                     class="menus"></span>{{'LANDING.MENUS' | translate}} </a> </div>
-        <div ng-if="$root.showTabWithConditions('eventList',['pointRegistration','couponRegistration'])"
-            ng-class="(isAdmin ? 'col-md-3 col-xs-3' : 'col-md-4 col-xs-4')"> <a href="" [routerLink]="eventList()"
+        <div *ngIf="showTabWithConditions('eventList',['pointRegistration','couponRegistration'])"
+            [ngClass]="(isAdmin ? 'col col-md-3 col-3' : 'col col-md-4 col-4')"> <a href="" [routerLink]="eventList"
                 class="darkCol menusLink" data-menu="ongoingEvents"> <span
                     class="events"></span>{{'LANDING.EVENTS_CALENDAR' | translate}} </a> </div>
-        <div ng-if="$root.getMenuPermisson('kpiDashboard')"
-            ng-class="isAdmin ? 'col-md-3 col-xs-3' : 'col-md-4 col-xs-4'"> <a href="" [routerLink]="kpiDashboard()"
-                class="lightCol menusLink" data-menu="dashboard"> <span class="dashboard"></span>
+        <div *ngIf="getMenuPermisson('kpiDashboard')" [ngClass]="isAdmin ? 'col col-md-3 col-3' : 'col col-md-4 col-4'">
+            <a [routerLink]="hello" class="lightCol menusLink" data-menu="dashboard"> <span
+                    class="dashboard"></span>
                 {{'LANDING.DASHBOARD' | translate}} </a> </div>
-        <div class="col-md-3 col-xs-3" ng-if="isAdmin"> <a href="#userList" class="darkCol menusLink"> <span
+        <div class="col col-md-3 col-3" *ngIf="isAdmin"> <a [routerLink]="userList" class="darkCol menusLink"> <span
                     class="userManagement"></span> {{'LANDING.USER_MANAGEMENT' | translate}} </a> </div>
     </div>
     <div class="menuContainer row subIcons-container" data-menuContainer="menus">
         <div>
-            <div ng-repeat="(mainMenu, data) in links" ng-if="data.length>0  && mainMenu != 'KpiDashboard'">
-                <div class="col-sm-12">
-                    <span class="glyphicon glyphicon-play-circle"></span>
-                    <span class="title">{{data[0].value.landingParentName | translate}}</span><br />
-                    <ul ng-class="$last ? 'nav navbar-nav navLinks noBorder' : 'nav navbar-nav navLinks'">
-                        <li ng-repeat="subItem in data |orderBy:'key'"
-                            ng-click="gotoState(subItem.value.state, subItem.value.param)"
-                            ng-class="{'clear-br': subItem.value.isFirstOnLanding}">
-                            <a [routerLink]="subItem.value.state">{{subItem.value.sublinkName | translate}}</a>
-                        </li>
-                    </ul>
-                </div>
+            <div *ngFor="let item of links | keyvalue">
+                <ng-container *ngIf="item.value.length>0  && item.key != 'KpiDashboard'">
+                    <div class="col col-12 col-sm-12">
+                        <i class="fa fa-play-circle-o"></i>
+                        <span class="title">{{item.value[0].value.landingParentName | translate}}</span><br />
+                        <div class="navbar  navbar-expand-lg navbar-light ">
+                            <ul [ngClass]="$last ? 'nav navbar-nav navLinks noBorder' : 'nav navbar-nav navLinks'">
+                                <li *ngFor="let subItem of item.value | orderby"
+                                    (click)="gotoState(subItem.value.state, subItem.value.param)"
+                                    [ngClass]="{'clear-br': subItem.value.isFirstOnLanding}">
+                                    <a [routerLink]="subItem.value.state">{{subItem.value.sublinkName | translate}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </ng-container>
             </div>
             <a href="" class="back-to-top"> <i class="glyphicon glyphicon-chevron-up"></i>
                 <span>{{'LANDING.BACK_TO_TOP' | translate}}</span></a>

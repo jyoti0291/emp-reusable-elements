@@ -1,13 +1,6 @@
-.custom-navbar {
-    background: none;
-    border-top: 4px solid #00a490;
-    border-bottom: 2px solid #5e6c89;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    border-right: none;
-    margin-bottom: 0;
-}
+@import '~assets/styles/_config.scss';
+
+/*Global Header*/
 
 .custom-brand {
     width: 28px;
@@ -17,7 +10,7 @@
     left: 16px;
     z-index: 2;
     top: 4px;
-    background: url(../../../../assets/images/brand-2.png) no-repeat center center;
+    background: url(~/assets/images/brand-2.png) no-repeat center center;
 }
 
 .custom-brand a {
@@ -36,7 +29,7 @@
     left: 13px;
     z-index: 2;
     top: 4px;
-    background: url(../../../../assets/images/brand-2-dev.png) no-repeat center center;
+    background: url(~/assets/images/brand-2-dev.png) no-repeat center center;
 }
 
 .custom-brand-dev a {
@@ -55,7 +48,7 @@
     left: 13px;
     z-index: 2;
     top: 4px;
-    background: url(../../../../assets/images/brand-2-stg.png) no-repeat center center;
+    background: url(~/assets/images/brand-2-stg.png) no-repeat center center;
 }
 
 .custom-brand-stg a {
@@ -64,4 +57,233 @@
     width: 40px;
     height: 38px;
     outline: none;
+}
+
+.emp-header {
+    .custom-brand {
+        width: 100px;
+        height: 78px;
+        background-color: #00a490;
+        position: absolute;
+        text-align: center;
+        left: 30px;
+        z-index: 2;
+        top: 0px;
+    }
+    .custom-brand a {
+        display: block;
+        text-indent: -9999px;
+        width: 100px;
+        height: 78px;
+        outline: none;
+    }
+    .custom-brand-dev {
+        background: url(~/assets/images/brand-2-dev.png) no-repeat center center;
+        width: 100px;
+        height: 78px;
+        background-color: #00a490;
+        position: absolute;
+        text-align: center;
+        left: 30px;
+        z-index: 2;
+        top: 0px;
+    }
+    .custom-brand-dev a {
+        display: block;
+        text-indent: -9999px;
+        width: 100px;
+        height: 78px;
+        outline: none;
+    }
+    .custom-brand-stg {
+        background: url(~/assets/images/brand-2-stg.png) no-repeat center center;
+        width: 100px;
+        height: 78px;
+        background-color: #00a490;
+        position: absolute;
+        text-align: center;
+        left: 30px;
+        z-index: 2;
+        top: 0px;
+    }
+    .custom-brand-stg a {
+        display: block;
+        text-indent: -9999px;
+        width: 100px;
+        height: 78px;
+        outline: none;
+    }
+    .custom-navbar {
+        background: none;
+        border-top: 4px solid #00a490;
+        border-bottom: none;
+        -webkit-box-shadow: 0px 5px 5px -2px rgba(46, 51, 70, 0.7);
+        -moz-box-shadow: 0px 5px 5px -2px rgba(46, 51, 70, 0.7);
+        box-shadow: 0px 5px 5px -2px rgba(46, 51, 70, 0.7);
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        border-right: none;
+        margin-bottom: 0px;
+    }
+}
+
+.custom-notify {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: block;
+    background: #ff5b57;
+    line-height: 12px;
+    font-weight: 300;
+    padding: 0.2em 0.4em;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.navbar-right {
+    float: right;
+}
+
+.navbar {
+    border: 0px;
+}
+
+.top-nav {
+    padding: 12px 17px 0 15px;
+}
+
+.top-nav>li {
+    display: inline-block;
+    float: left;
+    border-left: 1px solid $primary-text;
+    line-height: 20px;
+}
+
+.top-nav>li:first-child {
+    border-left: none;
+}
+
+.top-nav>li>a {
+    color: $primary-text;
+    font-size: 20px;
+    padding: 0px 7px;
+}
+
+.top-nav>li>a:hover,
+.top-nav>li>a:focus,
+.top-nav>.open>a,
+.top-nav>.open>a:hover,
+.top-nav>.open>a:focus {
+    color: $primary-text;
+    background: none;
+}
+
+.top-nav>li>a:hover i {
+    color: #01c5ad;
+}
+
+.toolbar .top-nav a {
+    line-height: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+.toolbar .top-nav a span {
+    border-right: 1px solid #7f7f7f;
+    padding: 0 5px;
+}
+
+.toolbar .top-nav .selectedMenu a span {
+    border-left: none;
+}
+
+.toolbar .top-nav li {
+    padding: 0px;
+    margin: 0 2px 0 0;
+}
+
+.toolbar .top-nav>li .glyphicon.glyphicon-user {
+    float: none;
+}
+
+.toolbar .top-nav {
+    padding: 0px;
+}
+
+.welcome-user a:hover .userName {
+    color: #01c5ad;
+}
+
+.top-nav>li .userName {
+    font-size: 12px;
+    float: left;
+    line-height: 15px;
+    padding: 0 0 0 5px;
+    position: relative;
+    top: -4px;
+}
+
+.top-nav>li .glyphicon.glyphicon-user {
+    float: left;
+}
+
+.top-nav .selectedMenu a,
+.top-nav .selectedMenu a:hover,
+.top-nav .selectedMenu a:focus,
+.top-nav .selectedMenu a:active {
+    background: #009985;
+    line-height: 50px;
+    color: $primary-text;
+    position: relative;
+}
+
+.top-nav .selectedMenu a i,
+.top-nav .selectedMenu a:hover i {
+    color: $primary-text;
+}
+
+.top-nav .selectedMenu:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 153, 133, 0);
+    border-top-color: #009985;
+    border-width: 7px;
+    margin-left: -7px;
+    z-index: 8;
+}
+
+.custom-navbar {
+    background: none;
+    border-top: 4px solid #00a490;
+    border-bottom: 2px solid #5e6c89;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-right: none;
+    margin-bottom: 0px;
+    min-height: 50px;
+}
+
+.dev-custom-nav {
+    background: #d1b205 !important;
+}
+
+.stg-custom-nav {
+    background: #b43232 !important;
+}
+
+.aquaColor {
+    color: #01c5ad;
+}
+
+.adAppDptNameError {
+    border: 1px solid #a94442 !important;
 }

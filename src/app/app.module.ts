@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core';
 import { FeaturesModule } from './features';
 import { LoginComponent } from './core/components/login/login.component';
-import { SharedModule } from './shared';
+import { SharedModule } from 'shared';
 import { FooterComponent } from './core/components/footer/footer.component';
 import { HeaderComponent } from './core/components/header/header.component';
 
@@ -18,7 +18,7 @@ import { LoginService } from './core/services/login';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
-  { path: '**', redirectTo: 'event', pathMatch: 'full'}
+  { path: '**', redirectTo: 'event', pathMatch: 'full' }
 ];
 
 @NgModule({
