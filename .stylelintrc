@@ -2,6 +2,10 @@
   "extends": "stylelint-config-standard",
   "rules": {
     "no-empty-source":null,
-    "indentation": 4
+    "indentation": 4,
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": ["mixin", "each"]
+    }],
+    "no-descending-specificity": null
   }
 }
