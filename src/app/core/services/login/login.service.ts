@@ -19,9 +19,4 @@ export class LoginService {
     const apiURL = this.apiEndPoint + 'Login?rakutenUserId=';
     return this.http.post<any>(apiURL + userId, {}, this.httpOptions);
   }
-
-  getUser(): Observable<any> {
-    const apiURL = this.apiEndPoint + 'Users/Self';
-    return this.http.get<any>(apiURL);
-  }
 }
