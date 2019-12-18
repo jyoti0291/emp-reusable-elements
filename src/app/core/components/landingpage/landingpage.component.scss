@@ -1,7 +1,12 @@
 @import '~assets/styles/_config.scss';
+$mainIconClasses: userSetting -200px -180px active -200px -225px,
+    dashboard 0 -180px active 0 -225px,
+    menus -40px -180px active -40px -225px,
+    events -120px -180px active -120px -225px,
+    reports -160px -180px active -160px -225px,
+    userManagement -80px -180px active -80px -225px;
 
 .emp-header {
-    /* Margin bottom by footer height */
     margin-bottom: 60px;
     overflow: visible;
 }
@@ -11,136 +16,103 @@ a {
 }
 
 .welcomeText {
-    margin: 32px 0 10px 0px;
+    margin: 32px 0 10px 0;
+
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    span {
+        color: #01c5ad;
+    }
+
+    .env-dev {
+        color: #d1b205;
+    }
+
+    .env-stg {
+        color: #b43232;
+    }
 }
 
-.welcomeText h1 {
-    font-size: 24px;
-    font-weight: bold;
-}
+.mainIcon {
+    div {
+        padding: 0;
+        border-right: 1px solid #0d8d83;
+        color: $primary-text;
+        text-align: justify;
+    }
 
-.welcomeText span {
-    color: #01c5ad;
-}
+    p {
+        margin: 10px 0 0 0;
+    }
 
-.welcomeText .env-dev {
-    color: #d1b205;
-}
+    a.darkCol,
+    & a.lightCol {
+        display: block;
+        height: 200px;
+        text-align: center;
+        color: $primary-text;
+        padding: 65px 0 0 0;
+        text-decoration: none;
+    }
 
-.welcomeText .env-stg {
-    color: #b43232;
-}
+    .darkCol {
+        background: #00a490;
+        outline: none;
 
-.mainIcon p {
-    margin: 10px 0px 0 0px;
+        &:hover {
+            background: #029886;
+            text-decoration: none;
+        }
+
+        &.active {
+            background: $primary-text;
+            color: #02b59f;
+        }
+    }
+
+    .lightCol {
+        background: #01c5ad;
+        outline: none;
+
+        &:hover {
+            background: #02b59f;
+            text-decoration: none;
+        }
+
+        &.active {
+            background: $primary-text;
+            color: #02b59f;
+        }
+    }
+
+    .active {
+        color: #01c5ad;
+    }
+
+    @each $mainClass in $mainIconClasses {
+        & .#{nth($mainClass, 1)} {
+            width: 40px;
+            height: 45px;
+            background: url(~/assets/images/sprite.png) no-repeat;
+            display: block;
+            text-indent: -9999px;
+            margin: 0 auto;
+            background-position: nth($mainClass, 2) nth($mainClass, 3);
+        }
+
+        & .#{nth($mainClass, 4)} {
+            & .#{nth($mainClass, 1)} {
+                background-position: nth($mainClass, 5) nth($mainClass, 6);
+            }
+        }
+    }
 }
 
 .text-bold {
     font-weight: bold !important;
-}
-
-.mainIcon a.lightCol,
-.mainIcon a.darkCol {
-    display: block;
-    height: 200px;
-    text-align: center;
-    color: $primary-text;
-    padding: 65px 0 0 0;
-    text-decoration: none;
-}
-
-.mainIcon .darkCol {
-    background: #00a490;
-    outline: none;
-}
-
-.mainIcon .lightCol {
-    background: #01c5ad;
-    outline: none;
-}
-
-.mainIcon .darkCol:hover {
-    background: #029886;
-    text-decoration: none;
-}
-
-.mainIcon .lightCol:hover {
-    background: #02b59f;
-    text-decoration: none;
-}
-
-.mainIcon .darkCol.active,
-.mainIcon .lightCol.active {
-    background: $primary-text;
-    color: #02b59f;
-}
-
-.mainIcon .userSetting,
-.mainIcon .dashboard,
-.mainIcon .menus,
-.mainIcon .userManagement,
-.mainIcon .events,
-.mainIcon .reports {
-    width: 40px;
-    height: 45px;
-    background: url(~/assets/images/sprite.png) no-repeat;
-    display: block;
-    text-indent: -9999px;
-    margin: 0 auto;
-}
-
-.mainIcon .dashboard {
-    background-position: 0px -180px;
-}
-
-.mainIcon .userSetting {
-    background-position: -200px -180px;
-}
-
-.mainIcon .menus {
-    background-position: -40px -180px;
-}
-
-.mainIcon .userManagement {
-    background-position: -80px -180px;
-}
-
-.mainIcon .events {
-    background-position: -120px -180px;
-}
-
-.mainIcon .reports {
-    background-position: -160px -180px;
-}
-
-/*Active Icons*/
-
-.mainIcon .active .dashboard {
-    background-position: 0px -225px;
-}
-
-.mainIcon .active .userSetting {
-    background-position: -200px -225px;
-}
-
-.mainIcon .active .menus {
-    background-position: -40px -225px;
-}
-
-.mainIcon .active .userManagement {
-    background-position: -80px -225px;
-}
-
-.mainIcon .active .events {
-    background-position: -120px -225px;
-}
-
-.mainIcon .active .reports {
-    background-position: -160px -225px;
-}
-
-.mainIcon .active {
-    color: #01c5ad;
 }
 
 .subIcons-container {
@@ -152,187 +124,187 @@ a {
 .subMenu {
     border-top: 1px solid #c7c9d2;
     margin-top: 14px;
+
+    h2 {
+        color: #0187b5;
+        font-size: 24px;
+        margin-top: 11px;
+    }
 }
 
-.subMenu h2 {
-    color: #0187b5;
-    font-size: 24px;
-    margin-top: 11px;
+.welcome {
+    a {
+        padding: 0;
+        color: #00b9a2;
+        text-decoration: none;
+    }
+
+    &:focus,
+    &:hover {
+        background-color: transparent;
+        color: $primary-text;
+        text-decoration: underline;
+    }
 }
 
 .subIcons {
     margin: 30px 0 0 0;
     outline: none;
-}
 
-.subIcons li {
-    margin-right: 10px;
-    position: relative;
-    display: block;
-    float: left;
-}
+    li {
+        margin-right: 10px;
+        position: relative;
+        display: block;
+        float: left;
+    }
 
-.subIcons a {
-    margin: 0;
-    display: block;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    color: #aeafb3;
-    background-color: #067ea0;
-    width: 72px;
-    height: 72px;
-    text-align: center;
-    line-height: 82px;
-    outline: none;
-}
+    a {
+        margin: 0;
+        display: block;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        color: #aeafb3;
+        background-color: #067ea0;
+        width: 72px;
+        height: 72px;
+        text-align: center;
+        line-height: 82px;
+        outline: none;
 
-.subIcons a:hover {
-    background-color: #aeafb3;
-    color: #067ea0;
+        &:hover {
+            background-color: #aeafb3;
+            color: #067ea0;
+        }
+    }
 }
 
 .menu-subIcons {
     font-size: 29px !important;
 }
 
-/*Landing page new css*/
-.menuContainer .clear-br {
-    clear: both;
-}
-
-.menuContainer .nav>li>a:after {
-    content: "|";
-    padding: 0 10px;
-    color: #81818b;
-    font-weight: bold;
-}
-
-.menuContainer .nav>li:last-child>a:after {
-    content: "";
-}
-
-.menuContainer .nav>li>a {
-    padding: 0;
-    color: #03a08d;
-}
-
-.menuContainer .nav>li>a:focus,
-.menuContainer .nav>li>a:hover {
-    background-color: transparent;
-    color: $primary-text;
-}
-
-.menuContainer .nav {
-    padding-left: 1px;
-}
-
-.menuContainer .title {
-    color: $primary-text;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.menuContainer .navLinks {
-    padding-left: 18px;
-    width: 100%;
-    padding-bottom: 12px;
-    border-bottom: 1px dashed #878d9b;
-    font-size: 14px;
-}
-
-.menuContainer .glyphicon-play-circle:before {
-    color: $primary-text;
-    font-size: 14px;
-    margin-right: 2px;
-}
-
-.menuContainer.subIcons-container .col-sm-12 {
-    padding: 14px 0 0 0;
-}
-
-.menuContainer {
-    background: none repeat scroll 0 0 rgba(63, 64, 82, 0.3);
-}
-
-.subIcons-container {
-    padding-bottom: 0 !important;
-}
-
-.menuContainer .row {
-    margin: 0;
-}
-
+/* Landing page new css */
 .menuContainer {
     margin-top: 15px;
     padding: 5px 50px;
     position: relative;
-}
+    background: none repeat scroll 0 0 rgba(63, 64, 82, 0.3);
 
-.menuContainer .back-to-top {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
+    .back-to-top {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
 
-.menuContainer .back-to-top span,
-.back-to-top span,
-.back-to-top-inner span {
-    display: inline-block;
-}
+    .back-to-top,
+    & .back-to-top-inner {
+        background: none;
+        margin: 0;
+        opacity: 0.8;
+        position: fixed;
+        bottom: 5%;
+        right: 1.2%;
+        width: 48px;
+        height: 48px;
+        z-index: 100;
+        text-decoration: none;
+        color: $primary-text;
+        background-color: #a0a0a0;
+        text-align: center;
+        padding: 4px;
+        display: none;
+        outline: none;
 
-.menuContainer .navbar {
-    padding: 0 !important;
-}
+        span {
+            display: inline-block;
+        }
 
-.back-to-top,
-.back-to-top-inner {
-    background: none;
-    margin: 0;
-    opacity: 0.8;
-    position: fixed;
-    bottom: 5%;
-    right: 1.2%;
-    width: 48px;
-    height: 48px;
-    z-index: 100;
-    text-decoration: none;
-    color: $primary-text;
-    background-color: #a0a0a0;
-    text-align: center;
-    padding: 4px;
-    display: none;
-    outline: none;
-    text-decoration: none;
-}
+        i {
+            font-size: 21px;
+        }
+    }
 
-.back-to-top i,
-.back-to-top-inner i {
-    font-size: 21px;
+    .clear-br {
+        clear: both;
+    }
+
+    .title {
+        color: $primary-text;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    .navLinks {
+        padding-left: 18px;
+        width: 100%;
+        padding-bottom: 12px;
+        border-bottom: 1px dashed #878d9b;
+        font-size: 14px;
+    }
+
+    .glyphicon-play-circle {
+        &::before {
+            color: $primary-text;
+            font-size: 14px;
+            margin-right: 2px;
+        }
+    }
+
+    &.subIcons-container {
+        padding-bottom: 0 !important;
+
+        .col-sm-12 {
+            padding: 14px 0 0 0;
+        }
+    }
+
+    .navbar {
+        padding: 0 !important;
+    }
+
+    .nav {
+        padding-left: 1px;
+
+        > li {
+            > a {
+                padding: 0;
+                color: #03a08d;
+
+                &::after {
+                    content: "|";
+                    padding: 0 10px;
+                    color: #81818b;
+                    font-weight: bold;
+                }
+
+                &:focus {
+                    background-color: transparent;
+                    color: $primary-text;
+                }
+
+                &:hover {
+                    background-color: transparent;
+                    color: $primary-text;
+                }
+            }
+
+            &:last-child {
+                > a {
+                    &::after {
+                        content: "";
+                    }
+                }
+            }
+        }
+    }
 }
 
 .mainIcon-container {
     margin: 40px auto 10px auto;
-}
-
-.mainIcon div {
-    padding: 0px;
-    border-right: 1px solid #0d8d83;
-    color: $primary-text;
-    text-align: justify;
-}
-
-.welcome a {
-    padding: 0;
-    color: #00b9a2;
-    text-decoration: none;
-}
-
-.welcome a:focus,
-.welcome a:hover {
-    background-color: transparent;
-    color: $primary-text;
-    text-decoration: underline;
 }
 
 .browserInfo {
