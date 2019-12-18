@@ -17,8 +17,7 @@ import { TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { LoginService } from './core/services/login';
 
 const appRoutes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: '**', redirectTo: 'event', pathMatch: 'full' }
+  { path: '', component: LoginComponent }
 ];
 
 @NgModule({
