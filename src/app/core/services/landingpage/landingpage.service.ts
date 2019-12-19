@@ -1,12 +1,6 @@
-import {
-    Injectable
-} from '@angular/core';
-import {
-    HttpClient
-} from '@angular/common/http';
-import {
-    Observable
-} from 'rxjs';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import * as _ from 'underscore';
 
 @Injectable({
@@ -331,7 +325,7 @@ export class LandingpageService {
                     landingParentName: 'COMMON.MENUS.LANDING.EVENT_PLANNING',
                     uiParentName: 'COMMON.MENUS.TOP_LEVEL.TXT_EVENT',
                     sublinkName: 'EVENTS.PLANNING.EVENT_REGISTRATION',
-                    state: 'eventRegistration',
+                    state: '/event/registration',
                     param: '{id: 0}'
                 }
             },
@@ -353,7 +347,7 @@ export class LandingpageService {
                     landingParentName: 'COMMON.MENUS.LANDING.EVENT_PLANNING',
                     uiParentName: 'COMMON.MENUS.TOP_LEVEL.TXT_EVENT',
                     sublinkName: 'COMMON.MENUS.SUB_MENUS.SUB_MENU_List',
-                    state: 'eventList',
+                    state: '/event',
                     param: ''
                 }
             },
