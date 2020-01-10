@@ -2,7 +2,6 @@ import { Component, OnInit, Input, SimpleChanges, EventEmitter, Output, OnChange
 import { FormGroup } from '@angular/forms';
 
 import { FieldConfig } from '../components.interface';
-import { ValidationService1, MinLength, Required } from 'services';
 
 @Component({
   selector: 'emp-text',
@@ -20,12 +19,6 @@ export class TextComponent implements OnInit {
 
   constructor() {}
   ngOnInit() {
-    const sortProgram = new ValidationService1({key: '3'});
-    console.log(sortProgram);
-
-    sortProgram.runSort(new MinLength());
-    // sort using linear search
-    sortProgram.runSort(new Required());
       //this.charactercountleft = this.data.max - (this.group.value.name1 ? this.group.value.name1.length : 0 );
   }
 
