@@ -1,0 +1,14 @@
+<div class="demo-full-width" [formGroup]="group">
+    <fieldset>
+        <legend [innerHTML]="field.label">  </legend>
+        <div class="class" *ngFor="let option of field.options">
+            <input [id]="option" type="radio" class="" [value]="option" name="gender" [formControlName]="field.name">
+            <label class="" [attr.for]="option">{{option}}</label>
+        </div>
+        <!-- etc -->
+    </fieldset>
+    
+    <ng-container *ngFor="let validation of field.validations;">
+    <p *ngIf="group.get(field.name).hasError(validation.name) && group.controls[field.name].touched">{{validation.message}}</p>
+    </ng-container>
+</div>

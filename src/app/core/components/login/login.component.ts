@@ -30,6 +30,10 @@ export class LoginComponent implements OnInit {
       this.loginData.userRole = roles;
       localStorage.setItem('userData', JSON.stringify(this.loginData));
       this.router.navigate(['/landingpage']);
+      localStorage.setItem('userData', JSON.stringify(resp.body.responseObject));
+      this.loginData = resp.body;
+      //this.getUser();
+      //this.router.navigate(['/event']);
     });
   }
 }

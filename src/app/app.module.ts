@@ -15,6 +15,7 @@ import { HeaderComponent } from './core/components/header/header.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { LoginService } from './core/services/login';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent }
@@ -41,7 +42,8 @@ const appRoutes: Routes = [
     CoreModule,
     FeaturesModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [Title, LoginService],
   bootstrap: [AppComponent]

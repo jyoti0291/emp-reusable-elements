@@ -11,4 +11,9 @@ export class FacadeService {
       this.titleService.setTitle('EMP | ' + text);
     });
   }
+  getString(key: any) {
+    this.translate.get(name).subscribe((text: string) => {
+      return text;
+    });
+  }
 }

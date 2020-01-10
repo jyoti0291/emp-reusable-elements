@@ -16,18 +16,18 @@ export class LandingpageService {
         observe: 'response' as 'response'
     };
 
-  private stateNames = {
-    ad: 'Ad',
-    admin: 'Administration',
-    campaign: 'Campaign',
-    campaignPlanning: 'CampainPlanning',
-    emagazine: 'EMagazine',
-    event: 'Event',
-    kpiDashboard: 'KpiDashboard',
-    publishing: 'Publishing',
-    releaseCheck: 'ReleaseCheck',
-    update: 'Update'
-  };
+    private stateNames = {
+        ad: 'Ad',
+        admin: 'Administration',
+        campaign: 'Campaign',
+        campaignPlanning: 'CampainPlanning',
+        emagazine: 'EMagazine',
+        event: 'Event',
+        kpiDashboard: 'KpiDashboard',
+        publishing: 'Publishing',
+        releaseCheck: 'ReleaseCheck',
+        update: 'Update'
+    };
 
     getCommonLinks() {
         return 'landingPage,' +

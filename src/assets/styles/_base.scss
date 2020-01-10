@@ -4,3 +4,318 @@ body {
     font-size: 30px;
     font-family: $font-type;
 }
+
+.fullLayouteLeftSidebar {
+    width: 4.33333%;
+    padding: 0;
+}
+
+.fullLayouteRightContainer {
+    width: 95.6667%;
+    margin-left: 4.33333%;
+    padding: 0;
+}
+
+.leftSidebar {
+    background-color: #00b9a2;
+    bottom: 32px;
+    display: block;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: fixed;
+    top: 50px;
+    z-index: 2;
+}
+
+.leftSidebar ul,
+.leftSidebar ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.leftSidebar ul {
+    width: 100%;
+    height: 98%;
+    overflow: auto;
+    overflow-x: hidden;
+    padding: 6px 77px 0 17px;
+}
+
+.leftSidebar ul li {
+    border-bottom: 1px solid #087366;
+    width: 26px;
+    margin: 0 auto;
+    padding: 14px 0;
+}
+
+.leftSidebar ul li a,
+.headerMenu {
+    text-indent: -9999px;
+    display: block;
+    background: url(../images/sprite.png) no-repeat;
+    width: 27px;
+    height: 24px;
+    outline: none;
+    cursor: pointer;
+}
+
+.leftSidebar ul li a.home {
+    background-position: -168px -13px;
+}
+
+.leftSidebar ul li a.basicInformation {
+    background-position: -206px -13px;
+}
+
+.leftSidebar ul li a.mailMagazine {
+    background-position: -246px -13px;
+}
+
+.leftSidebar ul li a.releaseCheckDetails {
+    background-position: -90px -714px;
+}
+
+.leftSidebar ul li a.assignmentDetails {
+    background-position: -325px -10px;
+}
+
+.leftSidebar ul li a.vendorManagement {
+    background-position: -366px -13px;
+}
+
+.leftSidebar ul li a.assetCreation {
+    background-position: -405px -10px;
+}
+
+.leftSidebar ul li a.others {
+    background-position: -286px -10px;
+}
+
+.leftSidebar ul li a.assignRegistration {
+    background-position: -327px -281px;
+}
+
+.leftSidebar ul li a.approval {
+    background-position: -165px -282px;
+}
+
+.leftSidebar ul li a.reject {
+    background-position: -206px -282px;
+}
+
+.leftSidebar ul li a.eventPlanning {
+    background-position: -248px -280px;
+}
+
+.leftSidebar ul li a.assignNewUser {
+    background-position: -289px -280px;
+}
+
+.leftSidebar ul li a.user-personalinfo {
+    background: none;
+    font-size: 24px;
+    text-indent: initial;
+    color: #444;
+    padding-left: 2px;
+    padding-top: 2px;
+}
+
+.leftSidebar ul li a.menuIdRequestList {
+    background-position: -408px -279px;
+}
+
+.leftSidebar ul li a.menuIdRequestList:hover,
+.leftSidebar ul li a.menuIdRequestList.active {
+    background-position: -408px -327px;
+}
+
+.leftSidebar ul li a.menuIdCreateRequest {
+    background-position: -367px -279px;
+}
+
+.leftSidebar ul li a.menuIdCreateRequest:hover,
+.leftSidebar ul li a.menuIdCreateRequest.active {
+    background-position: -367px -325px;
+}
+
+.leftSidebar ul li a.assignNewUser:hover,
+.leftSidebar ul li a.assignNewUser.active {
+    background-position: -289px -326px;
+}
+
+.leftSidebar ul li a.user-personalinfo:hover,
+.leftSidebar ul li a.user-personalinfo.active,
+.leftSidebar ul li a.user-personalinfo:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.leftSidebar ul li a.eventPlanning:hover,
+.leftSidebar ul li a.eventPlanning.active {
+    background-position: -248px -326px;
+}
+
+.leftSidebar ul li a.reject:hover,
+.leftSidebar ul li a.reject.active {
+    background-position: -206px -322px;
+}
+
+.leftSidebar ul li a.approval:hover,
+.leftSidebar ul li a.approval.active {
+    background-position: -165px -325px;
+}
+
+.leftSidebar ul li a.assignRegistration:hover,
+.leftSidebar ul li a.assignRegistration.active {
+    background-position: -327px -326px;
+}
+
+.leftSidebar ul li a.sendRequest {
+    background-position: -370px -236px;
+}
+
+.leftSidebar ul li a.sendRequest:hover,
+.leftSidebar ul li a.sendRequest.active {
+    background-position: -370px -236px;
+}
+
+.leftSidebar ul li a.home:hover,
+.leftSidebar ul li a.home.active {
+    background-position: -7px -13px;
+}
+
+.leftSidebar ul li a.basicInformation:hover,
+.leftSidebar ul li a.basicInformation.active {
+    background-position: -46px -13px;
+}
+
+.leftSidebar ul li a.mailMagazine:hover,
+.leftSidebar ul li a.mailMagazine.active {
+    background-position: -86px -13px;
+}
+
+.leftSidebar ul li a.releaseCheckDetails:hover,
+.leftSidebar ul li a.releaseCheckDetails.active {
+    background-position: -139px -714px;
+}
+
+.leftSidebar ul li a.assignmentDetails:hover,
+.leftSidebar ul li a.assignmentDetails.active {
+    background-position: -445px -10px;
+}
+
+.leftSidebar ul li a.vendorManagement:hover,
+.leftSidebar ul li a.vendorManagement.active {
+    background-position: -486px -13px;
+}
+
+.leftSidebar ul li a.assetCreation:hover,
+.leftSidebar ul li a.assetCreation.active {
+    background-position: -525px -10px;
+}
+
+.leftSidebar ul li a.others:hover,
+.leftSidebar ul li a.others.active {
+    background-position: -126px -10px;
+}
+
+.leftSidebar ul li a.calView {
+    background-position: -326px -104px;
+}
+
+.leftSidebar ul li a.calView:hover,
+.leftSidebar ul li a.calView.active {
+    background-position: -446px -104px;
+}
+
+.leftSidebar ul li a.import {
+    background-position: -248px -104px;
+}
+
+.leftSidebar ul li a.import:hover,
+.leftSidebar ul li a.import.active {
+    background-position: -368px -104px;
+}
+
+.leftSidebar ul li a.export {
+    background-position: -288px -104px;
+}
+
+.leftSidebar ul li a.export:hover,
+.leftSidebar ul li a.export.active {
+    background-position: -408px -104px;
+}
+
+.leftSidebar ul li a.adFramebasicInformation:hover,
+.leftSidebar ul li a.adFramebasicInformation.active {
+    background-position: -44px -11px;
+}
+
+h2.page-header {
+    background: #666666 !important;
+    color: #fff !important;
+    margin: 0 0 20px 0;
+    box-shadow: 0 5px 4px #ccc;
+    border: 0;
+    font-size: 18px;
+    padding: 10px 15px;
+    height: 45px;
+}
+
+h2.page-sub-header {
+    background: #dcdcdc !important;
+    color: #444 !important;
+    margin: 0 0 10px 0;
+    border: 0;
+    font-size: 16px;
+    padding: 6px 20px;
+    height: 30px;
+}
+
+.scrollDiv h2.page-header,
+h2.page-header.outSide {
+    background: #d5d5d5 !important;
+    color: #444 !important;
+    font-size: 15px;
+    font-weight: bold;
+    height: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 40px;
+}
+
+.eventReg-section .page-header .iconEventRegistration {
+    background-position: -447px -101px;
+}
+
+.eventReg-section .page-header span {
+    background: url(~/assets/images/sprite.png) no-repeat;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    margin: 0 8px 0 0;
+    vertical-align: middle;
+}
+
+.eventReg-section .page-header span.iconCampaignSetting {
+    background-position: -560px -547px !important;
+}
+
+.leftSidebar ul li a.campaignSetting:hover,
+.leftSidebar ul li a.campaignSetting.active {
+    background-position: -520px -547px !important;
+}
+
+.outerScrollHeading h2.page-header {
+    margin-bottom: 0;
+}
+
+.eventReg-section.form-horizontal .control-label {
+    text-align: left;
+    font-size: 12px;
+    font-weight: normal;
+    min-width: 180px;
+    padding-top: 5px;
+}

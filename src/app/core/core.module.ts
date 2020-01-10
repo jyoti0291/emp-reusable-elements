@@ -5,7 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { SharedModule } from 'shared';
 
-import { CommonService, LandingpageService } from './services';
+import { CommonService, LandingpageService, ValidationService } from './services';
 import { FacadeService } from './services';
 import { LoginService } from './services';
 import { InterceptorProvider } from './interceptors';
@@ -26,11 +26,13 @@ const appRoutes: Routes = [
   ],
   providers: [
     CommonService,
+    CommonLayoutService,
     FacadeService,
     InterceptorProvider,
+    LandingpageService,
     LoginService,
-    CommonLayoutService,
-    LandingpageService
-  ]
+    ValidationService
+  ],
+  exports: [SharedModule]
 })
 export class CoreModule { }
