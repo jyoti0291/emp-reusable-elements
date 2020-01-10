@@ -1,3 +1,3 @@
-export interface SortingStrategy {
+export interface ValidatorContract {
     init(array);
 }

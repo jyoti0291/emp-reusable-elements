@@ -12,7 +12,7 @@
         <!-- etc -->
     </fieldset>
     
-    <p *ngIf="group.get(hiddenControlName).hasError('required') && group.controls[hiddenControlName].touched">
+    <p *ngIf="group.get(hiddenControlName).hasError('required') && group.controls[hiddenControlName] && group.controls[hiddenControlName].touched">
         At least one checkbox is required to check
     </p>
 </div>

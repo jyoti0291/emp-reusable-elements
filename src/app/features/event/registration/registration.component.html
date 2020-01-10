@@ -1,6 +1,6 @@
 <form [formGroup]="form" (submit)="onSubmit($event)">
-    <emp-checkbox [field]="fields.userRoleCheckbox" [group]="form" [validators]="remember"></emp-checkbox>
-    <emp-text [field]="fields.usernameText" [group]="form" [data]="config" (changedValue)="local($event)"></emp-text>
+    <emp-checkbox [field]="fields.userRoleCheckbox" [group]="form" [minimum]="minCheck"></emp-checkbox>
+    <emp-text [field]="fields.usernameText" [group]="form" (changedValue)="local($event)"></emp-text>
     <emp-radiobutton [field]="fields.genderRadio" [group]="form"></emp-radiobutton>
     <emp-button></emp-button>
 </form>

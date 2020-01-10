@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 //import { EventService } from 'services';
 import { FormGroup } from '@angular/forms';
 import { CommonService } from 'services';
+import { fieldConfig } from 'app/shared/config';
+
 
 @Component({
   selector: 'emp-registration',
@@ -10,41 +12,17 @@ import { CommonService } from 'services';
 })
 export class RegistrationComponent implements OnInit {
   form: FormGroup;
-  fields: object = {
-    usernameText : {
-      type: 'input',
-      label: 'Username1',
-      inputType: 'text',
-      name: 'name1',
-      validations: [ {required : true} , {minlength: 5 }, {pattern: 'alpha'}]
-    },
-    genderRadio :  {
-      label: 'Select Gender',
-      name: 'gender',
-      inputType: 'radio',
-      options: ['Male', 'Female'],
-      validations: [ {required : true}]
-    },
-    userRoleCheckbox :  {
-      label: 'Select Role',
-      name: 'role',
-      inputType: 'checkbox',
-      options: [{ key: 1, text: 'Admin'},
-      { key: 2, text: 'Director'},
-      { key: 3, text: 'Professor'},
-      { key: 4, text: 'Student'}],
-      validations: [ {required : true}]
-    }
-  };
-  public remember = 1;
+  fields: object = fieldConfig.registration;
+  public minCheck = 1;
 
   constructor(private commonService: CommonService) { }
 
   ngOnInit() {
     // this.form.patchValue({
-    //   name1: 'Ajay'
+    //   name1: 'any name'
     // });
     this.form = this.commonService.prepareForm(this.fields);
+    console.log(this.form);
   }
 
   onSubmit(event: Event) {
@@ -57,7 +35,7 @@ export class RegistrationComponent implements OnInit {
     }
   }
   local(temp: any) {
-    console.log(temp);
+    //console.log(temp);
 
   }
 

@@ -11,7 +11,7 @@ import { CheckBoxGroup, FieldConfig } from '../components.interface';
 })
 export class CheckboxComponent implements OnInit {
   // @Input() name: string;
-  @Input() validators: Array<any>;
+  @Input() minimum: string;
   // @Input() options: Array<any>;
   @Input() group: FormGroup;
   @Input() field: FieldConfig;
@@ -27,13 +27,16 @@ export class CheckboxComponent implements OnInit {
       checkbox: new FormControl(false)
     })));
 
-    const hiddenControl = new FormControl(this.mapItems(checkboxGroup.value), Validators.required);
-    checkboxGroup.valueChanges.subscribe((v) => {
-      hiddenControl.setValue(this.mapItems(v));
-    });
-    this.hiddenControlName = this.field.name + 'selectedItems';
     this.group.addControl(this.field.name, checkboxGroup);
-    this.group.addControl(this.hiddenControlName, hiddenControl);
+    if (this.minimum) {
+      const hiddenControl = new FormControl(this.mapItems(checkboxGroup.value), Validators.required);
+      checkboxGroup.valueChanges.subscribe((v) => {
+        hiddenControl.setValue(this.mapItems(v));
+      });
+      this.hiddenControlName = this.field.name + 'selectedItems';
+      this.group.addControl(this.hiddenControlName, hiddenControl);
+    }
+
   }
   mapItems(items: CheckBoxGroup[]) {
     const selectedItems = items.filter((item: CheckBoxGroup) => item.checkbox).map((item) => item.id);

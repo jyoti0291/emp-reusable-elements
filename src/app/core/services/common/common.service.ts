@@ -39,7 +39,8 @@ export class CommonService {
         return;
       }
       if (fields[key].hasOwnProperty('validations')) {
-        fields[key].validations = this.validationService.prepareValidation(fields[key].validations);
+        // commented here to add validation from strategic pattern
+        //fields[key].validations = this.validationService.prepareValidation(fields[key].validations);
       }
       const control = this.fb.control(
         fields[key].value,

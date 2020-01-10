@@ -1,8 +1,13 @@
-import { SortingStrategy } from './interface';
+import { ValidatorContract } from './interface';
+import { Validators } from '@angular/forms';
 
-export class Required implements SortingStrategy {
+export class Required implements ValidatorContract {
     init() {
-        console.log('Required algorithm');
+        return {
+            name: 'required',
+            validator: Validators.required,
+            message: 'Required!'
+        };
         // implementation here
     }
 }

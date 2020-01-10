@@ -1,7 +1,6 @@
-import { SortingStrategy } from './interface';
+import { ValidatorContract } from './interface';
 
-// linear search sorting algorithm implementing the `SortingStrategy` interface, it implements its algorithm in the `init` method
-export class MinLength implements SortingStrategy {
+export class MinLength implements ValidatorContract {
     init(array) {
         console.log('Minlength algorithm');
         return true;

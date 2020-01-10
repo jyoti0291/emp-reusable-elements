@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, SimpleChanges, EventEmitter, Output, OnChanges } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormGroup, Validators } from '@angular/forms';
 
 import { FieldConfig } from '../components.interface';
 import { ValidationService1, MinLength, Required } from 'services';
@@ -21,12 +21,11 @@ export class TextComponent implements OnInit {
   constructor() {}
   ngOnInit() {
     const sortProgram = new ValidationService1({key: '3'});
-    console.log(sortProgram);
-
     sortProgram.runSort(new MinLength());
-    // sort using linear search
-    sortProgram.runSort(new Required());
-      //this.charactercountleft = this.data.max - (this.group.value.name1 ? this.group.value.name1.length : 0 );
+    const result = sortProgram.runSort(new Required());
+    this.group.controls[this.field.name].setValidators(result.validator);
+    this.field.validations.push(result);
+    //this.charactercountleft = this.data.max - (this.group.value.name1 ? this.group.value.name1.length : 0 );
   }
 
   onChange() {
