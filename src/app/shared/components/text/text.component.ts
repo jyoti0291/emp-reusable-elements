@@ -3,6 +3,7 @@ import { FormGroup, Validators } from '@angular/forms';
 
 import { FieldConfig } from '../components.interface';
 import { ValidationService1, MinLength, Required } from 'services';
+import { Pattern } from 'app/core/services/validation/pattern';
 
 @Component({
   selector: 'emp-text',
@@ -20,11 +21,20 @@ export class TextComponent implements OnInit {
 
   constructor() {}
   ngOnInit() {
-    const sortProgram = new ValidationService1({key: '3'});
-    sortProgram.runSort(new MinLength());
-    const result = sortProgram.runSort(new Required());
-    this.group.controls[this.field.name].setValidators(result.validator);
-    this.field.validations.push(result);
+    const vsInstance = new ValidationService1();
+
+    const required = vsInstance.run(new Required());
+
+    const min = vsInstance.run(new MinLength(this.field.validations.minlength));
+
+    const pattern = vsInstance.run(new Pattern(this.field.validations.pattern));
+    this.group.controls[this.field.name].setValidators([required.validator, min.validator, pattern.validator]);
+
+    this.field.validations = [];
+    this.field.validations.push(required);
+    this.field.validations.push(min);
+    this.field.validations.push(pattern);
+
     //this.charactercountleft = this.data.max - (this.group.value.name1 ? this.group.value.name1.length : 0 );
   }
 

@@ -4,7 +4,10 @@
     <ng-container *ngFor="let validation of field.validations;">
     <p *ngIf="group.get(field.name).hasError(validation.name) && group.controls[field.name].touched">{{validation.message}}</p>
     </ng-container>
-    <!-- --{{group.controls[field.name].value}} -->
+    <!-- <p>{{field.validations | json}}</p> -->
+    <!-- <p>{{group.get(field.name).hasError('pattern')}}</p> -->
+    <!-- --{{group.get(field.name).hasError(validation.name)}} -->
+
 </div>
 
 <!-- <mat-form-field class="demo-full-width" [formGroup]="group"> -->
