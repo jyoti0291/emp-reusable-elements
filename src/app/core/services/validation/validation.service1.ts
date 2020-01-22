@@ -7,10 +7,10 @@ import { ValidatorContract } from './interface';
 
 //config:any;
 export class ValidationService1 {
-  constructor(private data) {
+  constructor() {
 
   }
   run(normal: ValidatorContract) {
-    return normal.init(this.data);
+    return normal.init();
   }
 }

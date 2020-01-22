@@ -1,3 +1,3 @@
 export interface ValidatorContract {
-    init(data);
+    init();
 }
