@@ -782,7 +782,7 @@ export const global = {
         sampleCSVAdTagReleaseCheckListPathJP: true ? 'sampleCSV/AddFrameDataForCheckTemplateJP.xls' : '../sampleCSV/AddFrameDataForCheckTemplateJP.xls',
         sampleCSVParentCampaignListPath: true ? 'sampleCSV/CampaignImportTemplate.xls' : '../sampleCSV/CampaignImportTemplate.xls',
         sampleCSVPointCampaignListPath: true ? 'sampleCSV/PointImportTemplate.xls' : '../sampleCSV/PointImportTemplate.xls',
-        sampleCSVPointCampaignListPath: true ? 'sampleCSV/CouponImportTemplate.xls' : '../sampleCSV/CouponImportTemplate.xls',
+        sampleCSVCouponCampaignListPath: true ? 'sampleCSV/CouponImportTemplate.xls' : '../sampleCSV/CouponImportTemplate.xls',
         maximumAllowedFileSize: 25000000
       },
       exportDisabledMessage: 'No record(s) selected to export',

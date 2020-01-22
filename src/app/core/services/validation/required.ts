@@ -3,7 +3,7 @@ import { Validators } from '@angular/forms';
 import { ValidatorContract } from './interface';
 
 export class Required implements ValidatorContract {
-    init(data) {
+    init() {
         return {
             name: 'required',
             validator: Validators.required,
