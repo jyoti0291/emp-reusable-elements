@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FieldConfig } from '../components.interface';
 
 @Component({
   selector: 'emp-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
-export class ButtonComponent implements OnInit {
+export class ButtonComponent {
+  @Input() field: FieldConfig;
+  @Output() action = new EventEmitter<any>();
 
   constructor() { }
 
-  ngOnInit() {
+  return() {
+    this.action.emit();
   }
 
 }

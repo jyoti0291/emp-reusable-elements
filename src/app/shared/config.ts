@@ -7,16 +7,16 @@ export const fieldConfig = {
             name: 'name1',
             validationConfig: {minlength: 5 , pattern: 'alpha', required : true},
             validationMessages: []
-          },
-          genderRadio :  {
+        },
+        genderRadio :  {
             label: 'Select Gender',
             name: 'gender',
             inputType: 'radio',
             options: ['Male', 'Female'],
             validationConfig: {required : true},
             validationMessages: []
-          },
-          userRoleCheckbox :  {
+        },
+        userRoleCheckbox :  {
             label: 'Select Role',
             name: 'role',
             inputType: 'checkbox',
@@ -28,6 +28,10 @@ export const fieldConfig = {
             ],
             validationConfig: {required : true},
             validationMessages: []
-          }
+        },
+        submitButton: {
+          label: 'Submit',
+          inputType: 'submit'
+        }
     }
 };
