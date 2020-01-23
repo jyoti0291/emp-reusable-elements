@@ -1,22 +1,22 @@
-export interface Validator {
+export interface ValidationMessage {
     name: string;
-    validator: any;
+    validator?: any;
     message: string;
 }
-export interface ValidatorDeclaration {
-    key: string;
-    value: any;
+export interface ValidationConfig {
+    maxlength?: number;
+    minlength?: number;
+    pattern?: boolean;
+    required?: boolean;
 }
 export interface FieldConfig {
     label?: string;
-    name?: string;
+    name: string;
     inputType?: string;
     options?: any[];
-    collections?: any;
-    type?: string;
     value?: any;
-    //validations?: Validator[];
-    validations?: Array<object>;
+    validationConfig?: ValidationConfig;
+    validationMessages?: ValidationMessage[];
 }
 export interface CheckBoxGroup {
     id: string;

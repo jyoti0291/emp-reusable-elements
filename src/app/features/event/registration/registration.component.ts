@@ -22,7 +22,6 @@ export class RegistrationComponent implements OnInit {
     //   name1: 'any name'
     // });
     this.form = this.commonService.prepareForm(this.fields);
-    console.log(this.form);
   }
 
   onSubmit(event: Event) {
@@ -36,7 +35,5 @@ export class RegistrationComponent implements OnInit {
   }
   local(temp: any) {
     //console.log(temp);
-
   }
-
 }

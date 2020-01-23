@@ -5,24 +5,29 @@ export const fieldConfig = {
             label: 'Username1',
             inputType: 'text',
             name: 'name1',
-            validations: {minlength: 5 , pattern: 'alpha'}
+            validationConfig: {minlength: 5 , pattern: 'alpha', required : true},
+            validationMessages: []
           },
           genderRadio :  {
             label: 'Select Gender',
             name: 'gender',
             inputType: 'radio',
             options: ['Male', 'Female'],
-            validations: {required : true}
+            validationConfig: {required : true},
+            validationMessages: []
           },
           userRoleCheckbox :  {
             label: 'Select Role',
             name: 'role',
             inputType: 'checkbox',
-            options: [{ key: 1, text: 'Admin'},
-            { key: 2, text: 'Director'},
-            { key: 3, text: 'Professor'},
-            { key: 4, text: 'Student'}],
-            validations: {required : true}
+            options: [
+              { key: 1, text: 'Admin'},
+              { key: 2, text: 'Director'},
+              { key: 3, text: 'Professor'},
+              { key: 4, text: 'Student'}
+            ],
+            validationConfig: {required : true},
+            validationMessages: []
           }
     }
 };

@@ -1,5 +1,4 @@
-export * from './validation.service';
-export * from './validation.service1';
+export { ValidationService } from './validation.service';
 export { ValidatorContract } from './interface';
 export { MinLength }  from './minLength';
 export { Required } from './required';
