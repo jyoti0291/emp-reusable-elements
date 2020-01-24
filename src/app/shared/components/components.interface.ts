@@ -6,7 +6,7 @@ export interface ValidationMessage {
 export interface ValidationConfig {
     maxlength?: number;
     minlength?: number;
-    pattern?: boolean;
+    pattern?: string;
     required?: boolean;
 }
 export interface FieldConfig {

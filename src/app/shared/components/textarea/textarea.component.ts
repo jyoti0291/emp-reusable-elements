@@ -1,23 +1,21 @@
-import { Component, Input, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 import { FieldConfig } from '../components.interface';
-import { MinLength, Pattern, Required, ValidationService } from 'services';
+import { MinLength, Pattern, Required, ValidationService  } from 'services';
 
 @Component({
-  selector: 'emp-text',
-  templateUrl: './text.component.html',
-  styleUrls: ['./text.component.scss']
+  selector: 'emp-textarea',
+  templateUrl: './textarea.component.html',
+  styleUrls: ['./textarea.component.scss']
 })
-export class TextComponent implements OnInit {
+export class TextareaComponent implements OnInit {
   @Input() field: FieldConfig;
   @Input() group: FormGroup;
   @Output() changedValue = new EventEmitter<string>();
 
-  charactercountleft: number;
-  public displayErrors: boolean;
+  constructor() { }
 
-  constructor() {}
   ngOnInit() {
     const vsInstance = new ValidationService();
 
@@ -27,8 +25,6 @@ export class TextComponent implements OnInit {
 
     this.group.controls[this.field.name].setValidators([required.validator, min.validator, pattern.validator]);
     this.field.validationMessages.push(min , pattern , required);
-
-    //this.charactercountleft = this.data.max - (this.group.value.name1 ? this.group.value.name1.length : 0 );
   }
 
   onChange() {

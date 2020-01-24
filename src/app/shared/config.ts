@@ -29,6 +29,12 @@ export const fieldConfig = {
             validationConfig: {required : true},
             validationMessages: []
         },
+        area : {
+            label: 'description',
+            name: 'description',
+            validationConfig: {minlength: 5 , pattern: 'alpha', required : true},
+            validationMessages: []
+        },
         submitButton: {
           label: 'Submit',
           inputType: 'submit'

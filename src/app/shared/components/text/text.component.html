@@ -1,11 +1,13 @@
-<div class="demo-full-width" [formGroup]="group">
-    <label [attr.for]="field.name">{{field.name}}</label>
-    <input [attr.id]="field.name" [formControlName]="field.name" [placeholder]="field.label" [type]="field.inputType" (change)="onChange()">
-    <ng-container *ngFor="let validation of field.validationMessages;">
-    <p *ngIf="group.get(field.name).hasError(validation.name) && group.controls[field.name].touched">{{validation.message}}</p>
-    </ng-container>
+<div class="form-group row" [formGroup]="group">
+    <label [attr.for]="field.name" class="col-sm-2 col-form-label">{{field.label}}</label>
+    <div class="col-sm-10">
+        <input [attr.id]="field.name" [formControlName]="field.name" [placeholder]="field.label" [type]="field.inputType" (change)="onChange()" class="form-control">
+        <ng-container *ngFor="let validation of field.validationMessages;">
+            <p *ngIf="group.get(field.name).hasError(validation.name) && group.controls[field.name].touched">{{validation.message}}</p>
+        </ng-container>
+    </div>
 </div>
 
-<!-- <mat-form-field class="demo-full-width" [formGroup]="group"> -->
-    <!-- <input matInput [formControlName]="field.name" [placeholder]="field.label" [type]="field.inputType">
+<!-- <mat-form-field class="demo-full-width" [formGroup]="group">
+   <input matInput [formControlName]="field.name" [placeholder]="field.label" [type]="field.inputType">
 </mat-form-field> -->
