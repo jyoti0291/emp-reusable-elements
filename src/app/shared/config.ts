@@ -35,6 +35,12 @@ export const fieldConfig = {
             validationConfig: {minlength: 5 , pattern: 'alpha', required : true},
             validationMessages: []
         },
+        userTeamSelect : {
+            label: 'Team',
+            name: 'team',
+            validationConfig: {required : true},
+            validationMessages: []
+        },
         submitButton: {
           label: 'Submit',
           inputType: 'submit'
