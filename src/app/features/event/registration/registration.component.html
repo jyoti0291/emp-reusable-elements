@@ -5,6 +5,7 @@
         <emp-radiobutton [field]="fields.genderRadio" [group]="form"></emp-radiobutton>
         <emp-textarea [field]="fields.area" [group]="form" (changedValue)="local($event)"></emp-textarea>
         <emp-select [field]="fields.userTeamSelect" [group]="form"></emp-select>
+        <emp-date [field]="fields.userRegDate" [group]="form" (changedValue)="local($event)"></emp-date>
         <emp-button [field]="fields.submitButton"></emp-button>
     </form>
 </div>

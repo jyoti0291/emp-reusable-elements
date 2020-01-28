@@ -1,0 +1,18 @@
+<div class="demo-full-width" [formGroup]="group">
+    <label [attr.for]="field.name">{{field.label}}</label>
+    <div class="input-group">
+        <input class="form-control" [attr.id]="field.name" [formControlName]="field.name"  autocomplete='off' ngbDatepicker #d="ngbDatepicker" 
+        [placeholder]="field.placeholder" 
+         (change)="onChange()">
+         <div class="input-group-append">
+            <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button">
+                <i class="fa fa-calendar fa-4" aria-hidden="true" (click)="d.toggle()"></i>
+            </button>
+        </div>
+    </div>
+    <ng-container *ngFor="let validation of field.validationMessages;">
+    <p *ngIf="group.get(field.name).hasError(validation.name) && group.controls[field.name].touched">{{validation.message}}</p>
+    </ng-container>
+</div>
+
+  

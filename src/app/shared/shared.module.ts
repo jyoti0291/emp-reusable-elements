@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 import { PipesModule } from './pipes/index';
 import { CommonLayoutService } from './services';
@@ -11,7 +13,7 @@ import { RadiobuttonComponent } from './components/radiobutton/radiobutton.compo
 import { ButtonComponent } from './components/button/button.component';
 import { SelectComponent } from './components/select/select.component';
 import { TextareaComponent } from './components/textarea/textarea.component';
-
+import { DateComponent } from './components/date/date.component';
 @NgModule({
     declarations: [
         CheckboxComponent,
@@ -19,9 +21,10 @@ import { TextareaComponent } from './components/textarea/textarea.component';
         RadiobuttonComponent,
         ButtonComponent,
         SelectComponent,
-        TextareaComponent
+        TextareaComponent,
+        DateComponent
     ],
-    imports: [CommonModule, FormsModule, PipesModule, ReactiveFormsModule],
+    imports: [CommonModule, FormsModule, PipesModule, ReactiveFormsModule, NgbModule],
     exports: [
         TranslateModule,
         PipesModule,
@@ -32,7 +35,8 @@ import { TextareaComponent } from './components/textarea/textarea.component';
         ReactiveFormsModule,
         FormsModule,
         SelectComponent,
-        TextareaComponent
+        TextareaComponent,
+        DateComponent
     ],
     providers: [CommonLayoutService]
 })

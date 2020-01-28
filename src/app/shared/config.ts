@@ -44,6 +44,20 @@ export const fieldConfig = {
         submitButton: {
           label: 'Submit',
           inputType: 'submit'
+        },
+        userRegDate : {
+          label: 'User Reg date',
+          placeholder:'yyyy-mm-dd',
+          inputType: 'date',
+          name: 'regDate',
+          validationConfig: {required : true},
+          validationMessages: [],
+          datePickerSettings:{
+            displayMonths:2,
+            outsideDays:'hidden',
+            navigation:'select',
+            showWeekNumbers: false
+          }
         }
     }
 };
