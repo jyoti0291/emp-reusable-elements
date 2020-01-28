@@ -22,6 +22,7 @@ export class RegistrationComponent implements OnInit {
     //   name1: 'any name'
     // });
     this.form = this.commonService.prepareForm(this.fields);
+    fieldConfig.registration.userTeamSelect.value = 1;
   }
 
   onSubmit(event: Event) {
