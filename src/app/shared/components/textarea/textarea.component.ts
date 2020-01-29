@@ -5,7 +5,7 @@ import { FieldConfig } from '../components.interface';
 import { MinLength, Pattern, Required, ValidationService  } from 'services';
 
 @Component({
-  selector: 'emp-textarea',
+  selector: 'rx-textarea',
   templateUrl: './textarea.component.html',
   styleUrls: ['./textarea.component.scss']
 })

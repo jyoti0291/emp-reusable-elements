@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'emp-event',
+  selector: 'rx-event',
   templateUrl: './event.component.html',
   styleUrls: ['./event.component.scss']
 })

@@ -6,7 +6,7 @@ import { CommonLayoutService } from 'app/shared/services';
 import { LandingpageService, FacadeService } from 'services';
 
 @Component({
-  selector: 'emp-landingpage',
+  selector: 'rx-andingpage',
   templateUrl: './landingpage.component.html',
   styleUrls: ['./landingpage.component.scss'],
 })

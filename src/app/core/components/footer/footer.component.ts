@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
-  selector: 'emp-footer',
+  selector: 'rx-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })

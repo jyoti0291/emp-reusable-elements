@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
-  selector: 'emp-header',
+  selector: 'rx-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
         if (event instanceof NavigationEnd) {
           this.headerVisibility = true;
           if (this.router.url === '/landingpage' || this.router.url === '/') {
-            this.headerClass = 'emp-header';
+            this.headerClass = 'rx-eader';
             if (this.router.url === '/') {
               this.headerVisibility = false;
             }

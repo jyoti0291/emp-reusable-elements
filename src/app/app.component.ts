@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 
 @Component({
-  selector: 'emp-root',
+  selector: 'rx-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'emp-user-interface';
+  title = 'EMP-user-interface';
   public locale: string;
   private res = 'sdfasdfasdfasdfasdfasdfasdfasdfasdf';
   constructor(private translate: TranslateService) {

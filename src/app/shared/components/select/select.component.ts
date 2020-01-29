@@ -13,7 +13,7 @@ import { FieldConfig } from "../components.interface";
 import { ValidationService, Required } from "services";
 
 @Component({
-    selector: "emp-select",
+    selector: "rx-select",
     templateUrl: "./select.component.html",
     styleUrls: ["./select.component.scss"]
 })

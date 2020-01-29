@@ -5,16 +5,15 @@ import { CheckBoxGroup, FieldConfig } from '../components.interface';
 
 
 @Component({
-  selector: 'emp-checkbox',
+  selector: 'rx-checkbox',
   templateUrl: './checkbox.component.html',
   styleUrls: ['./checkbox.component.scss']
 })
 export class CheckboxComponent implements OnInit {
   // @Input() name: string;
-  @Input() minimum: string;
   // @Input() options: Array<any>;
   @Input() group: FormGroup;
-  @Input() field: FieldConfig;
+  @Input() field: any;
 
   @Output() callback: EventEmitter<Array<any>>;
   form: FormGroup;
@@ -28,7 +27,7 @@ export class CheckboxComponent implements OnInit {
     })));
 
     this.group.addControl(this.field.name, checkboxGroup);
-    if (this.minimum) {
+    if (this.field.mincheck) {
       const hiddenControl = new FormControl(this.mapItems(checkboxGroup.value), Validators.required);
       checkboxGroup.valueChanges.subscribe((v) => {
         hiddenControl.setValue(this.mapItems(v));
@@ -40,7 +39,7 @@ export class CheckboxComponent implements OnInit {
   }
   mapItems(items: CheckBoxGroup[]) {
     const selectedItems = items.filter((item: CheckBoxGroup) => item.checkbox).map((item) => item.id);
-    return selectedItems.length ? selectedItems : null;
+    return selectedItems.length >= this.field.mincheck ? selectedItems : null;
   }
 
   onToggle() {

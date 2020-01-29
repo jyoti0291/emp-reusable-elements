@@ -5,7 +5,7 @@ import { FieldConfig } from '../components.interface';
 import { NgbDatepickerConfig} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'emp-date',
+  selector: 'rx-date',
   templateUrl: './date.component.html',
   styleUrls: ['./date.component.scss']
 })
@@ -39,7 +39,5 @@ export class DateComponent implements OnInit {
 
   onChange() {
     this.changedValue.emit(this.group.controls[this.field.name].value);
-  }Init() {
   }
-
 }

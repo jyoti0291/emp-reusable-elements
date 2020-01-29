@@ -6,14 +6,13 @@ import { fieldConfig } from 'app/shared/config';
 
 
 @Component({
-  selector: 'emp-registration',
+  selector: 'rx-registration',
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
   form: FormGroup;
   fields: object = fieldConfig.registration;
-  public minCheck = 1;
 
   constructor(private commonService: CommonService) { }
 
@@ -26,13 +25,6 @@ export class RegistrationComponent implements OnInit {
   }
 
   onSubmit(event: Event) {
-    event.preventDefault();
-    event.stopPropagation();
-    if (this.form.valid) {
-      //this.submit.emit(this.form.value);
-    } else {
-      this.commonService.validateAllFormFields(this.form);
-    }
   }
   local(temp: any) {
     //console.log(temp);

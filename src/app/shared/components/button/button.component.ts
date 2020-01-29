@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FieldConfig } from '../components.interface';
 
 @Component({
-  selector: 'emp-button',
+  selector: 'rx-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })

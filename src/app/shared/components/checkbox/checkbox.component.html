@@ -3,15 +3,13 @@
         <legend class="col-form-label col-sm-2 pt-0" [innerHTML]="field.label"></legend>
         <div class="col-sm-10">
             <div [formArrayName]="field.name">
-                <div *ngFor="let control of group.controls[field.name].controls" [formGroup]="control">
-                    <label [attr.for]="control.controls.id.value" class="checkbox">
-                        <input formControlName="checkbox" type="checkbox" (change)="onToggle()"/>
-                        <span class="checkbox-label" [innerHTML]="control.controls.text.value"></span>
-                    </label>
+                <div class="form-check" *ngFor="let control of group.controls[field.name].controls" [formGroup]="control">
+                    <input class="form-check-input" formControlName="checkbox" type="checkbox" (change)="onToggle()" [attr.id]="control.controls.id.value">
+                    <label class="form-check-label" [attr.for]="control.controls.id.value">{{control.controls.text.value}}</label>
                 </div>
             </div>
             <p *ngIf="group.get(hiddenControlName).hasError('required') && group.controls[hiddenControlName] && group.controls[hiddenControlName].touched">
-                At least one checkbox is required to check
+                At least {{field.mincheck}} checkbox is required to check
             </p>
         </div>
     </div>

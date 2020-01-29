@@ -5,7 +5,7 @@ import { FieldConfig } from '../components.interface';
 import { Required, ValidationService } from 'services';
 
 @Component({
-  selector: 'emp-radiobutton',
+  selector: 'rx-radiobutton',
   templateUrl: './radiobutton.component.html',
   styleUrls: ['./radiobutton.component.scss']
 })

@@ -5,7 +5,7 @@ import { FacadeService } from 'services';
 import { LoginService } from 'services';
 
 @Component({
-  selector: 'emp-login',
+  selector: 'rx-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
