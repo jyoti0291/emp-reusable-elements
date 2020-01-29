@@ -12,7 +12,7 @@ import { RadiobuttonComponent } from './components/radiobutton/radiobutton.compo
 import { ButtonComponent } from './components/button/button.component';
 import { SelectComponent } from './components/select/select.component';
 import { TextareaComponent } from './components/textarea/textarea.component';
-// import { DateComponent } from './components/date/date.component';
+import { DateComponent } from './components/date/date.component';
 import { EmailComponent } from './components/email/email.component';
 import { FormComponent } from './components/form/form.component';
 
@@ -24,7 +24,7 @@ import { FormComponent } from './components/form/form.component';
         ButtonComponent,
         SelectComponent,
         TextareaComponent,
-        // DateComponent,
+        DateComponent,
         EmailComponent,
         FormComponent
     ],
@@ -40,7 +40,7 @@ import { FormComponent } from './components/form/form.component';
         FormsModule,
         SelectComponent,
         TextareaComponent,
-        // DateComponent,
+        DateComponent,
         EmailComponent,
         FormComponent
     ],
