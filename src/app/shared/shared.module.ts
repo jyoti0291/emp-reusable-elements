@@ -15,6 +15,7 @@ import { TextareaComponent } from './components/textarea/textarea.component';
 import { DateComponent } from './components/date/date.component';
 import { EmailComponent } from './components/email/email.component';
 import { FormComponent } from './components/form/form.component';
+import { ErrorContainerComponent } from './components/error-container/error-container.component';
 
 @NgModule({
     declarations: [
@@ -26,7 +27,8 @@ import { FormComponent } from './components/form/form.component';
         TextareaComponent,
         DateComponent,
         EmailComponent,
-        FormComponent
+        FormComponent,
+        ErrorContainerComponent
     ],
     imports: [CommonModule, FormsModule, PipesModule, ReactiveFormsModule, NgbModule],
     exports: [

@@ -6,9 +6,8 @@
             <input class="form-check-input" [attr.id]="option" type="radio" [value]="option" [formControlName]="field.name">
             <label class="form-check-label" [attr.for]="option">{{option}}</label>
         </div>
-        <ng-container *ngFor="let validation of field.validationMessages;">
-            <p *ngIf="group.get(field.name).hasError(validation.name) && group.controls[field.name].touched">{{validation.message}}</p>
-        </ng-container>
+        <rx-error-container [field]="field" [group]="group"></rx-error-container>
+
       </div>
     </div>
 </fieldset>

@@ -4,9 +4,6 @@
         <select [attr.id]="field.name" [formControlName]="field.name" (change)="onChange()" [value]="field.value">
             <option *ngFor="let obj of field.options" [value]="obj.key">{{obj.value}}</option>
         </select>
-        <ng-container *ngFor="let validation of field.validationMessages;">
-            <p *ngIf="group.get(field.name).hasError(validation.name) && group.controls[field.name].touched">
-                {{validation.message}}</p>
-        </ng-container>
+        <rx-error-container [field]="field" [group]="group"></rx-error-container>
     </div>
 </div>
