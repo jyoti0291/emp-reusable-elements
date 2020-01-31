@@ -1,7 +1,7 @@
 <div class="form-group row" [formGroup]="group">
     <label [attr.for]="field.name" class="col-sm-2 col-form-label">{{field.label}}</label>
     <div class="col-sm-10">
-        <select [attr.id]="field.name" [formControlName]="field.name" (change)="onChange()" [value]="field.value">
+        <select [attr.id]="field.name" class="form-control" [formControlName]="field.name" (change)="onChange()" [value]="field.value">
             <option *ngFor="let obj of field.options" [value]="obj.key">{{obj.value}}</option>
         </select>
         <rx-error-container [field]="field" [group]="group"></rx-error-container>

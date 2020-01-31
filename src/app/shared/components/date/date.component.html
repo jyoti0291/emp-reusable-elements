@@ -1,14 +1,10 @@
-<div class="demo-full-width" [formGroup]="group">
-    <label [attr.for]="field.name">{{field.label}}</label>
-    <div class="input-group">
+<div class="form-group row" [formGroup]="group">
+    <label [attr.for]="field.name" class="col-sm-2 col-form-label">{{field.label}}</label>
+    <div class="col-sm-10">
         <input class="form-control" [attr.id]="field.name" [formControlName]="field.name"  autocomplete='off' ngbDatepicker #d="ngbDatepicker" 
-        [placeholder]="field.placeholder" 
-         (change)="onChange()">
-         <div class="input-group-append">
-            <button class="btn btn-outline-secondary fa fa-calendar" (click)="d.toggle()" type="button">
-                
-            </button>
-        </div>
+        [placeholder]="field.placeholder" (change)="onChange()">
+        <button class="btn btn-outline-secondary fa fa-calendar" (click)="d.toggle()" type="button">
+        </button>
+        <rx-error-container [field]="field" [group]="group"></rx-error-container>
     </div>
-    <rx-error-container [field]="field" [group]="group"></rx-error-container>
 </div>

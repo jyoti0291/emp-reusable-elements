@@ -1,9 +1,9 @@
 <rx-form [group]="form" (submitted)="onSubmit($event)">
     <rx-checkbox [field]="fields.userRoleCheckbox" [group]="form"></rx-checkbox>
-    <rx-text [field]="fields.usernameText" [group]="form" (changedValue)="local($event)"></rx-text>
-    <rx-email [field]="fields.email" [group]="form" (changedValue)="local($event)"></rx-email>
+    <rx-text [field]="fields.usernameText" [group]="form" (changedValue)="textChanged($event)"></rx-text>
+    <rx-email [field]="fields.email" [group]="form" (changedValue)="emailChanged($event)"></rx-email>
     <rx-radiobutton [field]="fields.genderRadio" [group]="form"></rx-radiobutton>
-    <rx-textarea [field]="fields.area" [group]="form" (changedValue)="local($event)"></rx-textarea>
-    <rx-select [field]="fields.userTeamSelect" [group]="form" (changedValue)="local($event)"></rx-select>
-    <rx-date [field]="fields.userRegDate" [group]="form" (changedValue)="local($event)"></rx-date>
+    <rx-textarea [field]="fields.area" [group]="form" (changedValue)="textAreaChanged($event)"></rx-textarea>
+    <rx-select [field]="fields.userTeamSelect" [group]="form"></rx-select>
+    <rx-date [field]="fields.userRegDate" [group]="form"></rx-date>
 </rx-form>

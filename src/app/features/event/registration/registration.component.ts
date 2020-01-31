@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { CommonService } from 'services';
 import { fieldConfig } from 'app/shared/config';
+import { RegistrationService } from './registration.service';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class RegistrationComponent implements OnInit {
   form: FormGroup;
   fields: object = fieldConfig.registration;
 
-  constructor(private commonService: CommonService) { }
+  constructor(private commonService: CommonService, private regService: RegistrationService) { }
 
   ngOnInit() {
     // this.form.patchValue({
@@ -25,8 +26,15 @@ export class RegistrationComponent implements OnInit {
   }
 
   onSubmit(event: Event) {
+    console.log(event);
   }
-  local(temp: any) {
-    //console.log(temp);
+  textChanged(temp: Event) {
+    this.regService.textChanged();
+  }
+  emailChanged(temp: Event) {
+    this.regService.emailChanged();
+  }
+  textAreaChanged(temp: Event) {
+    this.regService.textAreaChanged();
   }
 }
