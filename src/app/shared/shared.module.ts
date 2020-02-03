@@ -3,6 +3,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgMultiSelectDropDownModule } from "ng-multiselect-dropdown";
 
 import { PipesModule } from './pipes/index';
 import { CommonLayoutService } from './services';
@@ -16,6 +17,7 @@ import { DateComponent } from './components/date/date.component';
 import { EmailComponent } from './components/email/email.component';
 import { FormComponent } from './components/form/form.component';
 import { ErrorContainerComponent } from './components/error-container/error-container.component';
+import { MultiselectDropdownComponent } from './components/multiselect-dropdown/multiselect-dropdown.component';
 
 @NgModule({
     declarations: [
@@ -28,9 +30,16 @@ import { ErrorContainerComponent } from './components/error-container/error-cont
         DateComponent,
         EmailComponent,
         FormComponent,
-        ErrorContainerComponent
+        ErrorContainerComponent,
+        MultiselectDropdownComponent
     ],
-    imports: [CommonModule, FormsModule, PipesModule, ReactiveFormsModule, NgbModule],
+    imports: [
+        CommonModule,
+        FormsModule,
+        PipesModule,
+        ReactiveFormsModule,
+        NgMultiSelectDropDownModule.forRoot()
+    ],
     exports: [
         TranslateModule,
         PipesModule,
@@ -44,7 +53,8 @@ import { ErrorContainerComponent } from './components/error-container/error-cont
         TextareaComponent,
         DateComponent,
         EmailComponent,
-        FormComponent
+        FormComponent,
+        MultiselectDropdownComponent
     ],
     providers: [CommonLayoutService]
 })

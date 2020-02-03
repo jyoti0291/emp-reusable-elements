@@ -1,0 +1,13 @@
+<div class="form-group row" [formGroup]="group">
+    <label [attr.for]="field.name" class="col-sm-2 col-form-label">{{field.label}}</label>
+    <div class="col-sm-10">
+        <ng-multiselect-dropdown [placeholder]="'custom placeholder'" [data]="field.options"
+            [ngModelOptions]="{standalone: true}" [(ngModel)]="field.value" [settings]="field.settings"
+            (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)">
+        </ng-multiselect-dropdown>
+        <ng-container *ngFor="let validation of field.validationMessages;">
+            <p *ngIf="group.get(field.name).hasError(validation.name) && group.controls[field.name].touched">
+                {{validation.message}}</p>
+        </ng-container>
+    </div>
+</div>

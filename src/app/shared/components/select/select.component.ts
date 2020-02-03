@@ -23,9 +23,6 @@ export class SelectComponent implements OnInit {
     @Input() group: FormGroup;
     @Output() changedValue = new EventEmitter<string>();
 
-    charactercountleft: number;
-    public displayErrors: boolean;
-
     constructor() {}
     ngOnInit() {
         const vsInstance = new ValidationService();
