@@ -1,7 +1,15 @@
-p {
-    color: red;
-}
+@import '~assets/styles/_mixin.scss';
+::ng-deep
+{
+    form {
+        margin-left: 100px;
+    }
 
-form {
-    margin-left: 100px;
+    .width-30 {
+        @include set-width(30%);
+    }
+
+    .width-70 {
+        @include set-width(70%);
+    }
 }

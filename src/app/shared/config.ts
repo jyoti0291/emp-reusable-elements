@@ -1,37 +1,53 @@
 export const fieldConfig = {
     registration : {
         usernameText : {
-            type: 'input',
-            label: 'Username1',
+            customClassName: {
+                container: 'width-70',
+                label: 'width-30'
+            },
             inputType: 'text',
+            label: 'Username1',
             name: 'name1',
-            value: 'abc',
+            type: 'input',
             validationConfig: {minlength: 5 , pattern: 'alpha', required : true},
-            validationMessages: []
+            validationMessages: [],
+            value: 'abc'
         },
         email : {
-            type: 'email',
-            label: 'email',
+            customClassName: {
+                container: '',
+                label: ''
+            },
             inputType: 'email',
+            label: 'email',
             name: 'email',
-            value: 'abc@ex.be',
-
+            type: 'email',
             validationConfig: {minlength: 10 , pattern: 'email', required : true},
-            validationMessages: []
+            validationMessages: [],
+            value: 'abc@ex.be'
         },
         genderRadio :  {
+            customClassName: {
+                container: '',
+                label: ''
+            },
+            inputType: 'radio',
             label: 'Select Gender',
             name: 'gender',
-            inputType: 'radio',
-            value: 'Male',
             options: ['Male', 'Female'],
             validationConfig: {required : true},
-            validationMessages: []
+            validationMessages: [],
+            value: 'Male'
         },
         userRoleCheckbox: {
-            label: 'Select Role',
-            name: 'role',
+            customClassName: {
+                container: '',
+                label: ''
+            },
             inputType: 'checkbox',
+            label: 'Select Role',
+            mincheck: 2,
+            name: 'role',
             options: [
                 { key: 1, text: 'Admin' },
                 { key: 2, text: 'Director' },
@@ -39,7 +55,6 @@ export const fieldConfig = {
                 { key: 4, text: 'Student' }
             ],
             validationConfig: {required : true},
-            mincheck: 2,
             validationMessages: []
         },
         area: {
