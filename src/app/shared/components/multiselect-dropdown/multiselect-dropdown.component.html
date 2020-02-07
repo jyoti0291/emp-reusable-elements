@@ -1,13 +1,13 @@
 <div class="form-group row" [formGroup]="group">
     <label [attr.for]="field.name" class="col-sm-2 col-form-label">{{field.label}}</label>
     <div class="col-sm-10">
-        <select [attr.id]="field.name" class="form-control" [formControlName]="field.name" (change)="onChange()" [value]="field.value">
-            <option *ngFor="let obj of field.options" [value]="obj.key">{{obj.value}}</option>
-        </select>
+        <ng-multiselect-dropdown [placeholder]="'custom placeholder'" [data]="field.options"
+            [ngModelOptions]="{standalone: true}" [(ngModel)]="field.value" [settings]="field.settings"
+            (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)">
+        </ng-multiselect-dropdown>
         <div class="position-absolute info-error">
             <rx-info *ngIf="field.infoTooltip" [data]="field.infoTooltip"></rx-info>
             <rx-error-container [field]="field" [group]="group"></rx-error-container>
         </div>
     </div>
 </div>
-<!-- --{{ | json}} -->

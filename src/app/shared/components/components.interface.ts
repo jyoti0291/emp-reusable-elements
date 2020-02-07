@@ -15,6 +15,7 @@ export interface FieldConfig {
     inputType?: string;
     options?: any[];
     value?: any;
+    settings?: any[];
     validationConfig?: ValidationConfig;
     validationMessages?: ValidationMessage[];
 }

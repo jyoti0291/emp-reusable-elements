@@ -6,4 +6,6 @@
     <rx-textarea [field]="fields.area" [group]="form" (changedValue)="textAreaChanged($event)"></rx-textarea>
     <rx-select [field]="fields.userTeamSelect" [group]="form"></rx-select>
     <rx-date [field]="fields.userRegDate" [group]="form"></rx-date>
+    <rx-multiselect-dropdown [field]="fields.userMultiSelect" [group]="form" (changedValue)="local($event)">
+    </rx-multiselect-dropdown>
 </rx-form>

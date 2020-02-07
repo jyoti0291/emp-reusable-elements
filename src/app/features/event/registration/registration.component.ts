@@ -13,16 +13,36 @@ import { RegistrationService } from './registration.service';
 })
 export class RegistrationComponent implements OnInit {
   form: FormGroup;
-  fields: object = fieldConfig.registration;
+  fields: any = fieldConfig.registration;
+  public minCheck = 1;
 
   constructor(private commonService: CommonService, private regService: RegistrationService) { }
 
   ngOnInit() {
+      // this.form.patchValue({
+      //   name1: 'any name'
+      // });
+      this.form = this.commonService.prepareForm(this.fields);
+      this.fields.userTeamSelect.value = 1;
+      //this.fields.area.value = "hello";
+    console.log(this.form.value);
+    //this.form.value.description = 'he he';
+     this.form.patchValue({
+         description: "any name"
+     });
     // this.form.patchValue({
-    //   name1: 'any name'
+    //     team: "1"
     // });
-    this.form = this.commonService.prepareForm(this.fields);
-    fieldConfig.registration.userTeamSelect.value = 1;
+    // this.form.get("team").setValue("1", {
+    //     onlySelf: true
+    // });
+    this.form.get("team").setValue(1, {
+        onlySelf: true
+    });
+
+    console.log(this.form.get("team"));
+      // console.log(this.group.get(this.field.name));
+      // console.log(this.fields.userTeamSelect);
   }
 
   onSubmit(event: Event) {

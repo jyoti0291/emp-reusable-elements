@@ -51,7 +51,7 @@ const appRoutes: Routes = [
   exports: [NgbModule],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
 
 // required for AOT compilation of translation
 export function HttpLoaderFactory(http: HttpClient) {

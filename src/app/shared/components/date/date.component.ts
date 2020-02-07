@@ -21,8 +21,11 @@ export class DateComponent implements OnInit {
 
   constructor(private config: NgbDatepickerConfig) {
     const current = new Date();
-    config.minDate = { year: current.getFullYear(), month: 
-    current.getMonth() + 1, day: current.getDate() };
+    config.minDate = {
+      year: current.getFullYear(),
+      month: current.getMonth() + 1,
+      day: current.getDate()
+    };
     config.outsideDays = 'hidden';
     config.displayMonths = 2;
     config.navigation = 'select';
