@@ -16,6 +16,7 @@ import { DateComponent } from './components/date/date.component';
 import { EmailComponent } from './components/email/email.component';
 import { FormComponent } from './components/form/form.component';
 import { ErrorContainerComponent } from './components/error-container/error-container.component';
+import { InfoComponent } from './components/info/info.component';
 
 @NgModule({
     declarations: [
@@ -28,7 +29,8 @@ import { ErrorContainerComponent } from './components/error-container/error-cont
         DateComponent,
         EmailComponent,
         FormComponent,
-        ErrorContainerComponent
+        ErrorContainerComponent,
+        InfoComponent
     ],
     imports: [CommonModule, FormsModule, PipesModule, ReactiveFormsModule, NgbModule],
     exports: [

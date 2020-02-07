@@ -6,16 +6,17 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CoreModule } from './core';
+import { LoginService } from './core/services/login';
 import { FeaturesModule } from './features';
 import { LoginComponent } from './core/components/login/login.component';
 import { SharedModule } from 'shared';
 import { FooterComponent } from './core/components/footer/footer.component';
 import { HeaderComponent } from './core/components/header/header.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader} from '@ngx-translate/http-loader';
-import { LoginService } from './core/services/login';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent }
@@ -30,22 +31,24 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
-    HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
-      }
-    }),
+    BrowserAnimationsModule,
     CoreModule,
     FeaturesModule,
-    SharedModule,
     FormsModule,
-    BrowserAnimationsModule
+    HttpClientModule,
+    NgbModule,
+    RouterModule.forRoot(appRoutes),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
+    SharedModule
   ],
   providers: [Title, LoginService],
+  exports: [NgbModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

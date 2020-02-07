@@ -8,9 +8,12 @@
                     <label class="form-check-label" [attr.for]="control.controls.id.value">{{control.controls.text.value}}</label>
                 </div>
             </div>
-            <p *ngIf="group.get(hiddenControlName).hasError('required') && group.controls[hiddenControlName] && group.controls[hiddenControlName].touched">
-                At least {{field.mincheck}} checkbox is required to check
-            </p>
+            <div class="position-absolute info-error">
+                <rx-info *ngIf="field.infoTooltip" [data]="field.infoTooltip"></rx-info>
+                <p class="errorMessage" *ngIf="group.get(hiddenControlName).hasError('required') && group.controls[hiddenControlName] && group.controls[hiddenControlName].touched">
+                    At least {{field.mincheck}} checkbox is required to check
+                </p>
+            </div>
         </div>
     </div>
 </fieldset>

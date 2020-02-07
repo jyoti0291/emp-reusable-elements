@@ -1,0 +1,21 @@
+i {
+    color: #4b9dd5;
+    cursor: pointer;
+    margin: 2px;
+    position: relative;
+}
+
+::ng-deep {
+    .info-icon-custom {
+        .tooltip-inner {
+            background-color: #b3d5ee;
+            color: #067ea0;
+            font-size: 11px;
+            width: max-content;
+        }
+
+        .arrow::before {
+            border-right-color: #b3d5ee;
+        }
+    }
+}

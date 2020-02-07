@@ -6,6 +6,10 @@ export const fieldConfig = {
                 label: 'width-30'
             },
             inputType: 'text',
+            infoTooltip: {
+                placement: 'right',
+                title: 'This is user name, enter text'
+            },
             label: 'Username1',
             name: 'name1',
             type: 'input',
@@ -19,6 +23,10 @@ export const fieldConfig = {
                 label: ''
             },
             inputType: 'email',
+            infoTooltip: {
+                placement: 'right',
+                title: 'This is Email'
+            },
             label: 'email',
             name: 'email',
             type: 'email',
@@ -45,6 +53,10 @@ export const fieldConfig = {
                 label: ''
             },
             inputType: 'checkbox',
+            infoTooltip: {
+                placement: 'right',
+                title: 'This is Checkbox'
+            },
             label: 'Select Role',
             mincheck: 2,
             name: 'role',

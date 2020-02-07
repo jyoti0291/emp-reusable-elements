@@ -1,7 +1,10 @@
 <div class="form-group row" [formGroup]="group">
     <label [attr.for]="field.name" class="col-sm-2 col-form-label">{{field.label}}</label>
     <div class="col-sm-10">
-        <input [attr.id]="field.name" [formControlName]="field.name" [placeholder]="field.label" [type]="field.inputType" (change)="onChange()" class="form-control">
-        <rx-error-container [field]="field" [group]="group"></rx-error-container>
+        <input [attr.id]="field.name" [formControlName]="field.name" [placeholder]="field.label" [type]="field.inputType" (change)="onChange()" class="form-control ">
+        <div class="position-absolute info-error">
+            <rx-info *ngIf="field.infoTooltip" [data]="field.infoTooltip"></rx-info>
+            <rx-error-container [field]="field" [group]="group"></rx-error-container>
+        </div>
     </div>
 </div>
