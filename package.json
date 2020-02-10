@@ -31,6 +31,7 @@
     "@types/underscore": "^1.9.4",
     "bootstrap": "^4.0.0",
     "font-awesome": "^4.7.0",
+    "glyphicons": "^0.2.0",
     "jquery": "^3.4.1",
     "moment": "^2.24.0",
     "ng-multiselect-dropdown": "^0.2.10",

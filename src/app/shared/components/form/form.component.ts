@@ -39,4 +39,7 @@ export class FormComponent implements OnInit {
       this.commonService.validateAllFormFields(this.group);
     }
   }
+  onReset() {
+    this.group.reset();
+  }
 }

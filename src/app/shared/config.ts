@@ -70,6 +70,10 @@ export const fieldConfig = {
             validationMessages: []
         },
         area: {
+            customClassName: {
+                container: '',
+                label: ''
+            },
             label: 'description',
             name: 'description',
             validationConfig: {
@@ -80,6 +84,10 @@ export const fieldConfig = {
             validationMessages: []
         },
         userTeamSelect: {
+            customClassName: {
+                container: '',
+                label: ''
+            },
             label: 'Select Team',
             name: 'team',
             value: null,
