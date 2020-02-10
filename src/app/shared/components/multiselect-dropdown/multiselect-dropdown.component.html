@@ -1,6 +1,6 @@
 <div class="form-group row" [formGroup]="group">
-    <label [attr.for]="field.name" class="col-sm-2 col-form-label">{{field.label}}</label>
-    <div class="col-sm-10">
+    <label [attr.for]="field.name" class="col-sm-2 col-form-label" [ngClass]="field.customClassName.label">{{field.label}}</label>
+    <div class="col-sm-10" [ngClass]="field.customClassName.container">
         <ng-multiselect-dropdown [placeholder]="'custom placeholder'" [data]="field.options"
             [ngModelOptions]="{standalone: true}" [(ngModel)]="field.value" [settings]="field.settings"
             (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)">

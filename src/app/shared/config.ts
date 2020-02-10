@@ -19,8 +19,8 @@ export const fieldConfig = {
         },
         email : {
             customClassName: {
-                container: '',
-                label: ''
+                container: 'width-70',
+                label: 'width-30'
             },
             inputType: 'email',
             infoTooltip: {
@@ -100,8 +100,12 @@ export const fieldConfig = {
             validationMessages: []
         },
         userRegDate : {
+            customClassName: {
+                container: '',
+                label: ''
+            },
             label: 'User Reg date',
-            placeholder:'yyyy-mm-dd',
+            placeholder: 'yyyy-mm-dd',
             inputType: 'date',
             name: 'regDate',
             validationConfig: {required : true},
@@ -114,30 +118,34 @@ export const fieldConfig = {
             }
         },
         userMultiSelect: {
-            label: "Select City",
-            name: "team",
-            value: [
-                { item_id: 3, item_text: "Pune" },
-                { item_id: 4, item_text: "Navsari" }
-            ],
+            customClassName: {
+                container: '',
+                label: ''
+            },
+            label: 'Select City',
+            name: 'team',
             options: [
-                { item_id: 1, item_text: "Mumbai" },
-                { item_id: 2, item_text: "Bangaluru" },
-                { item_id: 3, item_text: "Pune" },
-                { item_id: 4, item_text: "Navsari" },
-                { item_id: 5, item_text: "New Delhi" }
+                { item_id: 1, item_text: 'Mumbai' },
+                { item_id: 2, item_text: 'Bangaluru' },
+                { item_id: 3, item_text: 'Pune' },
+                { item_id: 4, item_text: 'Navsari' },
+                { item_id: 5, item_text: 'New Delhi' }
             ],
             settings: {
                 singleSelection: false,
-                idField: "item_id",
-                textField: "item_text",
-                selectAllText: "Select All",
-                unSelectAllText: "UnSelect All",
+                idField: 'item_id',
+                textField: 'item_text',
+                selectAllText: 'Select All',
+                unSelectAllText: 'UnSelect All',
                 itemsShowLimit: 3,
                 allowSearchFilter: true
             },
             validationConfig: { required: true },
-            validationMessages: []
+            validationMessages: [],
+            value: [
+                { item_id: 3, item_text: 'Pune' },
+                { item_id: 4, item_text: 'Navsari' }
+            ]
         },
         cancelButton: {
             label: 'Cancel',
