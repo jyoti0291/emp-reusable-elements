@@ -63,17 +63,17 @@ export interface DateType {
     };
     value?: string;
 }
-export interface MultiSelect {
-    baseConfig: FieldConfig;
+export interface MultiSelect extends FieldConfig {
     options: any;
     settings: {
-        singleSelection: false,
-        idField: 'item_id',
-        textField: 'item_text',
-        selectAllText: 'Select All',
-        unSelectAllText: 'UnSelect All',
-        itemsShowLimit: 3,
-        allowSearchFilter: true
+        singleSelection: false;
+        text: "Select Countries";
+        selectAllText: "Select All";
+        unSelectAllText: "UnSelect All";
+        enableSearchFilter: true;
+        classes: "myclass custom-class";
+        enableFilterSelectAll: true;
+        showCheckbox: true;
     };
     value: any;
 }

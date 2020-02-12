@@ -3,7 +3,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgMultiSelectDropDownModule } from "ng-multiselect-dropdown";
+import { AngularMultiSelectModule } from "angular2-multiselect-dropdown";
 
 import { PipesModule } from './pipes/index';
 import { CommonLayoutService } from './services';
@@ -41,7 +41,7 @@ import { MultiselectDropdownComponent } from './components/multiselect-dropdown/
         PipesModule,
         ReactiveFormsModule,
         NgbModule,
-        NgMultiSelectDropDownModule.forRoot()
+        AngularMultiSelectModule
     ],
     exports: [
         TranslateModule,

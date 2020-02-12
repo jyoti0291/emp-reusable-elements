@@ -1,10 +1,10 @@
 <div class="form-group row" [formGroup]="group">
-    <label [attr.for]="field.name" class="col-sm-2 col-form-label" [ngClass]="field.customCssClass.label">{{field.label}}</label>
+    <label [attr.for]="field.name" class="col-sm-2 col-form-label"
+        [ngClass]="field.customCssClass.label">{{field.label}}</label>
     <div class="col-sm-10" [ngClass]="field.customCssClass.container">
-        <ng-multiselect-dropdown [placeholder]="'custom placeholder'" [data]="field.options"
-            [ngModelOptions]="{standalone: true}" [(ngModel)]="field.value" [settings]="field.settings"
-            (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)">
-        </ng-multiselect-dropdown>
+        <angular2-multiselect [data]="field.options" [ngModelOptions]="{standalone: true}" [(ngModel)]="field.value"
+            [settings]="field.settings" (onSelect)="onItemSelect($event)" (onDeSelect)="OnItemDeSelect($event)"
+            (onSelectAll)="onSelectAll($event)" (onDeSelectAll)="onDeSelectAll($event)"></angular2-multiselect>
         <div class="position-absolute info-error">
             <rx-info *ngIf="field.infoTooltip" [data]="field.infoTooltip"></rx-info>
             <rx-error-container [field]="field" [group]="group"></rx-error-container>

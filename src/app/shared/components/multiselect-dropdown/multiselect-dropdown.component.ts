@@ -1,35 +1,58 @@
-import { Component, Input, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { IDropdownSettings } from 'ng-multiselect-dropdown';
+import { Component, OnInit, Input, EventEmitter, Output } from "@angular/core";
+import { MultiSelect } from "../components.interface";
+import { FormGroup } from "@angular/forms";
 
-import { FieldConfig } from '../components.interface';
 import { MinLength, Pattern, Required, ValidationService } from 'services';
 
 @Component({
-    selector: 'rx-multiselect-dropdown',
-    templateUrl: './multiselect-dropdown.component.html',
-    styleUrls: ['./multiselect-dropdown.component.scss']
+    selector: "rx-multiselect-dropdown",
+    templateUrl: "./multiselect-dropdown.component.html",
+    styleUrls: ["./multiselect-dropdown.component.scss"]
 })
 export class MultiselectDropdownComponent implements OnInit {
-    @Input() field: FieldConfig;
-    @Input() group: FormGroup;
-    @Output() changedValue = new EventEmitter<string>();
     constructor() {}
 
+    @Input() field: MultiSelect;
+    @Input() group: FormGroup;
+    @Output() changedValue = new EventEmitter<string>();
+    dropdownList = [];
+    selectedItems = [];
+    dropdownSettings = {};
     ngOnInit() {
-        const vsInstance = new ValidationService();
-
-        const required = vsInstance.run(new Required());
-
-        this.group.controls[this.field.name].setValidators([
-            required.validator
-        ]);
-        this.field.validationMessages.push(required);
+        this.sortMultiSelectOptions();
     }
+
+    sortMultiSelectOptions() {
+        let sortedOptions = this.sortItems(this.multiFilter());
+        let sortedValues = this.sortItems(this.field.value);
+        let finalOptions = sortedValues.concat(sortedOptions);
+        this.field.options = finalOptions;
+    }
+
+    sortItems(values) {
+        return values.sort((a, b) => (a.id > b.id ? 1 : -1));
+    }
+
+    multiFilter() {
+        let temp = this.field.value.map(a => a.id);
+        return this.field.options.filter(a => {
+            if (temp.indexOf(a.id) == -1) return a;
+        });
+    }
+
     onItemSelect(item: any) {
-        console.log(item);
+        this.sortMultiSelectOptions();
     }
+
+    OnItemDeSelect(item: any) {
+        this.sortMultiSelectOptions();
+    }
+
     onSelectAll(items: any) {
-        console.log(items);
+        this.sortMultiSelectOptions();
+    }
+
+    onDeSelectAll(items: any) {
+        this.sortMultiSelectOptions();
     }
 }
