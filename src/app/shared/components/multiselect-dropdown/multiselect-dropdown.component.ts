@@ -1,14 +1,14 @@
-import { Component, Input, EventEmitter, OnInit, Output } from "@angular/core";
-import { FormGroup } from "@angular/forms";
-import { IDropdownSettings } from "ng-multiselect-dropdown";
+import { Component, Input, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { IDropdownSettings } from 'ng-multiselect-dropdown';
 
-import { FieldConfig } from "../components.interface";
-import { MinLength, Pattern, Required, ValidationService } from "services";
+import { FieldConfig } from '../components.interface';
+import { MinLength, Pattern, Required, ValidationService } from 'services';
 
 @Component({
-    selector: "rx-multiselect-dropdown",
-    templateUrl: "./multiselect-dropdown.component.html",
-    styleUrls: ["./multiselect-dropdown.component.scss"]
+    selector: 'rx-multiselect-dropdown',
+    templateUrl: './multiselect-dropdown.component.html',
+    styleUrls: ['./multiselect-dropdown.component.scss']
 })
 export class MultiselectDropdownComponent implements OnInit {
     @Input() field: FieldConfig;

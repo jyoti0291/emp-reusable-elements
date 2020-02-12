@@ -1,16 +1,15 @@
-import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output, AfterContentInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 import { CommonService } from 'services';
 import { fieldConfig } from 'app/shared/config';
-
 
 @Component({
   selector: 'rx-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
-export class FormComponent implements OnInit {
+export class FormComponent implements OnInit, AfterContentInit {
   @Input() group: FormGroup;
   @Output() submitted = new EventEmitter<string>();
 
@@ -26,8 +25,10 @@ export class FormComponent implements OnInit {
     });
   }
   ngOnInit() {
-    this.fields.submitButton.disabled = false;
     this.onChanges();
+  }
+  ngAfterContentInit(): void {
+    this.fields.submitButton.disabled = true;
     this.formData = {...this.group.value};
   }
   onSubmit(event: Event) {

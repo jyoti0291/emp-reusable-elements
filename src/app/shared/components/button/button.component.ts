@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-import { FieldConfig } from '../components.interface';
+import { Button } from '../components.interface';
 
 @Component({
   selector: 'rx-button',
@@ -8,7 +8,7 @@ import { FieldConfig } from '../components.interface';
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent {
-  @Input() field: FieldConfig;
+  @Input() field: Button;
   @Output() action = new EventEmitter<any>();
 
   constructor() { }

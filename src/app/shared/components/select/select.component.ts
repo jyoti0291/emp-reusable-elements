@@ -6,16 +6,16 @@ import {
     EventEmitter,
     Output,
     OnChanges
-} from "@angular/core";
-import { FormGroup, Validators } from "@angular/forms";
+} from '@angular/core';
+import { FormGroup, Validators } from '@angular/forms';
 
-import { FieldConfig } from "../components.interface";
-import { ValidationService, Required } from "services";
+import { FieldConfig } from '../components.interface';
+import { ValidationService, Required } from 'services';
 
 @Component({
-    selector: "rx-select",
-    templateUrl: "./select.component.html",
-    styleUrls: ["./select.component.scss"]
+    selector: 'rx-select',
+    templateUrl: './select.component.html',
+    styleUrls: ['./select.component.scss']
 })
 export class SelectComponent implements OnInit {
     @Input() data;

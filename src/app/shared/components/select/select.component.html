@@ -1,6 +1,6 @@
 <div class="form-group row" [formGroup]="group">
-    <label [attr.for]="field.name" class="col-sm-2 col-form-label" [ngClass]="field.customClassName.label">{{field.label}}</label>
-    <div class="col-sm-10" [ngClass]="field.customClassName.container">
+    <label [attr.for]="field.name" class="col-sm-2 col-form-label" [ngClass]="field.customCssClass.label">{{field.label}}</label>
+    <div class="col-sm-10" [ngClass]="field.customCssClass.container">
         <select [attr.id]="field.name" class="form-control" [formControlName]="field.name" (change)="onChange()" [value]="field.value">
             <option *ngFor="let obj of field.options" [value]="obj.key">{{obj.value}}</option>
         </select>

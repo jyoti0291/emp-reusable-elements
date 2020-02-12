@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormArray, FormGroup, FormControl, Validators } from '@angular/forms';
 
-import { CheckBoxGroup, FieldConfig } from '../components.interface';
+import { CheckBoxGroup, CheckBox } from '../components.interface';
 
 
 @Component({
@@ -13,7 +13,7 @@ export class CheckboxComponent implements OnInit {
   // @Input() name: string;
   // @Input() options: Array<any>;
   @Input() group: FormGroup;
-  @Input() field: any;
+  @Input() field: CheckBox;
 
   @Output() callback: EventEmitter<Array<any>>;
   form: FormGroup;
