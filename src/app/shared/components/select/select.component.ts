@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 import { FormGroup, Validators } from '@angular/forms';
 
-import { FieldConfig } from '../components.interface';
+import { Select } from '../components.interface';
 import { ValidationService, Required } from 'services';
 
 @Component({
@@ -19,7 +19,7 @@ import { ValidationService, Required } from 'services';
 })
 export class SelectComponent implements OnInit {
     @Input() data;
-    @Input() field: FieldConfig;
+    @Input() field: Select;
     @Input() group: FormGroup;
     @Output() changedValue = new EventEmitter<string>();
 

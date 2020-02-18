@@ -1,9 +1,10 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+
 import { global } from 'app/shared/constants';
+
 import { Observable, of, Subject } from 'rxjs/index';
 import { map, mergeMap, catchError } from 'rxjs/operators';
-
 
 @Injectable({
   providedIn: 'root'

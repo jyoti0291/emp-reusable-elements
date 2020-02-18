@@ -1,13 +1,13 @@
-import { Component, OnInit, Input, EventEmitter, Output } from "@angular/core";
-import { MultiSelect } from "../components.interface";
-import { FormGroup } from "@angular/forms";
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { MultiSelect } from '../components.interface';
+import { FormGroup } from '@angular/forms';
 
 import { MinLength, Pattern, Required, ValidationService } from 'services';
 
 @Component({
-    selector: "rx-multiselect-dropdown",
-    templateUrl: "./multiselect-dropdown.component.html",
-    styleUrls: ["./multiselect-dropdown.component.scss"]
+    selector: 'rx-multiselect-dropdown',
+    templateUrl: './multiselect-dropdown.component.html',
+    styleUrls: ['./multiselect-dropdown.component.scss']
 })
 export class MultiselectDropdownComponent implements OnInit {
     constructor() {}
@@ -23,9 +23,9 @@ export class MultiselectDropdownComponent implements OnInit {
     }
 
     sortMultiSelectOptions() {
-        let sortedOptions = this.sortItems(this.multiFilter());
-        let sortedValues = this.sortItems(this.field.value);
-        let finalOptions = sortedValues.concat(sortedOptions);
+        const sortedOptions = this.sortItems(this.multiFilter());
+        const sortedValues = this.sortItems(this.field.value);
+        const finalOptions = sortedValues.concat(sortedOptions);
         this.field.options = finalOptions;
     }
 
@@ -34,9 +34,9 @@ export class MultiselectDropdownComponent implements OnInit {
     }
 
     multiFilter() {
-        let temp = this.field.value.map(a => a.id);
+        const temp = this.field.value.map(a => a.id);
         return this.field.options.filter(a => {
-            if (temp.indexOf(a.id) == -1) return a;
+            return temp.indexOf(a.id) === -1 ? a : null;
         });
     }
 

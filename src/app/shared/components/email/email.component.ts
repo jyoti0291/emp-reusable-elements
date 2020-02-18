@@ -1,8 +1,8 @@
 import { Component, Input, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
-import { FieldConfig } from '../components.interface';
-import { MinLength, Pattern, Required, ValidationService, Email } from 'services';
+import { Email } from '../components.interface';
+import { MinLength, Pattern, Required, ValidationService, EmailService } from 'services';
 
 @Component({
   selector: 'rx-email',
@@ -10,7 +10,7 @@ import { MinLength, Pattern, Required, ValidationService, Email } from 'services
   styleUrls: ['./email.component.scss']
 })
 export class EmailComponent implements OnInit {
-  @Input() field: FieldConfig;
+  @Input() field: Email;
   @Input() group: FormGroup;
   @Output() changedValue = new EventEmitter<string>();
 
@@ -24,12 +24,12 @@ export class EmailComponent implements OnInit {
     const required = vsInstance.run(new Required());
     const min = vsInstance.run(new MinLength(this.field.validationConfig.minlength));
     const pattern = vsInstance.run(new Pattern(this.field.validationConfig.pattern));
-    const email = vsInstance.run(new Email(this.field.validationConfig.pattern));
+    const email = vsInstance.run(new EmailService(this.field.validationConfig.pattern));
 
     this.group.controls[this.field.name].setValidators([required.validator, min.validator, pattern.validator, email.validator]);
     this.field.validationMessages.push(min , pattern , required, email);
 
-    //this.charactercountleft = this.data.max - (this.group.value.name1 ? this.group.value.name1.length : 0 );
+    // this.charactercountleft = this.data.max - (this.group.value.name1 ? this.group.value.name1.length : 0 );
   }
 
   onChange() {

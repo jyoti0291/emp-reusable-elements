@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
-import { FieldConfig } from '../components.interface';
+import { TextArea } from '../components.interface';
 import { MinLength, Pattern, Required, ValidationService  } from 'services';
 
 @Component({
@@ -10,7 +10,7 @@ import { MinLength, Pattern, Required, ValidationService  } from 'services';
   styleUrls: ['./textarea.component.scss']
 })
 export class TextareaComponent implements OnInit {
-  @Input() field: FieldConfig;
+  @Input() field: TextArea;
   @Input() group: FormGroup;
   @Output() changedValue = new EventEmitter<string>();
 

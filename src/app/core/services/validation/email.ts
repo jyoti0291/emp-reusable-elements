@@ -2,7 +2,7 @@ import { Validators } from '@angular/forms';
 
 import { ValidatorContract } from './interface';
 
-export class Email implements ValidatorContract {
+export class EmailService implements ValidatorContract {
     constructor(public data) {}
     init() {
         return {

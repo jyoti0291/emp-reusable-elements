@@ -22,7 +22,7 @@ export class CheckboxComponent implements OnInit {
   ngOnInit() {
     const checkboxGroup = new FormArray(this.field.options.map(item => new FormGroup({
       id: new FormControl(item.key),
-      text: new FormControl(item.text),
+      text: new FormControl(item.value),
       checkbox: new FormControl(false)
     })));
 
@@ -43,9 +43,9 @@ export class CheckboxComponent implements OnInit {
   }
 
   onToggle() {
-    //this.callback.emit(this.options);
+    // this.callback.emit(this.options);
     // let temp = this.options.filter(x => x.checked);
-     //console.log(this.options);
+    // console.log(this.options);
     // temp = temp.map(x => x.value);
     // console.log( temp.map(x => x.value));
   }

@@ -1,23 +1,23 @@
-export interface ValidationMessage {
-    name: string;
-    validator?: any;
-    message: string;
+export interface CustomCssClass {
+    container: string;
+    label: string;
 }
+
+
 export interface ValidationConfig {
     maxlength?: number;
     minlength?: number;
     pattern?: string;
     required?: boolean;
 }
-export interface CustomCssClass {
-    container: string;
-    label: string;
+
+export interface ValidationMessage {
+    message: string;
+    name: string;
+    validator?: any;
 }
 
-export interface InfoTooltip {
-    placement: string;
-    title: string;
-}
+
 export interface FieldConfig {
     customCssClass?: CustomCssClass;
     infoTooltip?: InfoTooltip;
@@ -28,29 +28,33 @@ export interface FieldConfig {
     validationConfig?: ValidationConfig;
     validationMessages?: ValidationMessage[];
 }
-export interface Text {
+export interface InfoTooltip {
+    placement: string;
+    title: string;
+}
+export interface RxJSON {
+    key: number;
     value: string;
 }
-export interface Email {
-    baseConfig: FieldConfig;
+export interface Text extends FieldConfig {
+    value?: string;
+}
+export interface Email extends FieldConfig {
     value: string;
 }
-export interface Radio {
-    baseConfig: FieldConfig;
+export interface Radio extends FieldConfig {
     options: Array<string>;
-    value: string;
+    value?: string;
 }
 export interface CheckBox extends FieldConfig {
     mincheck: number;
-    options: any;
+    options: RxJSON[];
 }
-export interface TextArea {
-    baseConfig: FieldConfig;
-    value: string;
+export interface TextArea extends FieldConfig {
+    value?: string;
 }
-export interface Select {
-    baseConfig: FieldConfig;
-    options: any;
+export interface Select extends FieldConfig {
+    options: RxJSON[];
     value: string;
 }
 export interface DateType {
@@ -67,11 +71,11 @@ export interface MultiSelect extends FieldConfig {
     options: any;
     settings: {
         singleSelection: false;
-        text: "Select Countries";
-        selectAllText: "Select All";
-        unSelectAllText: "UnSelect All";
+        text: 'Select Countries';
+        selectAllText: 'Select All';
+        unSelectAllText: 'UnSelect All';
         enableSearchFilter: true;
-        classes: "myclass custom-class";
+        classes: 'myclass custom-class';
         enableFilterSelectAll: true;
         showCheckbox: true;
     };

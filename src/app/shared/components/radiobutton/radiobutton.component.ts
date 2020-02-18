@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
-import { FieldConfig } from '../components.interface';
+import { Radio } from '../components.interface';
 import { Required, ValidationService } from 'services';
 
 @Component({
@@ -10,8 +10,7 @@ import { Required, ValidationService } from 'services';
   styleUrls: ['./radiobutton.component.scss']
 })
 export class RadiobuttonComponent implements OnInit {
-  @Input() data;
-  @Input() field: FieldConfig;
+  @Input() field: Radio;
   @Input() group: FormGroup;
   constructor() { }
 
