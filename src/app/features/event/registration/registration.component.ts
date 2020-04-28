@@ -23,7 +23,7 @@ export class RegistrationComponent implements OnInit {
       this.fields.userTeamSelect.value = 1;
       console.log(this.form.value);
       this.form.patchValue({
-          description: 'any name'
+          description: 'Hello World!!!'
       });
 
       // this.form.get('team').setValue('1', {

@@ -14,16 +14,16 @@ export class TextareaComponent implements OnInit {
   @Input() group: FormGroup;
   @Output() changedValue = new EventEmitter<string>();
 
-  constructor() { }
+  constructor(private vsInstance: ValidationService) {}
 
   ngOnInit() {
-    const vsInstance = new ValidationService();
+    const required = this.vsInstance.run(new Required(this.field.validationConfig));
+    const min = this.vsInstance.run(new MinLength(this.field.validationConfig));
+    const pattern = this.vsInstance.run(new Pattern(this.field.validationConfig));
 
-    const required = vsInstance.run(new Required());
-    const min = vsInstance.run(new MinLength(this.field.validationConfig.minlength));
-    const pattern = vsInstance.run(new Pattern(this.field.validationConfig.pattern));
+    const validatorResult = this.vsInstance.prepareValidators(min, pattern, required );
+    this.group.controls[this.field.name].setValidators([...validatorResult]);
 
-    this.group.controls[this.field.name].setValidators([required.validator, min.validator, pattern.validator]);
     this.field.validationMessages.push(min , pattern , required);
   }
 

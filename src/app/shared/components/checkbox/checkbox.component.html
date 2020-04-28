@@ -1,10 +1,10 @@
 <fieldset class="form-group" [formGroup]="group">
     <div class="row">
-        <legend class="col-form-label col-sm-2 pt-0" [innerHTML]="field.label" [ngClass]="field.customCssClass.label"></legend>
-        <div class="col-sm-10" [ngClass]="field.customCssClass.label">
+        <legend class="col-form-label col-sm-3 pt-0" [innerHTML]="field.label" [ngClass]="field.customCssClass.label"></legend>
+        <div class="col-sm-9" [ngClass]="field.customCssClass.label">
             <div [formArrayName]="field.name">
                 <div class="form-check" *ngFor="let control of group.controls[field.name].controls" [formGroup]="control">
-                    <input class="form-check-input" formControlName="checkbox" type="checkbox" (change)="onToggle()" [attr.id]="control.controls.id.value">
+                    <input [ngClass]="{'invalid': group.get(hiddenControlName).hasError('required') && group.controls[hiddenControlName] && group.controls[hiddenControlName].touched}" class="form-check-input" formControlName="checkbox" type="checkbox" (change)="onToggle()" [attr.id]="control.controls.id.value" >
                     <label class="form-check-label" [attr.for]="control.controls.id.value">{{control.controls.text.value}}</label>
                 </div>
             </div>

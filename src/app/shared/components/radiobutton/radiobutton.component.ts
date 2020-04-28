@@ -12,14 +12,14 @@ import { Required, ValidationService } from 'services';
 export class RadiobuttonComponent implements OnInit {
   @Input() field: Radio;
   @Input() group: FormGroup;
-  constructor() { }
+  constructor(private vsInstance: ValidationService) {}
 
   ngOnInit() {
-    const vsInstance = new ValidationService();
-    const result = vsInstance.run(new Required());
+    const required = this.vsInstance.run(new Required(this.field.validationConfig));
     // Adding a validator
-    this.group.controls[this.field.name].setValidators(result.validator);
+    const validatorResult = this.vsInstance.prepareValidators(required);
+    this.group.controls[this.field.name].setValidators([...validatorResult]);
     // for displaying error message
-    this.field.validationMessages.push(result);
+    this.field.validationMessages.push(required);
   }
 }

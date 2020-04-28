@@ -17,17 +17,18 @@ export class EmailComponent implements OnInit {
   charactercountleft: number;
   public displayErrors: boolean;
 
-  constructor() {}
+  constructor(private vsInstance: ValidationService) {}
+
   ngOnInit() {
-    const vsInstance = new ValidationService();
 
-    const required = vsInstance.run(new Required());
-    const min = vsInstance.run(new MinLength(this.field.validationConfig.minlength));
-    const pattern = vsInstance.run(new Pattern(this.field.validationConfig.pattern));
-    const email = vsInstance.run(new EmailService(this.field.validationConfig.pattern));
+    const required = this.vsInstance.run(new Required(this.field.validationConfig));
+    const min = this.vsInstance.run(new MinLength(this.field.validationConfig));
+    const pattern = this.vsInstance.run(new Pattern(this.field.validationConfig));
+    const email = this.vsInstance.run(new EmailService());
 
-    this.group.controls[this.field.name].setValidators([required.validator, min.validator, pattern.validator, email.validator]);
-    this.field.validationMessages.push(min , pattern , required, email);
+    const validatorResult = this.vsInstance.prepareValidators( email, min, pattern, required);
+    this.group.controls[this.field.name].setValidators([...validatorResult]);
+    this.field.validationMessages.push(email, min, pattern, required);
 
     // this.charactercountleft = this.data.max - (this.group.value.name1 ? this.group.value.name1.length : 0 );
   }
@@ -35,5 +36,4 @@ export class EmailComponent implements OnInit {
   onChange() {
     this.changedValue.emit(this.group.controls[this.field.name].value);
   }
-
 }

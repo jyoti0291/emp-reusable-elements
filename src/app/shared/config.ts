@@ -3,14 +3,14 @@ export const fieldConfig = {
         usernameText: {
             customCssClass: {
                 container: 'width-70',
-                label: 'width-30'
+                label: 'width-30 font-weight-bold'
             },
             infoTooltip: {
                 placement: 'right',
                 title: 'This is user name, enter text'
             },
             inputType: 'text',
-            label: 'Username1',
+            label: 'Username',
             name: 'name1',
             validationConfig: {
                 minlength: 5,
@@ -18,12 +18,12 @@ export const fieldConfig = {
                 required: true
             },
             validationMessages: [],
-            value: 'abc'
+            value: ''
         },
         email: {
             customCssClass: {
-                container: 'width-70',
-                label: 'width-30'
+                container: '',
+                label: 'font-italic'
             },
             infoTooltip: {
                 placement: 'right',
@@ -38,7 +38,7 @@ export const fieldConfig = {
                 required: true
             },
             validationMessages: [],
-            value: 'abc@ex.be'
+            value: ''
         },
         genderRadio: {
             customCssClass: {

@@ -2,7 +2,7 @@
     <form class="col-sm-6" [formGroup]="group" (submit)="onSubmit($event)">
         <ng-content></ng-content>
         <div class="form-group row" [formGroup]="group">
-            <div class="offset-2 col-sm-10">
+            <div class="offset-2 col-sm-9">
                 <rx-button [field]="fields.submitButton"></rx-button>
                 <rx-button [field]="fields.cancelButton"></rx-button>
             </div>

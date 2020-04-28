@@ -18,15 +18,15 @@ export class TextComponent implements OnInit {
   charactercountleft: number;
   public displayErrors: boolean;
 
-  constructor() {}
+  constructor(private vsInstance: ValidationService) {}
   ngOnInit() {
-    const vsInstance = new ValidationService();
 
-    const pattern = vsInstance.run(new Pattern(this.field.validationConfig.pattern));
-    const required = vsInstance.run(new Required());
-    const min = vsInstance.run(new MinLength(this.field.validationConfig.minlength));
+    const min = this.vsInstance.run(new MinLength(this.field.validationConfig));
+    const pattern = this.vsInstance.run(new Pattern(this.field.validationConfig));
+    const required = this.vsInstance.run(new Required(this.field.validationConfig));
 
-    this.group.controls[this.field.name].setValidators([pattern.validator, required.validator, min.validator]);
+    const validatorResult = this.vsInstance.prepareValidators(min, pattern, required );
+    this.group.controls[this.field.name].setValidators([...validatorResult]);
     this.field.validationMessages.push(min , pattern , required);
     // this.charactercountleft = this.data.max - (this.group.value.name1 ? this.group.value.name1.length : 0 );
   }

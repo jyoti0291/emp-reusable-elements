@@ -5,10 +5,12 @@ import { patterMapper } from './patternMapper';
 export class Pattern implements ValidatorContract {
     constructor(public data) {}
     init() {
-        return {
-            name: 'pattern',
-            validator: Validators.pattern(patterMapper[this.data]),
-            message: 'Accept only text'
-        };
+        if (this.data && this.data.pattern) {
+            return {
+                name: 'pattern',
+                validator: Validators.pattern(patterMapper[this.data.pattern]),
+                message: 'Accept only text'
+            };
+        }
     }
 }

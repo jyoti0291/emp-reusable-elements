@@ -10,12 +10,12 @@ export const global = {
       adFrameCorr: {
         layoutDropDown: [
           {
-            key: 1,
+            key : 1,
             value: 'ADFRAME.LIST.SIMPLE',
             param: true
           },
           {
-            key: 2,
+            key : 2,
             value: 'ADFRAME.LIST.ALL',
             param: false
           }
@@ -80,12 +80,12 @@ export const global = {
         },
         statusDropdown: [
             {
-              key: 1,
+              key : 1,
               value: 'CAMPAIGN.CALENDAR.OPERATION_STATUS_EXCLUDE_STOPPED',
               param: 'ACTIVE_CAMPAIGN'
             },
             {
-              key: 2,
+              key : 2,
               value: 'CAMPAIGN.CALENDAR.OPERATION_STATUS_ALL',
               param: 'ALL_CAMPAIGN'
             }
@@ -136,72 +136,72 @@ export const global = {
         repeatFrequencyClassFieldName: 'repeatFrequency',
         statusDropdown: [
           {
-            key: 1,
+            key : 1,
             value: 'EVENTS.COMMON.OPERATION_STATUS_EXCLUDE_STOPPED',
             param: 'ACTIVE_EVENTS'
           },
           {
-            key: 2,
+            key : 2,
             value: 'EVENTS.COMMON.OPERATION_STATUS_ALL',
             param: 'ALL_EVENTS'
           }
         ],
         statusFilterDropdown: [
           {
-            key: 1,
+            key : 1,
             value: 'EVENTS.TEIREI_EVENT_MANAGEMENT_LIST.DRAFT',
             param: 'AUTO_GEN_DRAFT_EVENTS'
           },
           {
-            key: 2,
+            key : 2,
             value: 'EVENTS.TEIREI_EVENT_MANAGEMENT_LIST.DRAFT_AND_DISCARDED',
             param: 'AUTO_GEN_DISCARDED_EVENTS'
           },
           {
-            key: 3,
+            key : 3,
             value: 'EVENTS.TEIREI_EVENT_MANAGEMENT_LIST.REGISTERED',
             param: 'AUTO_GEN_REGISTERED_EVENTS'
           },
           {
-            key: 4,
+            key : 4,
             value: 'EVENTS.TEIREI_EVENT_MANAGEMENT_LIST.ALL_EVENTS',
             param: 'ALL_EVENTS'
           }
         ],
         statusProducerPICFilterDropdown: [
           {
-            key: 1,
+            key : 1,
             value: 'EVENTS.TEIREI_EVENT_MANAGEMENT_LIST.MY_EVENTS',
             param: 'AUTO_GEN_EVENTS_PRODUCER'
           },
           {
-            key: 2,
+            key : 2,
             value: 'EVENTS.TEIREI_EVENT_MANAGEMENT_LIST.ALL_EVENTS',
             param: 'ALL_EVENTS'
           }
         ],
         eventDraftStatus: [
           {
-            key: 0,
+            key : 0,
             value: 'EVENTS.TEIREI_EVENT_MANAGEMENT_LIST.DRAFT_CAPITAL'
           },
           {
-            key: 1,
+            key : 1,
             value: 'EVENTS.TEIREI_EVENT_MANAGEMENT_LIST.REGISTERED_CAPITAL'
           },
           {
-            key: 2,
+            key : 2,
             value: 'EVENTS.TEIREI_EVENT_MANAGEMENT_LIST.DISCARDED_CAPITAL'
           }
         ],
         mailLayoutListStatusDropdown: [
           {
-            key: 1,
+            key : 1,
             value: 'MAIL_LAYOUTS.COMMON.OPERATION_STATUS_EXCLUDE_STOPPED',
             param: 'ACTIVE_EVENTS'
           },
           {
-            key: 2,
+            key : 2,
             value: 'MAIL_LAYOUTS.COMMON.OPERATION_STATUS_ALL',
             param: 'ALL_EVENTS'
           }
@@ -223,47 +223,47 @@ export const global = {
           },
           checkDateTimeDropDown: [
             {
-              key: 1,
+              key : 1,
               value: 'AD_RELEASE_CHECK.CHECK_DATE_DROPDOWN.TODAY',
               param: 'CHECK_DATE_TIME_TODAY'
             },
             {
-              key: 2,
+              key : 2,
               value: 'AD_RELEASE_CHECK.CHECK_DATE_DROPDOWN.YESTERDAY',
               param: 'CHECK_DATE_TIME_YESTERDAY'
             },
             {
-              key: 3,
+              key : 3,
               value: 'AD_RELEASE_CHECK.CHECK_DATE_DROPDOWN.THIS_WEEK',
               param: 'CHECK_DATE_TIME_THIS_WEEK'
             },
             {
-              key: 4,
+              key : 4,
               value: 'AD_RELEASE_CHECK.CHECK_DATE_DROPDOWN.LAST_WEEK',
               param: 'CHECK_DATE_TIME_LAST_WEEK'
             },
             {
-              key: 5,
+              key : 5,
               value: 'AD_RELEASE_CHECK.CHECK_DATE_DROPDOWN.THIS_MONTH',
               param: 'CHECK_DATE_TIME_THIS_MONTH'
             },
             {
-              key: 6,
+              key : 6,
               value: 'AD_RELEASE_CHECK.CHECK_DATE_DROPDOWN.ONE_MONTH',
               param: 'CHECK_DATE_TIME_ONE_MONTH'
             },
             {
-              key: 7,
+              key : 7,
               value: 'AD_RELEASE_CHECK.CHECK_DATE_DROPDOWN.THREE_MONTHS',
               param: 'CHECK_DATE_TIME_THREE_MONTHS'
             },
             {
-              key: 8,
+              key : 8,
               value: 'AD_RELEASE_CHECK.CHECK_DATE_DROPDOWN.SIX_MONTHS',
               param: 'CHECK_DATE_TIME_SIX_MONTHS'
             },
             {
-              key: 9,
+              key : 9,
               value: 'AD_RELEASE_CHECK.CHECK_DATE_DROPDOWN.NOT_APPLY',
               param: 'CHECK_DATE_TIME_NOT_APPLY'
             },
@@ -414,17 +414,17 @@ export const global = {
         teireiEventManagementDefaultSort: 'releaseDay,asc',
         registerTeireiEventFilterDropdown: [
           {
-            key: 1,
+            key : 1,
             value: 'REGULAR_EVENT_ADFRAME.FILTER.REGISTERED_EVENTS',
             param: 'AUTO_GEN_REGISTERED_EVENTS'
           },
           {
-            key: 2,
+            key : 2,
             value: 'REGULAR_EVENT_ADFRAME.FILTER.DRAFT_EVENTS',
             param: 'AUTO_GEN_DRAFT_EVENTS'
           },
           {
-            key: 3,
+            key : 3,
             value: 'REGULAR_EVENT_ADFRAME.FILTER.ALL_EVENTS',
             param: 'ALL_EVENTS'
           }
@@ -2196,52 +2196,52 @@ export const global = {
         ],
         checkDateTimeDropDown: [
           {
-            key: 1,
+            key : 1,
             value: 'AD_RELEASE_CHECK.CHECK_DATE_DROPDOWN.TODAY',
             param: 'CHECK_DATE_TIME_TODAY'
           },
           {
-            key: 2,
+            key : 2,
             value: 'AD_RELEASE_CHECK.CHECK_DATE_DROPDOWN.YESTERDAY',
             param: 'CHECK_DATE_TIME_YESTERDAY'
           },
           {
-            key: 3,
+            key : 3,
             value: 'AD_RELEASE_CHECK.CHECK_DATE_DROPDOWN.THIS_WEEK',
             param: 'CHECK_DATE_TIME_THIS_WEEK'
           },
           {
-            key: 4,
+            key : 4,
             value: 'AD_RELEASE_CHECK.CHECK_DATE_DROPDOWN.LAST_WEEK',
             param: 'CHECK_DATE_TIME_LAST_WEEK'
           },
           {
-            key: 5,
+            key : 5,
             value: 'AD_RELEASE_CHECK.CHECK_DATE_DROPDOWN.THIS_MONTH',
             param: 'CHECK_DATE_TIME_THIS_MONTH'
           },
           {
-            key: 6,
+            key : 6,
             value: 'AD_RELEASE_CHECK.CHECK_DATE_DROPDOWN.ONE_MONTH',
             param: 'CHECK_DATE_TIME_ONE_MONTH'
           },
           {
-            key: 7,
+            key : 7,
             value: 'AD_RELEASE_CHECK.CHECK_DATE_DROPDOWN.THREE_MONTHS',
             param: 'CHECK_DATE_TIME_THREE_MONTHS'
           },
           {
-            key: 8,
+            key : 8,
             value: 'AD_RELEASE_CHECK.CHECK_DATE_DROPDOWN.SIX_MONTHS',
             param: 'CHECK_DATE_TIME_SIX_MONTHS'
           },
           {
-            key: 9,
+            key : 9,
             value: 'MAIL_RELEASE_CHECK.FILTER.CHECK_COLUMN.NOT_CHECKED_YET',
             param: 'CHECK_DATE_TIME_NOT_CHECKED_YET'
           },
           {
-            key: 10,
+            key : 10,
             value: 'AD_RELEASE_CHECK.CHECK_DATE_DROPDOWN.NOT_APPLY',
             param: 'CHECK_DATE_TIME_NOT_APPLY'
           }
@@ -2254,10 +2254,7 @@ export const global = {
         enableSearch: true,
         showCheckAll: true,
         showUncheckAll: true,
-        smartButtonMaxItems: 0,
-        smartButtonTextConverter: function (itemText, originalItem) {
-          return itemText;
-        }
+        smartButtonMaxItems: 0
       },
       eventTypes: {
         1: 'EVENTS.REGISTRATION.EVENT_TYPES.NORMAL_EVENT',
@@ -2275,135 +2272,135 @@ export const global = {
         'SEASONAL': 'CAMPAIGN.REGISTRATION.CAMPAIGN_TYPES.SEASONAL_CAMPAIGN',
       },
       exportRequestTypes: {
-        EVENT_LIST_VIEW: { key: 1, label: 'DOWNLOADS.COMMON.EVENT_LIST_VIEW' },
-        EVENT_TEIREI_EVENT_MANAGEMENT: { key: 62, label: 'DOWNLOADS.COMMON.EVENT_TEIREI_EVENT_MANAGEMENT' },
-        EVENT_CALENDAR_VIEW: { key: 2, label: 'DOWNLOADS.COMMON.EVENT_CALENDAR_VIEW' },
-        EVENT_ASSET_CREATION: { key: 3, label: 'DOWNLOADS.COMMON.EVENT_ASSET_CREATION' },
-        EVENT_PENDING_ASSIGN: { key: 4, label: 'DOWNLOADS.COMMON.EVENT_PENDING_ASSIGN' },
-        EVENT_WAITING_ASSIGN: { key: 5, label: 'DOWNLOADS.COMMON.EVENT_WAITING_ASSIGN' },
-        EVENT_NEW_EVENT_APPROVAL: { key: 6, label: 'DOWNLOADS.COMMON.EVENT_NEW_EVENT_APPROVAL' },
-        EVENT_NEW_ASSIGN_APPROVAL: { key: 7, label: 'DOWNLOADS.COMMON.EVENT_NEW_ASSIGN_APPROVAL' },
-        EVENT_CHANGED_APPROVAL: { key: 8, label: 'DOWNLOADS.COMMON.EVENT_CHANGED_APPROVAL' },
-        EVENT_RESUBMIT_EVENT_APPROVAL: { key: 9, label: 'DOWNLOADS.COMMON.EVENT_RESUBMIT_EVENT_APPROVAL' },
-        EVENT_RESUBMIT_ASSIGN_APPROVAL: { key: 10, label: 'DOWNLOADS.COMMON.EVENT_RESUBMIT_ASSIGN_APPROVAL' },
-        EVENT_RESUBMIT_CHANGED_APPROVAL: { key: 11, label: 'DOWNLOADS.COMMON.EVENT_RESUBMIT_CHANGED_APPROVAL' },
-        EVENT_IMPORT_WEB_REQUEST: { key: 12, label: 'DOWNLOADS.COMMON.EVENT_IMPORT_WEB_REQUEST' },
-        SIMPLE_WEB_REQUEST_LIST_VIEW: { key: 19, label: 'DOWNLOADS.COMMON.SIMPLE_WEB_REQUEST_LIST_VIEW' },
-        SIMPLE_WEB_REQUEST_CALENDAR_VIEW: { key: 20, label: 'DOWNLOADS.COMMON.SIMPLE_WEB_REQUEST_CALENDAR_VIEW' },
-        WEB_PUBLISH_REQUEST_LIST_VIEW: { key: 21, label: 'DOWNLOADS.COMMON.WEB_PUBLISH_REQUEST_LIST_VIEW' },
-        WEB_PUBLISH_REQUEST_CALENDAR_VIEW: { key: 22, label: 'DOWNLOADS.COMMON.WEB_PUBLISH_REQUEST_CALENDAR_VIEW' },
-        WEB_PUBLISH_REQUEST_BASIC_LIST_VIEW: { key: 46, label: 'DOWNLOADS.COMMON.WEB_PUBLISH_REQUEST_LIST_VIEW' },
-        WEB_PUBLISH_REQUEST_BASIC_CALENDAR_VIEW: { key: 47, label: 'DOWNLOADS.COMMON.WEB_PUBLISH_REQUEST_CALENDAR_VIEW' },
-        KPI_DASHBOARD_ALL: { key: 13, label: 'DOWNLOADS.COMMON.KPI_DASHBOARD_ALL' },
-        KPI_DASHBOARD_GROUPS: { key: 14, label: 'DOWNLOADS.COMMON.KPI_DASHBOARD_GROUPS' },
-        KPI_DASHBOARD_GENRES: { key: 15, label: 'DOWNLOADS.COMMON.KPI_DASHBOARD_GENRES' },
-        KPI_DASHBOARD_TEAMS: { key: 16, label: 'DOWNLOADS.COMMON.KPI_DASHBOARD_TEAMS' },
-        KPI_DASHBOARD_CAMPAIGN: { key: 17, label: 'DOWNLOADS.COMMON.KPI_DASHBOARD_CAMPAIGN' },
-        KPI_DASHBOARD_EVENT: { key: 18, label: 'DOWNLOADS.COMMON.KPI_DASHBOARD_EVENT' },
-        EVENT_BASIC_NEW_EVENT_APPROVAL: { key: 31, label: 'DOWNLOADS.COMMON.EVENT_NEW_EVENT_APPROVAL' },
-        EVENT_BASIC_RESUBMIT_EVENT_APPROVAL: { key: 32, label: 'DOWNLOADS.COMMON.EVENT_RESUBMIT_EVENT_APPROVAL' },
-        EVENT_BASIC_NEW_ASSIGN_APPROVAL: { key: 33, label: 'DOWNLOADS.COMMON.EVENT_NEW_ASSIGN_APPROVAL' },
-        EVENT_BASIC_RESUBMIT_ASSIGN_APPROVAL: { key: 34, label: 'DOWNLOADS.COMMON.EVENT_RESUBMIT_ASSIGN_APPROVAL' },
-        EVENT_BASIC_ASSET_CREATION: { key: 29, label: 'DOWNLOADS.COMMON.EVENT_ASSET_CREATION' },
-        EVENT_BASIC_IMPORT_WEB_REQUEST: { key: 27, label: 'DOWNLOADS.COMMON.EVENT_IMPORT_WEB_REQUEST' },
-        EVENT_BASIC_PENDING_ASSIGN: { key: 26, label: 'DOWNLOADS.COMMON.EVENT_PENDING_ASSIGN' },
-        EVENT_BASIC_WAITING_ASSIGN: { key: 28, label: 'DOWNLOADS.COMMON.EVENT_WAITING_ASSIGN' },
-        EVENT_BASIC_CHANGED_APPROVAL: { key: 35, label: 'DOWNLOADS.COMMON.EVENT_CHANGED_APPROVAL' },
-        EVENT_BASIC_RESUBMIT_CHANGED_APPROVAL: { key: 30, label: 'DOWNLOADS.COMMON.EVENT_RESUBMIT_CHANGED_APPROVAL' },
-        WAKU_INFOMATION_DOWNLOAD_LIST: {key:25,label: 'DOWNLOADS.COMMON.WAKU_INFOMATION_DOWNLOAD_LIST'},
-        WAKU_INFOMATION_DOWNLOAD_CALENDER: {key:48,label: 'DOWNLOADS.COMMON.WAKU_INFOMATION_DOWNLOAD_CALENDER'},
-        RELEASE_CHECK_EXPORT_LIST: { key: 37, label: 'DOWNLOADS.COMMON.RELEASE_CHECK_EXPORT_LIST' },
-        RELEASE_CHECK_EXPORT_CALENDAR: { key: 38, label: 'DOWNLOADS.COMMON.RELEASE_CHECK_EXPORT_CALENDAR' },
-        RELEASE_CHECK_BASIC_EXPORT_LIST: { key: 39, label: 'DOWNLOADS.COMMON.RELEASE_CHECK_EXPORT_LIST' },
-        RELEASE_CHECK_BASIC_EXPORT_CALENDAR: { key: 40, label: 'DOWNLOADS.COMMON.RELEASE_CHECK_EXPORT_CALENDAR' },
-        USER_LIST_EXPORT: { key: 41, label: 'DOWNLOADS.COMMON.USER_LIST_EXPORT' },
-        REGULAR_EVENT_AD_FRAME: { key: 42, label: 'DOWNLOADS.COMMON.REGULAR_EVENT_AD_FRAME' },
-        REGULAR_EVENT_AD_FRAME_IMPORT_EXPORT: { key: 43, label: 'DOWNLOADS.COMMON.REGULAR_EVENT_AD_FRAME_IMPORT_EXPORT' },
-        TOP_BANNER_CHECK_SCHEDULE: { key: 44, label: 'DOWNLOADS.COMMON.TOP_BANNER_CHECK_SCHEDULE' },
-        CAMPAIGN_LIST_EXPORT: { key: 45, label: 'DOWNLOADS.COMMON.CAMPAIGN_LIST_EXPORT' },
-        COUPON_LIST_EXPORT: { key: 53, label: 'DOWNLOADS.COMMON.COUPON_LIST_EXPORT' },
-        CAMPAIGN_CALENDAR_COUPON_EXPORT: { key: 76, label: 'DOWNLOADS.COMMON.CAMPAIGN_CALENDAR_COUPON_EXPORT' },
-        COUPON_LIST_VIEW_EXPORT: { key: 87, label: 'DOWNLOADS.COMMON.COUPON_LIST_VIEW_EXPORT' },
-        COUPON_APPROVAL_LIST_VIEW_EXPORT: { key: 88, label: 'DOWNLOADS.COMMON.COUPON_APPROVAL_LIST_VIEW_EXPORT' },
-        COUPON_REJECTED_LIST_VIEW_EXPORT: { key: 89, label: 'DOWNLOADS.COMMON.COUPON_REJECTED_LIST_VIEW_EXPORT' },
-        POINT_LIST_EXPORT: { key: 78, label: 'DOWNLOADS.COMMON.POINT_LIST_EXPORT' },
-        POINT_LIST_VIEW_EXPORT: { key: 81, label: 'DOWNLOADS.COMMON.POINT_LIST_VIEW_EXPORT' },
-        POINT_APPROVAL_LIST_VIEW_EXPORT: { key: 82, label: 'DOWNLOADS.COMMON.POINT_APPROVAL_LIST_VIEW_EXPORT' },
-        POINT_REJECTED_LIST_VIEW_EXPORT: { key: 83, label: 'DOWNLOADS.COMMON.POINT_REJECTED_LIST_VIEW_EXPORT' },
-        AD_FRAME_CRCTN_REQ_EXPORT: {key:54, label: 'DOWNLOADS.COMMON.AD_FRAME_CRCTN_REQ_EXPORT'},
-        AD_FRAME_CORRECTION_REQUEST_REJECTED_EXPORT: { key: 50, label: 'DOWNLOADS.COMMON.AD_FRAME_CORRECTION_REQUEST_REJECTED_EXPORT' },
-        AD_FRAME_CORRECTION_REQUEST_PENDING_AD_DEPT_APPROVAL_EXPORT: { key: 51, label: 'DOWNLOADS.COMMON.AD_FRAME_CORRECTION_REQUEST_PENDING_AD_DEPT_APPROVAL_EXPORT' },
-        AD_FRAME_CORRECTION_REQUEST_PENDING_APPLICANT_LEADER_APPROVAL_EXPORT: {key:52, label: 'DOWNLOADS.COMMON.AD_FRAME_CORRECTION_REQUEST_PENDING_APPLICANT_LEADER_APPROVAL_EXPORT'},
-        BASIC_SEARCH_CAMPAIGN_LIST_VIEW: {key:49,label: 'DOWNLOADS.COMMON.CAMPAIGN_LIST_EXPORT'},
-        NONJS_SCREEN: {key:56,label: 'DOWNLOADS.COMMON.BANNER_INFORMATION_EXPORT'},
-        NONJS_CALENDAR_VIEW: {key:57,label: 'DOWNLOADS.COMMON.BANNER_INFORMATION_EXPORT'},
-        NONJS_LIST_VIEW: {key:58,label: 'DOWNLOADS.COMMON.BANNER_INFORMATION_EXPORT'},
-        BASIC_SEARCH_NONJS_CALENDAR: {key:59,label: 'DOWNLOADS.COMMON.BANNER_INFORMATION_EXPORT'},
-        BASIC_SEARCH_NONJS_LIST: {key:60,label: 'DOWNLOADS.COMMON.BANNER_INFORMATION_EXPORT'},
-        NONJS_MANAGEMENT_SCREEN: {key:61,label: 'DOWNLOADS.COMMON.NON_JS_BANNER_MANAGEMENT'},
-        REGULAR_EVENT_AD_FRAME_EXPORT: { key: 63, label: 'DOWNLOADS.COMMON.REGULAR_EVENT_AD_FRAME' },
-        REGULAR_EVENT_AD_FRAME_ADPLAT_EXPORT: { key: 64, label: 'DOWNLOADS.COMMON.REGULAR_EVENT_AD_FRAME' },
-        EVENT_LOG_VIEW: {key:55,label: 'DOWNLOADS.COMMON.EVENT_LOG_VIEW'},
-        BIG_EVENT_EXPORT: { key: 65, label: 'EVENTS.REGISTRATION.EXPORT_SUB_URLS_EVENTS.DOWNLOAD_EXPORT_DETAILS' },
-        PERSONALIZED_CONTENTS_EXPORT: {key:66,label: 'DOWNLOADS.COMMON.PERSONALIZED_CONTENTS_EXPORT'},
-        MAIL_LAYOUT_EXPORT: { key: 67, label: 'DOWNLOADS.COMMON.MAIL_LAYOUT_EXPORT' },
-        MAIL_LAYOUT_LOG_EXPORT: { key: 68, label: 'DOWNLOADS.COMMON.MAIL_LAYOUT_LOG_EXPORT' },
-        AD_TAG_RELEASE_CHECK_EXPORT: { key: 69, label: 'DOWNLOADS.COMMON.AD_TAG_RELEASE_CHECK_LIST_VIEW' },
-        MAIL_RELEASE_CHECK_EXPORT: { key: 70, label: 'DOWNLOADS.COMMON.MAIL_RELEASE_CHECK_LIST_VIEW' },
-        OTHER_BANNER_CALENDAR_VIEW: { key: 71, label: 'DOWNLOADS.COMMON.OTHER_BANNER_INFORMATION_EXPORT' },
-        OTHER_BANNER_LIST_VIEW: { key: 72, label: 'DOWNLOADS.COMMON.OTHER_BANNER_INFORMATION_EXPORT' },
-        OTHER_BANNER_SCREEN: { key: 73, label: 'DOWNLOADS.COMMON.OTHER_BANNER_INFORMATION_EXPORT' },
-        BASIC_SEARCH_OTHER_BANNER_CALENDAR: {key:74,label: 'DOWNLOADS.COMMON.OTHER_BANNER_INFORMATION_EXPORT'},
-        BASIC_SEARCH_OTHER_BANNER_LIST: {key:75,label: 'DOWNLOADS.COMMON.OTHER_BANNER_INFORMATION_EXPORT'},
-        CAMPAIGN_LIST_NON_HENSEI_EXPORT: { key: 85, label: 'DOWNLOADS.COMMON.CAMPAIGN_LIST_NON_HENSEI_EXPORT' },
-        APPROVE_CAMPAIGN_LIST_EXPORT: { key: 84, label: 'DOWNLOADS.COMMON.APPROVE_CAMPAIGN_LIST_EXPORT' },
-        REJECTED_CAMPAIGN_LIST_EXPORT: { key: 86, label: 'DOWNLOADS.COMMON.REJECTED_CAMPAIGN_LIST_EXPORT' }
+        EVENT_LIST_VIEW: { key : 1, label: 'DOWNLOADS.COMMON.EVENT_LIST_VIEW' },
+        EVENT_TEIREI_EVENT_MANAGEMENT: { key : 62, label: 'DOWNLOADS.COMMON.EVENT_TEIREI_EVENT_MANAGEMENT' },
+        EVENT_CALENDAR_VIEW: { key : 2, label: 'DOWNLOADS.COMMON.EVENT_CALENDAR_VIEW' },
+        EVENT_ASSET_CREATION: { key : 3, label: 'DOWNLOADS.COMMON.EVENT_ASSET_CREATION' },
+        EVENT_PENDING_ASSIGN: { key : 4, label: 'DOWNLOADS.COMMON.EVENT_PENDING_ASSIGN' },
+        EVENT_WAITING_ASSIGN: { key : 5, label: 'DOWNLOADS.COMMON.EVENT_WAITING_ASSIGN' },
+        EVENT_NEW_EVENT_APPROVAL: { key : 6, label: 'DOWNLOADS.COMMON.EVENT_NEW_EVENT_APPROVAL' },
+        EVENT_NEW_ASSIGN_APPROVAL: { key : 7, label: 'DOWNLOADS.COMMON.EVENT_NEW_ASSIGN_APPROVAL' },
+        EVENT_CHANGED_APPROVAL: { key : 8, label: 'DOWNLOADS.COMMON.EVENT_CHANGED_APPROVAL' },
+        EVENT_RESUBMIT_EVENT_APPROVAL: { key : 9, label: 'DOWNLOADS.COMMON.EVENT_RESUBMIT_EVENT_APPROVAL' },
+        EVENT_RESUBMIT_ASSIGN_APPROVAL: { key : 10, label: 'DOWNLOADS.COMMON.EVENT_RESUBMIT_ASSIGN_APPROVAL' },
+        EVENT_RESUBMIT_CHANGED_APPROVAL: { key : 11, label: 'DOWNLOADS.COMMON.EVENT_RESUBMIT_CHANGED_APPROVAL' },
+        EVENT_IMPORT_WEB_REQUEST: { key : 12, label: 'DOWNLOADS.COMMON.EVENT_IMPORT_WEB_REQUEST' },
+        SIMPLE_WEB_REQUEST_LIST_VIEW: { key : 19, label: 'DOWNLOADS.COMMON.SIMPLE_WEB_REQUEST_LIST_VIEW' },
+        SIMPLE_WEB_REQUEST_CALENDAR_VIEW: { key : 20, label: 'DOWNLOADS.COMMON.SIMPLE_WEB_REQUEST_CALENDAR_VIEW' },
+        WEB_PUBLISH_REQUEST_LIST_VIEW: { key : 21, label: 'DOWNLOADS.COMMON.WEB_PUBLISH_REQUEST_LIST_VIEW' },
+        WEB_PUBLISH_REQUEST_CALENDAR_VIEW: { key : 22, label: 'DOWNLOADS.COMMON.WEB_PUBLISH_REQUEST_CALENDAR_VIEW' },
+        WEB_PUBLISH_REQUEST_BASIC_LIST_VIEW: { key : 46, label: 'DOWNLOADS.COMMON.WEB_PUBLISH_REQUEST_LIST_VIEW' },
+        WEB_PUBLISH_REQUEST_BASIC_CALENDAR_VIEW: { key : 47, label: 'DOWNLOADS.COMMON.WEB_PUBLISH_REQUEST_CALENDAR_VIEW' },
+        KPI_DASHBOARD_ALL: { key : 13, label: 'DOWNLOADS.COMMON.KPI_DASHBOARD_ALL' },
+        KPI_DASHBOARD_GROUPS: { key : 14, label: 'DOWNLOADS.COMMON.KPI_DASHBOARD_GROUPS' },
+        KPI_DASHBOARD_GENRES: { key : 15, label: 'DOWNLOADS.COMMON.KPI_DASHBOARD_GENRES' },
+        KPI_DASHBOARD_TEAMS: { key : 16, label: 'DOWNLOADS.COMMON.KPI_DASHBOARD_TEAMS' },
+        KPI_DASHBOARD_CAMPAIGN: { key : 17, label: 'DOWNLOADS.COMMON.KPI_DASHBOARD_CAMPAIGN' },
+        KPI_DASHBOARD_EVENT: { key : 18, label: 'DOWNLOADS.COMMON.KPI_DASHBOARD_EVENT' },
+        EVENT_BASIC_NEW_EVENT_APPROVAL: { key : 31, label: 'DOWNLOADS.COMMON.EVENT_NEW_EVENT_APPROVAL' },
+        EVENT_BASIC_RESUBMIT_EVENT_APPROVAL: { key : 32, label: 'DOWNLOADS.COMMON.EVENT_RESUBMIT_EVENT_APPROVAL' },
+        EVENT_BASIC_NEW_ASSIGN_APPROVAL: { key : 33, label: 'DOWNLOADS.COMMON.EVENT_NEW_ASSIGN_APPROVAL' },
+        EVENT_BASIC_RESUBMIT_ASSIGN_APPROVAL: { key : 34, label: 'DOWNLOADS.COMMON.EVENT_RESUBMIT_ASSIGN_APPROVAL' },
+        EVENT_BASIC_ASSET_CREATION: { key : 29, label: 'DOWNLOADS.COMMON.EVENT_ASSET_CREATION' },
+        EVENT_BASIC_IMPORT_WEB_REQUEST: { key : 27, label: 'DOWNLOADS.COMMON.EVENT_IMPORT_WEB_REQUEST' },
+        EVENT_BASIC_PENDING_ASSIGN: { key : 26, label: 'DOWNLOADS.COMMON.EVENT_PENDING_ASSIGN' },
+        EVENT_BASIC_WAITING_ASSIGN: { key : 28, label: 'DOWNLOADS.COMMON.EVENT_WAITING_ASSIGN' },
+        EVENT_BASIC_CHANGED_APPROVAL: { key : 35, label: 'DOWNLOADS.COMMON.EVENT_CHANGED_APPROVAL' },
+        EVENT_BASIC_RESUBMIT_CHANGED_APPROVAL: { key : 30, label: 'DOWNLOADS.COMMON.EVENT_RESUBMIT_CHANGED_APPROVAL' },
+        WAKU_INFOMATION_DOWNLOAD_LIST: {key :25, label: 'DOWNLOADS.COMMON.WAKU_INFOMATION_DOWNLOAD_LIST'},
+        WAKU_INFOMATION_DOWNLOAD_CALENDER: {key :48, label: 'DOWNLOADS.COMMON.WAKU_INFOMATION_DOWNLOAD_CALENDER'},
+        RELEASE_CHECK_EXPORT_LIST: { key : 37, label: 'DOWNLOADS.COMMON.RELEASE_CHECK_EXPORT_LIST' },
+        RELEASE_CHECK_EXPORT_CALENDAR: { key : 38, label: 'DOWNLOADS.COMMON.RELEASE_CHECK_EXPORT_CALENDAR' },
+        RELEASE_CHECK_BASIC_EXPORT_LIST: { key : 39, label: 'DOWNLOADS.COMMON.RELEASE_CHECK_EXPORT_LIST' },
+        RELEASE_CHECK_BASIC_EXPORT_CALENDAR: { key : 40, label: 'DOWNLOADS.COMMON.RELEASE_CHECK_EXPORT_CALENDAR' },
+        USER_LIST_EXPORT: { key : 41, label: 'DOWNLOADS.COMMON.USER_LIST_EXPORT' },
+        REGULAR_EVENT_AD_FRAME: { key : 42, label: 'DOWNLOADS.COMMON.REGULAR_EVENT_AD_FRAME' },
+        REGULAR_EVENT_AD_FRAME_IMPORT_EXPORT: { key : 43, label: 'DOWNLOADS.COMMON.REGULAR_EVENT_AD_FRAME_IMPORT_EXPORT' },
+        TOP_BANNER_CHECK_SCHEDULE: { key : 44, label: 'DOWNLOADS.COMMON.TOP_BANNER_CHECK_SCHEDULE' },
+        CAMPAIGN_LIST_EXPORT: { key : 45, label: 'DOWNLOADS.COMMON.CAMPAIGN_LIST_EXPORT' },
+        COUPON_LIST_EXPORT: { key : 53, label: 'DOWNLOADS.COMMON.COUPON_LIST_EXPORT' },
+        CAMPAIGN_CALENDAR_COUPON_EXPORT: { key : 76, label: 'DOWNLOADS.COMMON.CAMPAIGN_CALENDAR_COUPON_EXPORT' },
+        COUPON_LIST_VIEW_EXPORT: { key : 87, label: 'DOWNLOADS.COMMON.COUPON_LIST_VIEW_EXPORT' },
+        COUPON_APPROVAL_LIST_VIEW_EXPORT: { key : 88, label: 'DOWNLOADS.COMMON.COUPON_APPROVAL_LIST_VIEW_EXPORT' },
+        COUPON_REJECTED_LIST_VIEW_EXPORT: { key : 89, label: 'DOWNLOADS.COMMON.COUPON_REJECTED_LIST_VIEW_EXPORT' },
+        POINT_LIST_EXPORT: { key : 78, label: 'DOWNLOADS.COMMON.POINT_LIST_EXPORT' },
+        POINT_LIST_VIEW_EXPORT: { key : 81, label: 'DOWNLOADS.COMMON.POINT_LIST_VIEW_EXPORT' },
+        POINT_APPROVAL_LIST_VIEW_EXPORT: { key : 82, label: 'DOWNLOADS.COMMON.POINT_APPROVAL_LIST_VIEW_EXPORT' },
+        POINT_REJECTED_LIST_VIEW_EXPORT: { key : 83, label: 'DOWNLOADS.COMMON.POINT_REJECTED_LIST_VIEW_EXPORT' },
+        AD_FRAME_CRCTN_REQ_EXPORT: {key :54, label: 'DOWNLOADS.COMMON.AD_FRAME_CRCTN_REQ_EXPORT'},
+        AD_FRAME_CORRECTION_REQUEST_REJECTED_EXPORT: { key : 50, label: 'DOWNLOADS.COMMON.AD_FRAME_CORRECTION_REQUEST_REJECTED_EXPORT' },
+        AD_FRAME_CORRECTION_REQUEST_PENDING_AD_DEPT_APPROVAL_EXPORT: { key : 51, label: 'DOWNLOADS.COMMON.AD_FRAME_CORRECTION_REQUEST_PENDING_AD_DEPT_APPROVAL_EXPORT' },
+        AD_FRAME_CORRECTION_REQUEST_PENDING_APPLICANT_LEADER_APPROVAL_EXPORT: {key :52, label: 'DOWNLOADS.COMMON.AD_FRAME_CORRECTION_REQUEST_PENDING_APPLICANT_LEADER_APPROVAL_EXPORT'},
+        BASIC_SEARCH_CAMPAIGN_LIST_VIEW: {key :49, label: 'DOWNLOADS.COMMON.CAMPAIGN_LIST_EXPORT'},
+        NONJS_SCREEN: {key :56, label: 'DOWNLOADS.COMMON.BANNER_INFORMATION_EXPORT'},
+        NONJS_CALENDAR_VIEW: {key :57, label: 'DOWNLOADS.COMMON.BANNER_INFORMATION_EXPORT'},
+        NONJS_LIST_VIEW: {key :58, label: 'DOWNLOADS.COMMON.BANNER_INFORMATION_EXPORT'},
+        BASIC_SEARCH_NONJS_CALENDAR: {key :59, label: 'DOWNLOADS.COMMON.BANNER_INFORMATION_EXPORT'},
+        BASIC_SEARCH_NONJS_LIST: {key :60, label: 'DOWNLOADS.COMMON.BANNER_INFORMATION_EXPORT'},
+        NONJS_MANAGEMENT_SCREEN: {key :61, label: 'DOWNLOADS.COMMON.NON_JS_BANNER_MANAGEMENT'},
+        REGULAR_EVENT_AD_FRAME_EXPORT: { key : 63, label: 'DOWNLOADS.COMMON.REGULAR_EVENT_AD_FRAME' },
+        REGULAR_EVENT_AD_FRAME_ADPLAT_EXPORT: { key : 64, label: 'DOWNLOADS.COMMON.REGULAR_EVENT_AD_FRAME' },
+        EVENT_LOG_VIEW: {key :55, label: 'DOWNLOADS.COMMON.EVENT_LOG_VIEW'},
+        BIG_EVENT_EXPORT: { key : 65, label: 'EVENTS.REGISTRATION.EXPORT_SUB_URLS_EVENTS.DOWNLOAD_EXPORT_DETAILS' },
+        PERSONALIZED_CONTENTS_EXPORT: {key :66, label: 'DOWNLOADS.COMMON.PERSONALIZED_CONTENTS_EXPORT'},
+        MAIL_LAYOUT_EXPORT: { key : 67, label: 'DOWNLOADS.COMMON.MAIL_LAYOUT_EXPORT' },
+        MAIL_LAYOUT_LOG_EXPORT: { key : 68, label: 'DOWNLOADS.COMMON.MAIL_LAYOUT_LOG_EXPORT' },
+        AD_TAG_RELEASE_CHECK_EXPORT: { key : 69, label: 'DOWNLOADS.COMMON.AD_TAG_RELEASE_CHECK_LIST_VIEW' },
+        MAIL_RELEASE_CHECK_EXPORT: { key : 70, label: 'DOWNLOADS.COMMON.MAIL_RELEASE_CHECK_LIST_VIEW' },
+        OTHER_BANNER_CALENDAR_VIEW: { key : 71, label: 'DOWNLOADS.COMMON.OTHER_BANNER_INFORMATION_EXPORT' },
+        OTHER_BANNER_LIST_VIEW: { key : 72, label: 'DOWNLOADS.COMMON.OTHER_BANNER_INFORMATION_EXPORT' },
+        OTHER_BANNER_SCREEN: { key : 73, label: 'DOWNLOADS.COMMON.OTHER_BANNER_INFORMATION_EXPORT' },
+        BASIC_SEARCH_OTHER_BANNER_CALENDAR: {key :74, label: 'DOWNLOADS.COMMON.OTHER_BANNER_INFORMATION_EXPORT'},
+        BASIC_SEARCH_OTHER_BANNER_LIST: {key :75, label: 'DOWNLOADS.COMMON.OTHER_BANNER_INFORMATION_EXPORT'},
+        CAMPAIGN_LIST_NON_HENSEI_EXPORT: { key : 85, label: 'DOWNLOADS.COMMON.CAMPAIGN_LIST_NON_HENSEI_EXPORT' },
+        APPROVE_CAMPAIGN_LIST_EXPORT: { key : 84, label: 'DOWNLOADS.COMMON.APPROVE_CAMPAIGN_LIST_EXPORT' },
+        REJECTED_CAMPAIGN_LIST_EXPORT: { key : 86, label: 'DOWNLOADS.COMMON.REJECTED_CAMPAIGN_LIST_EXPORT' }
       },
       exportStatus: {
-        IN_PROGRESS: { key: 2, label: 'DOWNLOADS.COMMON.IN_PROGRESS' },
-        COMPLETED: { key: 3, label: 'DOWNLOADS.COMMON.COMPLETED' },
-        FAILED: { key: 4, label: 'DOWNLOADS.COMMON.FAILED' },
-        READY: { key: 1, label: 'DOWNLOADS.COMMON.READY' },
-        INTERRUPTED: { key: 5, label: 'DOWNLOADS.COMMON.INTERRUPTED' }
+        IN_PROGRESS: { key : 2, label: 'DOWNLOADS.COMMON.IN_PROGRESS' },
+        COMPLETED: { key : 3, label: 'DOWNLOADS.COMMON.COMPLETED' },
+        FAILED: { key : 4, label: 'DOWNLOADS.COMMON.FAILED' },
+        READY: { key : 1, label: 'DOWNLOADS.COMMON.READY' },
+        INTERRUPTED: { key : 5, label: 'DOWNLOADS.COMMON.INTERRUPTED' }
       },
       importUpdateStatus: {
-        IN_PROGRESS: { key: 2, label: 'DOWNLOADS.COMMON.IMPORT_PROGRESS' },
-        COMPLETED: { key: 3, label: 'DOWNLOADS.COMMON.COMPLETED' },
-        FAILED: { key: 4, label: 'DOWNLOADS.COMMON.FAILED' },
-        READY: { key: 1, label: 'DOWNLOADS.COMMON.READY' },
-        INTERRUPTED: { key: 5, label: 'DOWNLOADS.COMMON.INTERRUPTED' }
+        IN_PROGRESS: { key : 2, label: 'DOWNLOADS.COMMON.IMPORT_PROGRESS' },
+        COMPLETED: { key : 3, label: 'DOWNLOADS.COMMON.COMPLETED' },
+        FAILED: { key : 4, label: 'DOWNLOADS.COMMON.FAILED' },
+        READY: { key : 1, label: 'DOWNLOADS.COMMON.READY' },
+        INTERRUPTED: { key : 5, label: 'DOWNLOADS.COMMON.INTERRUPTED' }
       },
       importUpdateReqType: {
-        EVENT_IMPORT: { key: 1, label: 'COMMON.IMPORT.REQUEST_TYPES.EVENT_IMPORT' },
-        EVENT_UPDATE: { key: 2, label: 'COMMON.IMPORT.REQUEST_TYPES.EVENT_UPDATE' },
-        ASSIGN_IMPORT: { key: 3, label: 'COMMON.IMPORT.REQUEST_TYPES.ASSIGN_IMPORT' },
-        TEIREI_EVENT_IMPORT: { key: 4, label: 'COMMON.IMPORT.REQUEST_TYPES.TEIREI_EVENT_IMPORT' },
-        WEB_PUBLISHING_IMPORT: { key: 5, label: 'COMMON.IMPORT.REQUEST_TYPES.WEB_PUBLISHING_IMPORT' },
-        RELEASE_CHECK_IMPORT: { key:6, label: 'COMMON.IMPORT.REQUEST_TYPES.RELEASE_CHECK_IMPORT'},
-        SUB_URL_REGISTRATION: { key:7, label: 'COMMON.IMPORT.REQUEST_TYPES.SUB_URL_REGISTRATION'},
-        SUB_URL_UPDATE: { key: 8, label: 'COMMON.IMPORT.REQUEST_TYPES.SUB_URL_UPDATE' },
-        MAIL_LAYOUT_UPDATE: { key: 9, label: 'COMMON.IMPORT.REQUEST_TYPES.MAIL_LAYOUT_UPDATE' },
-        AD_TAG_RELEASE_CHECK_IMPORT: { key:10, label: 'COMMON.IMPORT.REQUEST_TYPES.AD_TAG_RELEASE_CHECK_IMPORT'},
-        CAMPAIGN_PARENT_IMPORT: { key:11, label: 'COMMON.IMPORT.REQUEST_TYPES.CAMPAIGN_PARENT_IMPORT'},
-        CAMPAIGN_POINT_IMPORT: { key:12, label: 'COMMON.IMPORT.REQUEST_TYPES.CAMPAIGN_POINT_IMPORT'},
-        CAMPAIGN_COUPON_IMPORT: { key:12, label: 'COMMON.IMPORT.REQUEST_TYPES.CAMPAIGN_COUPON_IMPORT'}
+        EVENT_IMPORT: { key : 1, label: 'COMMON.IMPORT.REQUEST_TYPES.EVENT_IMPORT' },
+        EVENT_UPDATE: { key : 2, label: 'COMMON.IMPORT.REQUEST_TYPES.EVENT_UPDATE' },
+        ASSIGN_IMPORT: { key : 3, label: 'COMMON.IMPORT.REQUEST_TYPES.ASSIGN_IMPORT' },
+        TEIREI_EVENT_IMPORT: { key : 4, label: 'COMMON.IMPORT.REQUEST_TYPES.TEIREI_EVENT_IMPORT' },
+        WEB_PUBLISHING_IMPORT: { key : 5, label: 'COMMON.IMPORT.REQUEST_TYPES.WEB_PUBLISHING_IMPORT' },
+        RELEASE_CHECK_IMPORT: { key :6, label: 'COMMON.IMPORT.REQUEST_TYPES.RELEASE_CHECK_IMPORT'},
+        SUB_URL_REGISTRATION: { key :7, label: 'COMMON.IMPORT.REQUEST_TYPES.SUB_URL_REGISTRATION'},
+        SUB_URL_UPDATE: { key : 8, label: 'COMMON.IMPORT.REQUEST_TYPES.SUB_URL_UPDATE' },
+        MAIL_LAYOUT_UPDATE: { key : 9, label: 'COMMON.IMPORT.REQUEST_TYPES.MAIL_LAYOUT_UPDATE' },
+        AD_TAG_RELEASE_CHECK_IMPORT: { key :10, label: 'COMMON.IMPORT.REQUEST_TYPES.AD_TAG_RELEASE_CHECK_IMPORT'},
+        CAMPAIGN_PARENT_IMPORT: { key :11, label: 'COMMON.IMPORT.REQUEST_TYPES.CAMPAIGN_PARENT_IMPORT'},
+        CAMPAIGN_POINT_IMPORT: { key :12, label: 'COMMON.IMPORT.REQUEST_TYPES.CAMPAIGN_POINT_IMPORT'},
+        CAMPAIGN_COUPON_IMPORT: { key :12, label: 'COMMON.IMPORT.REQUEST_TYPES.CAMPAIGN_COUPON_IMPORT'}
       },
       bannerType: {
-        UXP: { key: '1', value: true },
-        OTHER: { key: '2', value: true }
+        UXP: { key : '1', value: true },
+        OTHER: { key : '2', value: true }
       },
       bannerTypeSearchObj: { id: 0, fieldId: 4117, fieldName: 'banner.type', fieldValue: false, filterCondition: 'IN' },
       bannerTypeFieldFilters: {
         UXP_BANNER: 'Js & Non Js Banner',
         OTHER_BANNER: 'Other Banner'
       },
-      otherBannerOtherArea: { key: 'userInput_', value: 'Other Area' },
-      userInputKey: 'userInput_',
+      otherBannerOtherArea: { key : 'userInput_', value: 'Other Area' },
+      userInputkey : 'userInput_',
       genreDevice: {
-        PC: { key: '3', keyEvent: '1,2', value: true },
-        SP: { key: '2', keyEvent: '3,4', value: true },
-        TB: { key: '4', keyEvent: '0', value: true },
-        MB: { key: '1', keyEvent: '5,6', value: true }
+        PC: { key : '3', keyEvent: '1,2', value: true },
+        SP: { key : '2', keyEvent: '3,4', value: true },
+        TB: { key : '4', keyEvent: '0', value: true },
+        MB: { key : '1', keyEvent: '5,6', value: true }
       },
       genreFieldIDs: [374, 221, 222, 223, 224, 225, 226],
       otherBannerIds: [4107, 4108, 4109, 4110, 4111, 4112, 4113, 4114, 4115, 4116],
@@ -2413,8 +2410,8 @@ export const global = {
         deviceType: { id: 0, fieldId: 375, fieldName: 'genre.device.type', fieldValue: false, filterCondition: 'IN' }
       },
       otherBannerDevice: {
-        PC: { key: '3', keyEvent: '1,2', value: true },
-        SP: { key: '2', keyEvent: '3,4', value: true },
+        PC: { key : '3', keyEvent: '1,2', value: true },
+        SP: { key : '2', keyEvent: '3,4', value: true },
       },
       otherBannerSearchObj: { id: 0, fieldId: 4118, fieldName: 'banner.dvc.type', fieldValue: false, filterCondition: 'IN' },
       preSalesFileType: { id: 0, fieldId: 379, fieldName: 'presales.file.type', fieldValue: 0, filterCondition: 'EQUAL' },

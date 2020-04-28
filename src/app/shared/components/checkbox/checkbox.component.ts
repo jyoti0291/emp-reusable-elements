@@ -20,11 +20,15 @@ export class CheckboxComponent implements OnInit {
   hiddenControlName: string;
   constructor() { }
   ngOnInit() {
-    const checkboxGroup = new FormArray(this.field.options.map(item => new FormGroup({
-      id: new FormControl(item.key),
-      text: new FormControl(item.value),
-      checkbox: new FormControl(false)
-    })));
+    const checkboxGroup = new FormArray(
+      this.field.options.map(
+        item => new FormGroup({
+          id: new FormControl(item.key),
+          text: new FormControl(item.value),
+          checkbox: new FormControl(false)
+        })
+      )
+    );
 
     this.group.addControl(this.field.name, checkboxGroup);
     if (this.field.mincheck) {
@@ -35,7 +39,6 @@ export class CheckboxComponent implements OnInit {
       this.hiddenControlName = this.field.name + 'selectedItems';
       this.group.addControl(this.hiddenControlName, hiddenControl);
     }
-
   }
   mapItems(items: CheckBoxGroup[]) {
     const selectedItems = items.filter((item: CheckBoxGroup) => item.checkbox).map((item) => item.id);

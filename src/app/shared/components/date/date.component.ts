@@ -19,7 +19,7 @@ export class DateComponent implements OnInit {
   charactercountleft: number;
   public displayErrors: boolean;
 
-  constructor(private config: NgbDatepickerConfig) {
+  constructor(private config: NgbDatepickerConfig, private vsInstance: ValidationService) {
     const current = new Date();
     config.minDate = {
       year: current.getFullYear(),
@@ -32,11 +32,11 @@ export class DateComponent implements OnInit {
     config.showWeekNumbers = false;
   }
   ngOnInit() {
-    const vsInstance = new ValidationService();
 
-    const required = vsInstance.run(new Required());
+    const required = this.vsInstance.run(new Required(this.field.validationConfig));
 
-    this.group.controls[this.field.name].setValidators([required.validator]);
+    const validatorResult = this.vsInstance.prepareValidators(required);
+    this.group.controls[this.field.name].setValidators([...validatorResult]);
     this.field.validationMessages.push(required);
   }
 

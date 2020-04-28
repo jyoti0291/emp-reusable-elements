@@ -30,7 +30,7 @@ export class CommonService {
     return null;
   }
 
-  public prepareForm(fields: object) {
+  public prepareForm(fields) {
     const keys = Object.keys(fields);
     const group = this.fb.group({});
     keys.forEach((key) => {
@@ -39,7 +39,7 @@ export class CommonService {
       }
       if (fields[key].hasOwnProperty('validations')) {
         // commented here to add validation from strategic pattern
-        //fields[key].validations = this.validationService.prepareValidation(fields[key].validations);
+        // fields[key].validations = this.validationService.prepareValidation(fields[key].validations);
       }
       const control = this.fb.control(
         fields[key].value,

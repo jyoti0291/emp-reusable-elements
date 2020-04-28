@@ -23,15 +23,13 @@ export class SelectComponent implements OnInit {
     @Input() group: FormGroup;
     @Output() changedValue = new EventEmitter<string>();
 
-    constructor() {}
+    constructor(private vsInstance: ValidationService) {}
     ngOnInit() {
-        const vsInstance = new ValidationService();
 
-        const required = vsInstance.run(new Required());
+        const required = this.vsInstance.run(new Required(this.field.validationConfig));
 
-        this.group.controls[this.field.name].setValidators([
-            required.validator
-        ]);
+        const validatorResult = this.vsInstance.prepareValidators(required );
+        this.group.controls[this.field.name].setValidators([...validatorResult]);
         this.field.validationMessages.push(required);
     }
 
