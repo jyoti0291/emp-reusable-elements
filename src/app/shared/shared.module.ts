@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularMultiSelectModule } from "angular2-multiselect-dropdown";
+import { FormioModule } from 'angular-formio';
 
 import { PipesModule } from './pipes/index';
 import { CommonLayoutService } from './services';
@@ -19,6 +20,7 @@ import { FormComponent } from './components/form/form.component';
 import { ErrorContainerComponent } from './components/error-container/error-container.component';
 import { InfoComponent } from './components/info/info.component';
 import { MultiselectDropdownComponent } from './components/multiselect-dropdown/multiselect-dropdown.component';
+import { FormBuilderComponent } from './components/form-builder/form-builder.component';
 
 @NgModule({
     declarations: [
@@ -33,7 +35,8 @@ import { MultiselectDropdownComponent } from './components/multiselect-dropdown/
         FormComponent,
         ErrorContainerComponent,
         InfoComponent,
-        MultiselectDropdownComponent
+        MultiselectDropdownComponent,
+        FormBuilderComponent
     ],
     imports: [
         CommonModule,
@@ -41,7 +44,8 @@ import { MultiselectDropdownComponent } from './components/multiselect-dropdown/
         PipesModule,
         ReactiveFormsModule,
         NgbModule,
-        AngularMultiSelectModule
+        AngularMultiSelectModule,
+        FormioModule
     ],
     exports: [
         TranslateModule,
@@ -57,7 +61,8 @@ import { MultiselectDropdownComponent } from './components/multiselect-dropdown/
         DateComponent,
         EmailComponent,
         FormComponent,
-        MultiselectDropdownComponent
+        MultiselectDropdownComponent,
+        FormBuilderComponent
     ],
     providers: [CommonLayoutService]
 })
