@@ -29,6 +29,7 @@
     "@ngx-translate/core": "^11.0.1",
     "@ngx-translate/http-loader": "^4.0.0",
     "@types/underscore": "^1.9.4",
+    "angular-formio": "^3.27.3",
     "angular2-multiselect-dropdown": "^4.6.3",
     "bootstrap": "^4.0.0",
     "font-awesome": "^4.7.0",
