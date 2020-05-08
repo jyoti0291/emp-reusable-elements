@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { EventComponent } from './event.component';
 import { ListComponent } from './list/list.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { EventFormBuilderComponent } from './event-form-builder/event-form-builder.component';
+import { EventFormRendererComponent } from './event-form-renderer/event-form-renderer.component';
 const routes: Routes = [
   {
     path: 'event',
@@ -21,6 +23,14 @@ const routes: Routes = [
       {
         path: 'list',
         component: ListComponent,
+      },
+      {
+        path: 'create',
+        component: EventFormBuilderComponent,
+      },
+      {
+        path: 'view',
+        component: EventFormRendererComponent,
       }
     ]
   },

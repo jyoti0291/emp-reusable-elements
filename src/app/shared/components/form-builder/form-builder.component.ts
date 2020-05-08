@@ -50,6 +50,7 @@ export class FormBuilderComponent implements OnInit {
   }
 
   onChange(event) {
+    localStorage.setItem("formComponents", JSON.stringify(event.form.components));
   }
 
 }

@@ -21,6 +21,7 @@ import { ErrorContainerComponent } from './components/error-container/error-cont
 import { InfoComponent } from './components/info/info.component';
 import { MultiselectDropdownComponent } from './components/multiselect-dropdown/multiselect-dropdown.component';
 import { FormBuilderComponent } from './components/form-builder/form-builder.component';
+import { FormRendererComponent } from './components/form-renderer/form-renderer.component';
 
 @NgModule({
     declarations: [
@@ -36,7 +37,8 @@ import { FormBuilderComponent } from './components/form-builder/form-builder.com
         ErrorContainerComponent,
         InfoComponent,
         MultiselectDropdownComponent,
-        FormBuilderComponent
+        FormBuilderComponent,
+        FormRendererComponent
     ],
     imports: [
         CommonModule,
@@ -62,7 +64,8 @@ import { FormBuilderComponent } from './components/form-builder/form-builder.com
         EmailComponent,
         FormComponent,
         MultiselectDropdownComponent,
-        FormBuilderComponent
+        FormBuilderComponent,
+        FormRendererComponent
     ],
     providers: [CommonLayoutService]
 })

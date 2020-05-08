@@ -8,11 +8,13 @@ import { EventComponent } from './event/event.component';
 import { EventModule } from './event/event.module';
 import { ListComponent } from './event/list/list.component';
 import { RegistrationComponent } from './event/registration/registration.component';
+import { EventFormBuilderComponent } from './event/event-form-builder/event-form-builder.component';
+import { EventFormRendererComponent } from './event/event-form-renderer/event-form-renderer.component';
 import { SharedModule } from 'shared';
 
 
 @NgModule({
-  declarations: [EventComponent, RegistrationComponent, ListComponent],
+  declarations: [EventComponent, RegistrationComponent, ListComponent, EventFormBuilderComponent, EventFormRendererComponent],
   imports: [
     CommonModule,
     EventModule,
