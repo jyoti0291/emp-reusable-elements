@@ -1,1 +1,5 @@
-<form-builder [form]="formSrc" (change)="onChange($event)" [options]="formOptions"></form-builder>
+<!-- To Generate/construct form -->
+<form-builder [form]="formSrc" [options]="formOptions" (change)="onChange($event)"></form-builder>
+
+<!-- To render form -->
+<formio [form]='formSrc'></formio>
