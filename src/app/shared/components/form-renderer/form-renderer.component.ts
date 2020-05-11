@@ -12,7 +12,7 @@ export class FormRendererComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    let formComp = localStorage.getItem("components");
+    let formComp = localStorage.getItem("formComponents");
     this.formSrc.components = JSON.parse(formComp);
     console.log(this.formSrc);
   }
