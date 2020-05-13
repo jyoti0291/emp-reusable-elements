@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RegistrationService } from '../../../features/event/registration/registration.service';
 
 @Component({
   selector: 'rx-form-builder',
@@ -135,13 +136,12 @@ export class FormBuilderComponent implements OnInit {
     }
   };
 
-  constructor() { }
+  constructor(private regService: RegistrationService) { }
 
   ngOnInit() {
     this.formSrc.components = JSON.parse(localStorage.getItem('formComponents')) || [];
   }
   onChange(event) {
-    localStorage.setItem('formComponents', JSON.stringify(event.form.components));
+    this.regService.setFormComponents(event.form.components);
   }
-
 }
