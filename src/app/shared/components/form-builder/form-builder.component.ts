@@ -138,9 +138,10 @@ export class FormBuilderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.formSrc.components = JSON.parse(localStorage.getItem('formComponents')) || [];
   }
   onChange(event) {
-    localStorage.setItem("formComponents", JSON.stringify(event.form.components));
+    localStorage.setItem('formComponents', JSON.stringify(event.form.components));
   }
 
 }
