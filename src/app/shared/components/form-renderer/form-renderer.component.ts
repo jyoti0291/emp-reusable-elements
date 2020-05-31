@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { RegistrationService } from '../../../features/event/registration/registration.service';
 
+declare global {
+  interface Window { setLanguage: any; }
+}
+
 @Component({
   selector: 'rx-form-renderer',
   templateUrl: './form-renderer.component.html',
@@ -15,13 +19,12 @@ export class FormRendererComponent implements OnInit {
 
   ngOnInit() {
     this.formComponents = this.regService.getFormComponents();
-    // let formComp = localStorage.getItem("formComponents");
-    this.formSrc.components = this.formComponents;
-    console.log(this.formSrc);
+    let formComp = localStorage.getItem("formComponents");
+    this.formSrc.components = JSON.parse(formComp);
   }
 
   onSubmit(event) {
-    console.log(event.data);
+    console.log(event);
   }
 
 }

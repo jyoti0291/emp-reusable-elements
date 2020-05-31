@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'rx-event-form-renderer',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventFormRendererComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+  }
+
+  editForm() {
+    this.router.navigate(['../create'], { relativeTo: this.activatedRoute });
   }
 
 }
