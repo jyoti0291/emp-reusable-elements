@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RegistrationService } from '../../../features/event/registration/registration.service';
 
-declare global {
-  interface Window { setLanguage: any; }
-}
-
 @Component({
   selector: 'rx-form-renderer',
   templateUrl: './form-renderer.component.html',
