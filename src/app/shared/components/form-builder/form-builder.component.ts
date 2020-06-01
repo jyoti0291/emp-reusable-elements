@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RegistrationService } from '../../../features/event/registration/registration.service';
 import { Formio } from 'angular-formio';
 import { Components , Utils  } from 'formiojs';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -12,6 +13,8 @@ import { Components , Utils  } from 'formiojs';
 export class FormBuilderComponent implements OnInit {
   public formSrc = { components: [] };
   public formComponents = [];
+  edit: String;
+  private sub: any;
   public formOptions = {
     builder: {
       basic: {
@@ -140,38 +143,50 @@ export class FormBuilderComponent implements OnInit {
     }
   };
 
-  constructor(private regService: RegistrationService) { }
+  constructor(private route: ActivatedRoute, private regService: RegistrationService) { }
 
   ngOnInit() {
     const editForm = Components.components.textfield.editForm;
     Components.components.textfield.editForm = function() {
       const form = editForm();
       const tabs = Utils.getComponent(form.components, 'tabs', true);
-      let customTab = JSON.parse(JSON.stringify(tabs.components[0].components));
-      customTab = [{
-        input: true,
-        key: "translation",
-        label: "Translation",
-        placeholder: "Field Translation",
-        tooltip: "The label for this field that will appear next to it.",
-        type: "textfield",
-        weight: 0
-      }]
-      tabs.components.push({
-        key: 'custom',
-        label: 'Custom',
-        components: customTab
+      var filteredArray = tabs.components[0].components.filter(function(itm){
+        return itm.key == 'translation';
       });
+      if (filteredArray) {
+        tabs.components[0].components.push({
+          input: true,
+          key: "translation",
+          label: "Translation",
+          placeholder: "Field Translation",
+          tooltip: "The label for this field that will appear next to it.",
+          type: "textfield",
+          weight: 0
+        });
+      }
       return form;
     };
-    let formComp = localStorage.getItem("formComponents");
-    this.formComponents = this.regService.getFormComponents();
-    // let formComp = localStorage.getItem("formComponents");
-    this.formSrc.components = this.formComponents;
-    console.log(Components.components.textfield.editForm());
+    this.sub = this.route.params.subscribe(params => {
+       this.edit = params['edit'];
+    });
+    if (this.edit) {
+      this.regService.setFormComponents(JSON.parse(localStorage.getItem("formComponents")));
+    }
+    let formComp = this.regService.getFormComponents();
+    this.formSrc.components = formComp;
   }
 
   onChange(event) {
+    event.builder.i18next.options.resources.ja = {};
+    if (event.form.components.length) {
+      let translationObj = {};
+      for (let field of event.form.components) {
+        translationObj[field.label] = field.translation;
+      }
+      event.builder.i18next.options.resources.ja = {
+        translation: translationObj
+      };
+    }
     this.regService.setFormComponents(event.form.components);
   }
 }
