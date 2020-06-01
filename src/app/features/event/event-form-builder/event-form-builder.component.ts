@@ -15,6 +15,8 @@ export class EventFormBuilderComponent implements OnInit {
   }
 
   generateForm() {
+    let formComponents = this.regService.getFormComponents();
+    localStorage.setItem("formComponents", JSON.stringify(formComponents));
     this.router.navigate(['../view'], { relativeTo: this.activatedRoute });
   }
 

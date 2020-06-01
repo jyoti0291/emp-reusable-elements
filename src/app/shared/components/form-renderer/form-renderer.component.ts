@@ -15,13 +15,12 @@ export class FormRendererComponent implements OnInit {
 
   ngOnInit() {
     this.formComponents = this.regService.getFormComponents();
-    // let formComp = localStorage.getItem("formComponents");
-    this.formSrc.components = this.formComponents;
-    console.log(this.formSrc);
+    let formComp = localStorage.getItem("formComponents");
+    this.formSrc.components = JSON.parse(formComp);
   }
 
   onSubmit(event) {
-    console.log(event.data);
+    console.log(event);
   }
 
 }

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { RegistrationService } from '../../../features/event/registration/registration.service';
+import { Formio } from 'angular-formio';
+import { Components , Utils  } from 'formiojs';
+
 
 @Component({
   selector: 'rx-form-builder',
@@ -8,6 +11,7 @@ import { RegistrationService } from '../../../features/event/registration/regist
 })
 export class FormBuilderComponent implements OnInit {
   public formSrc = { components: [] };
+  public formComponents = [];
   public formOptions = {
     builder: {
       basic: {
@@ -139,8 +143,34 @@ export class FormBuilderComponent implements OnInit {
   constructor(private regService: RegistrationService) { }
 
   ngOnInit() {
-    this.formSrc.components = JSON.parse(localStorage.getItem('formComponents')) || [];
+    const editForm = Components.components.textfield.editForm;
+    Components.components.textfield.editForm = function() {
+      const form = editForm();
+      const tabs = Utils.getComponent(form.components, 'tabs', true);
+      let customTab = JSON.parse(JSON.stringify(tabs.components[0].components));
+      customTab = [{
+        input: true,
+        key: "translation",
+        label: "Translation",
+        placeholder: "Field Translation",
+        tooltip: "The label for this field that will appear next to it.",
+        type: "textfield",
+        weight: 0
+      }]
+      tabs.components.push({
+        key: 'custom',
+        label: 'Custom',
+        components: customTab
+      });
+      return form;
+    };
+    let formComp = localStorage.getItem("formComponents");
+    this.formComponents = this.regService.getFormComponents();
+    // let formComp = localStorage.getItem("formComponents");
+    this.formSrc.components = this.formComponents;
+    console.log(Components.components.textfield.editForm());
   }
+
   onChange(event) {
     this.regService.setFormComponents(event.form.components);
   }
