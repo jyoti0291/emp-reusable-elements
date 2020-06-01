@@ -146,26 +146,7 @@ export class FormBuilderComponent implements OnInit {
   constructor(private route: ActivatedRoute, private regService: RegistrationService) { }
 
   ngOnInit() {
-    const editForm = Components.components.textfield.editForm;
-    Components.components.textfield.editForm = function() {
-      const form = editForm();
-      const tabs = Utils.getComponent(form.components, 'tabs', true);
-      var filteredArray = tabs.components[0].components.filter(function(itm){
-        return itm.key == 'translation';
-      });
-      if (filteredArray) {
-        tabs.components[0].components.push({
-          input: true,
-          key: "translation",
-          label: "Translation",
-          placeholder: "Field Translation",
-          tooltip: "The label for this field that will appear next to it.",
-          type: "textfield",
-          weight: 0
-        });
-      }
-      return form;
-    };
+    this.addTranslationTab();
     this.sub = this.route.params.subscribe(params => {
        this.edit = params['edit'];
     });
@@ -174,6 +155,34 @@ export class FormBuilderComponent implements OnInit {
     }
     let formComp = this.regService.getFormComponents();
     this.formSrc.components = formComp;
+  }
+
+  addTranslationTab() {
+    for (let component in Components.components) {
+      const editForm = Components.components[component].editForm;
+      Components.components[component].editForm = function() {
+        const form = editForm();
+        const tabs = Utils.getComponent(form.components, 'tabs', true);
+        let count = 0;
+        tabs.components[0].components.filter(function (itm) {
+          if (itm.key == 'translation') {
+            count++;
+          }
+        });
+        if (count == 0) {
+          tabs.components[0].components.push({
+            input: true,
+            key: "translation",
+            label: "Translation",
+            placeholder: "Field Translation",
+            tooltip: "The label for this field that will appear next to it.",
+            type: "textfield",
+            weight: 0
+          });
+        }
+        return form;
+      };
+    }
   }
 
   onChange(event) {
