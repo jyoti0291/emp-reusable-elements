@@ -9,7 +9,8 @@ import { Formio, FormioAppConfig } from 'angular-formio';
 })
 export class EventFormRendererComponent implements OnInit {
   public formOptions = null;
-  public form
+  public form;
+  public selectField;
   constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
@@ -19,22 +20,24 @@ export class EventFormRendererComponent implements OnInit {
     this.router.navigate(['../create', {edit: true }], { relativeTo: this.activatedRoute });
   }
 
-  setLangugage() {
-    let formComp = localStorage.getItem("formComponents");
-    let formOption = {
-      components: JSON.parse(formComp)
-    }
-    Formio.createForm(document.getElementById('formio'), formOption, {
-      readOnly: false,
-      language: 'en',
-      i18n: {
-        'en': {
-          Submit: 'Submit'
-        }
+  setLangugage(language) {
+    if (language) {
+      let formComp = localStorage.getItem("formComponents");
+      let formOption = {
+        components: JSON.parse(formComp)
       }
-    }).then(function(form) {
-      form.language = 'ja';
-    });
+      Formio.createForm(document.getElementById('formio'), formOption, {
+        readOnly: false,
+        language: 'en',
+        i18n: {
+          'en': {
+            Submit: 'Submit'
+          }
+        }
+      }).then(function(form) {
+        form.language = language;
+      });
+    }
   }
 
 }
