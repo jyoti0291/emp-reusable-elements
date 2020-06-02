@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class RegistrationService {
   public formComp = [];
+  public formTranslations = null;
   constructor() { }
   textChanged() {
     console.log('text changed');
@@ -20,5 +21,11 @@ export class RegistrationService {
   }
   getFormComponents() {
     return this.formComp;
+  }
+  setFormTranslations(formTranslations) {
+    this.formTranslations = formTranslations;
+  }
+  getFormTranslations() {
+    return this.formTranslations;
   }
 }

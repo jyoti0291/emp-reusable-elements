@@ -195,6 +195,8 @@ export class FormBuilderComponent implements OnInit {
       event.builder.i18next.options.resources.ja = {
         translation: translationObj
       };
+      localStorage.setItem("formTranslations", JSON.stringify(translationObj));
+      this.regService.setFormTranslations(translationObj);
     }
     this.regService.setFormComponents(event.form.components);
   }

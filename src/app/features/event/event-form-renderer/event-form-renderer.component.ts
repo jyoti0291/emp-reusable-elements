@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Formio, FormioAppConfig } from 'angular-formio';
+import { RegistrationService } from '../registration/registration.service';
 
 @Component({
   selector: 'rx-event-form-renderer',
@@ -11,7 +12,7 @@ export class EventFormRendererComponent implements OnInit {
   public formOptions = null;
   public form;
   public selectField;
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private regService: RegistrationService) { }
 
   ngOnInit() {
   }
@@ -21,7 +22,8 @@ export class EventFormRendererComponent implements OnInit {
   }
 
   setLangugage(language) {
-    if (language) {
+    let self = this;
+    if (language != "null") {
       let formComp = localStorage.getItem("formComponents");
       let formOption = {
         components: JSON.parse(formComp)
@@ -34,7 +36,11 @@ export class EventFormRendererComponent implements OnInit {
             Submit: 'Submit'
           }
         }
-      }).then(function(form) {
+      }).then(function (form) {
+        let formTranslations = self.regService.getFormTranslations() ? self.regService.getFormTranslations() : JSON.parse(localStorage.getItem("formTranslations"));
+        form.i18next.options.resources['ja'] = {
+          translation: formTranslations
+        };
         form.language = language;
       });
     }
