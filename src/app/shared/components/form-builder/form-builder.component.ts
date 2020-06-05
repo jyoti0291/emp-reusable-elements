@@ -22,10 +22,7 @@ export class FormBuilderComponent implements OnInit {
           content: false,
           selectboxes: false,
         }
-      },
-      advanced: false,
-      data: false,
-      layout: false
+      }
     },
     editForm: {
       textfield: [
@@ -144,19 +141,50 @@ export class FormBuilderComponent implements OnInit {
 
   ngOnInit() {
     const editForm = Components.components.textfield.editForm;
-    Components.components.textfield.editForm = function() {
-      const form = editForm();
-      const tabs = Utils.getComponent(form.components, 'tabs', true);
-      let customTab = JSON.parse(JSON.stringify(tabs.components[0].components));
-      customTab = [{
+    const form = editForm();
+    const tabs = Utils.getComponent(form.components, 'tabs', true);
+    if (!tabs.components.some(item => item.key === 'custom')) {
+      this.addCustomTab(form, tabs);
+    }
+    let formComp = localStorage.getItem('formComponents');
+    this.formComponents = this.regService.getFormComponents();
+    this.formSrc.components = this.formComponents;
+  }
+
+  addCustomTab(form: any, tabs: any) {
+    Components.components.textfield.editForm = () => {
+      const customTab = [{
         input: true,
-        key: "translation",
-        label: "Translation",
-        placeholder: "Field Translation",
-        tooltip: "The label for this field that will appear next to it.",
-        type: "textfield",
+        key: 'typeofUser',
+        label: 'User Type',
+        placeholder: 'User Type',
+        tooltip: 'user type.',
+        type: 'textfield',
         weight: 0
-      }]
+      },
+      {
+        weight: 700,
+        type: 'radio',
+        label: 'Permission',
+        tooltip: 'permission.',
+        key: 'permission',
+        input: true,
+        inline: true,
+        values: [
+          {
+            label: 'Read',
+            value: 'read'
+          },
+          {
+            label: 'Edit',
+            value: 'edit'
+          },
+          {
+            label: 'Delete',
+            value: 'delete'
+          }
+        ]
+      }];
       tabs.components.push({
         key: 'custom',
         label: 'Custom',
@@ -164,11 +192,6 @@ export class FormBuilderComponent implements OnInit {
       });
       return form;
     };
-    let formComp = localStorage.getItem("formComponents");
-    this.formComponents = this.regService.getFormComponents();
-    // let formComp = localStorage.getItem("formComponents");
-    this.formSrc.components = this.formComponents;
-    console.log(Components.components.textfield.editForm());
   }
 
   onChange(event) {
