@@ -1,9 +1,0 @@
-<header class="container-fluid noPadding noMargin noBorder" *ngIf="headerVisibility" [ngClass]="headerClass">
-    <nav confirm-on-exit class="navbar navbar-inverse custom-navbar"
-        [ngClass]="infoAnnouncement ? 'announceBlue' : alertAnnouncement ? 'announceGold' : environmentVar == 'DEV' ? 'dev-custom-nav' : environmentVar == 'STG' ? 'stg-custom-nav' : ''">
-        <div class="navbar-header custom-brand" [ngClass]="environmentVar=='DEV' ? 'custom-brand-dev':environmentVar=='STG'? 'custom-brand-stg' :''">
-            <a [routerLink]="['landingpage']">EMP</a>
-        </div>
-        <div common-navigation></div>
-    </nav>
-</header>

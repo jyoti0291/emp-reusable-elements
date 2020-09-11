@@ -7,7 +7,6 @@ import { AngularMultiSelectModule } from "angular2-multiselect-dropdown";
 import { FormioModule } from 'angular-formio';
 
 import { PipesModule } from './pipes/index';
-import { CommonLayoutService } from './services';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { TextComponent } from './components/text/text.component';
 import { RadiobuttonComponent } from './components/radiobutton/radiobutton.component';
@@ -22,6 +21,7 @@ import { InfoComponent } from './components/info/info.component';
 import { MultiselectDropdownComponent } from './components/multiselect-dropdown/multiselect-dropdown.component';
 import { FormBuilderComponent } from './components/form-builder/form-builder.component';
 import { FormRendererComponent } from './components/form-renderer/form-renderer.component';
+import { ValidationService, CommonService } from './services';
 
 @NgModule({
     declarations: [
@@ -67,6 +67,6 @@ import { FormRendererComponent } from './components/form-renderer/form-renderer.
         FormBuilderComponent,
         FormRendererComponent
     ],
-    providers: [CommonLayoutService]
+    providers: [CommonService,ValidationService]
 })
 export class SharedModule {}
