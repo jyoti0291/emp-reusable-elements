@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "emp-user-interface": {
+    "emp-reusable-elements": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/emp-user-interface",
+            "outputPath": "dist/emp-reusable-elements",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -73,19 +73,19 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "emp-user-interface:build",
+            "browserTarget": "emp-reusable-elements:build",
             "disableHostCheck": true
           },
           "configurations": {
             "production": {
-              "browserTarget": "emp-user-interface:build:production"
+              "browserTarget": "emp-reusable-elements:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "emp-user-interface:build"
+            "browserTarget": "emp-reusable-elements:build"
           }
         },
         "test": {
@@ -122,15 +122,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "emp-user-interface:serve"
+            "devServerTarget": "emp-reusable-elements:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "emp-user-interface:serve:production"
+              "devServerTarget": "emp-reusable-elements:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "emp-user-interface"
+  "defaultProject": "emp-reusable-elements"
 }

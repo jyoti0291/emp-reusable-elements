@@ -1,5 +1,5 @@
 {
-  "name": "emp-user-interface",
+  "name": "emp-reusable-elements",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -10,7 +10,6 @@
     "lint:styles": "stylelint \"src/**/*.scss\"",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^8.2.14",
     "@angular/cdk": "~8.2.3",
